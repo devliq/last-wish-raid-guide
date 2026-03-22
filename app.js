@@ -2,6 +2,11 @@
    LAST WISH RAID GUIDE — Interactive JS
    ============================================= */
 
+// ─── Build Configurations (loaded from builds.js) ───
+const builds = typeof BUILDS !== 'undefined' ? BUILDS : [];
+const guardianClasses = typeof GUARDIAN_CLASSES !== 'undefined' ? GUARDIAN_CLASSES : ['Titan', 'Hunter', 'Warlock'];
+const elements = typeof ELEMENTS !== 'undefined' ? ELEMENTS : ['Arc', 'Solar', 'Void', 'Strand', 'Prismatic'];
+
 // ─── State ────────────────────────────────────
 const state = {
   clearedEncounters: new Set(),
@@ -319,4 +324,4 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     card.style.transition = 'opacity 250ms ease, transform 250ms ease';
     observer.observe(card);
   });
-})();
+})(); 

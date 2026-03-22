@@ -64,6 +64,56 @@
     <!-- HERO -->
     <section class="hero" aria-label="Last Wish overview">
       <div class="container">
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Decorative Ahamkara Shield SVG -->
+          <svg class="hero-image" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background glow -->
+            <ellipse cx="200" cy="150" rx="160" ry="120" fill="url(#heroGlow)" opacity="0.6"/>
+            <!-- Outer shield -->
+            <path d="M200 30 L350 70 L350 200 L200 270 L50 200 L50 70 Z" 
+                  fill="url(#shieldGradient)" stroke="var(--color-primary)" stroke-width="2" opacity="0.9"/>
+            <!-- Inner shield -->
+            <path d="M200 55 L320 85 L320 190 L200 245 L80 190 L80 85 Z" 
+                  fill="none" stroke="var(--color-primary)" stroke-width="1" opacity="0.5"/>
+            <!-- Center eye -->
+            <circle cx="200" cy="150" r="35" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2"/>
+            <circle cx="200" cy="150" r="20" fill="var(--color-primary)" opacity="0.8"/>
+            <circle cx="200" cy="150" r="10" fill="var(--color-text)"/>
+            <!-- Ahamkara spine decorations -->
+            <path d="M200 55 L200 30" stroke="var(--color-primary)" stroke-width="2"/>
+            <path d="M200 245 L200 270" stroke="var(--color-primary)" stroke-width="2"/>
+            <path d="M80 85 L50 70" stroke="var(--color-primary)" stroke-width="1.5"/>
+            <path d="M320 85 L350 70" stroke="var(--color-primary)" stroke-width="1.5"/>
+            <path d="M80 190 L50 200" stroke="var(--color-primary)" stroke-width="1.5"/>
+            <path d="M320 190 L350 200" stroke="var(--color-primary)" stroke-width="1.5"/>
+            <!-- Decorative lines -->
+            <path d="M120 100 L280 100" stroke="var(--color-primary)" stroke-width="0.5" opacity="0.4"/>
+            <path d="M120 200 L280 200" stroke="var(--color-primary)" stroke-width="0.5" opacity="0.4"/>
+            <path d="M100 150 L300 150" stroke="var(--color-primary)" stroke-width="0.5" opacity="0.4"/>
+            <!-- Gradients -->
+            <defs>
+              <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="var(--color-primary)" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="shieldGradient" x1="200" y1="30" x2="200" y2="270" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="var(--color-surface)" stop-opacity="0.8"/>
+                <stop offset="50%" stop-color="var(--color-surface-2)" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="var(--color-surface)" stop-opacity="0.8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <!-- Hero Banner Image -->
+        <div class="hero-banner-container">
+          <img 
+            src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=1200&h=400&fit=crop&q=80"
+            alt="Last Wish Raid-banner featuring Riven of a Thousand Voices in the Dreaming City"
+            class="hero-banner"
+            loading="eager"
+            onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 400%22%3E%3Cdefs%3E%3ClinearGradient id=%22bg%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%231a1a2e%22/%3E%3Cstop offset=%2250%25%22 style=%22stop-color:%2316213e%22/%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%230f0f23%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22gold%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%220%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%23ffd700%22/%3E%3Cstop offset=%2250%25%22 style=%22stop-color:%23ffb700%22/%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%23ffd700%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%221200%22 height=%22400%22 fill=%22url(%23bg)%22/%3E%3Ccircle cx=%22100%22 cy=%2280%22 r=%2240%22 fill=%22%237b2d8e%22 opacity=%220.3%22/%3E%3Ccircle cx=%221100%22 cy=%22320%22 r=%2260%22 fill=%22%237b2d8e%22 opacity=%220.3%22/%3E%3Cpath d=%22M600 60 Q650 100 700 80 Q750 120 800 100 Q850 140 900 120 Q920 150 900 180 Q850 220 800 200 Q750 250 700 220 Q650 280 600 240 Q550 200 500 240 Q450 280 400 220 Q350 250 300 200 Q250 220 200 180 Q180 150 200 120 Q250 140 300 100 Q350 120 400 80 Q450 100 500 60 Q550 80 600 60 Z%22 fill=%22%23c9a227%22 opacity=%220.6%22/%3E%3Ccircle cx=%22450%22 cy=%22140%22 r=%228%22 fill=%22%23ff4444%22/%3E%3Ccircle cx=%22550%22 cy=%22130%22 r=%226%22 fill=%22%23ff4444%22/%3E%3Ccircle cx=%22650%22 cy=%22130%22 r=%226%22 fill=%22%23ff4444%22/%3E%3Ccircle cx=%22750%22 cy=%22140%22 r=%228%22 fill=%22%23ff4444%22/%3E%3Ctext x=%22600%22 y=%22320%22 font-family=%22Georgia serif%22 font-size=%2272%22 font-weight=%22bold%22 fill=%22url(%23gold)%22 text-anchor=%22middle%22%3ELAST WISH%3C/text%3E%3Ctext x=%22600%22 y=%22360%22 font-family=%22Arial sans-serif%22 font-size=%2224%22 fill=%22%23999999%22 text-anchor=%22middle%22 letter-spacing=%228%22%3ERAID%3C/text%3E%3Cline x1=%22400%22 y1=%22290%22 x2=%22800%22 y2=%22290%22 stroke=%22%23ffd700%22 stroke-width=%222%22 opacity=%220.5%22/%3E%3C/svg%3E'"
+          >
+        </div>
         <div class="hero-content">
           <span class="hero-eyebrow">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
@@ -145,6 +195,45 @@
           <p class="section-desc">Click each encounter for mechanics, roles, checklist, and symbol callouts.</p>
         </div>
 
+        <!-- Raid Overview Infographic -->
+        <div class="raid-overview-infographic">
+          <div class="infographic-header">
+            <span class="infographic-label">Raid Overview</span>
+            <h3 class="infographic-title">All 5 Encounters in Order</h3>
+          </div>
+          <div class="encounters-flow">
+            <div class="flow-encounter">
+              <div class="encounter-number">1</div>
+              <div class="encounter-name">Kalli</div>
+              <div class="encounter-type">Plate Puzzle</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-encounter">
+              <div class="encounter-number">2</div>
+              <div class="encounter-name">Shuro Chi</div>
+              <div class="encounter-type">Puzzle + DPS</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-encounter">
+              <div class="encounter-number">3</div>
+              <div class="encounter-name">Morgeth</div>
+              <div class="encounter-type">Orb Puzzle</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-encounter">
+              <div class="encounter-number">4</div>
+              <div class="encounter-name">Vault</div>
+              <div class="encounter-type">Symbol Maze</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-encounter flow-encounter--final">
+              <div class="encounter-number">5</div>
+              <div class="encounter-name">Riven</div>
+              <div class="encounter-type">Eye Puzzle + Boss</div>
+            </div>
+          </div>
+        </div>
+
         <!-- Encounter Tabs -->
         <div class="encounter-tabs" role="tablist" aria-label="Encounters">
           <button class="encounter-tab active" role="tab" aria-selected="true" data-enc="0" onclick="switchEncounterTab(0)">
@@ -176,6 +265,40 @@
 
         <!-- E1: KALLI -->
         <div class="encounter-panel active" id="enc-0" role="tabpanel">
+          <div class="encounter-header-visual">
+            <img 
+              src="https://worldsofdestiny.com/wp-content/uploads/2021/01/Last-Wish-Encounter-1-Kallis-Doors.jpg"
+              alt="Kalli, the Corrupted encounter in Last Wish raid"
+              class="encounter-image"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 200%27%3E%3Cdefs%3E%3ClinearGradient id=%27bg1%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23181428%27/%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%230d0d15%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27200%27 fill=%27url(%23bg1)%27/%3E%3C!-- Arena Floor with 6 Plates --%3E%3Cellipse cx=%27200%27 cy=%27100%27 rx=%27140%27 ry=%2780%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.3%27/%3E%3C!-- Plate Positions (hexagon) --%3E%3Ccircle cx=%27120%27 cy=%2770%27 r=%2720%27 fill=%27%23c9a227%27 opacity=%270.4%27 stroke=%27%23ffd700%27 stroke-width=%272%27/%3E%3Ctext x=%27120%27 y=%2775%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23000%27 text-anchor=%27middle%27%3E1%3C/text%3E%3Ccircle cx=%27200%27 cy=%2750%27 r=%2720%27 fill=%27%23c9a227%27 opacity=%270.4%27 stroke=%27%23ffd700%27 stroke-width=%272%27/%3E%3Ctext x=%27200%27 y=%2755%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23000%27 text-anchor=%27middle%27%3E2%3C/text%3E%3Ccircle cx=%27280%27 cy=%2770%27 r=%2720%27 fill=%27%23c9a227%27 opacity=%270.4%27 stroke=%27%23ffd700%27 stroke-width=%272%27/%3E%3Ctext x=%27280%27 y=%2775%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23000%27 text-anchor=%27middle%27%3E3%3C/text%3E%3Ccircle cx=%27120%27 cy=%27130%27 r=%2720%27 fill=%27%23c9a227%27 opacity=%270.4%27 stroke=%27%23ffd700%27 stroke-width=%272%27/%3E%3Ctext x=%27120%27 y=%27135%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23000%27 text-anchor=%27middle%27%3E4%3C/text%3E%3Ccircle cx=%27200%27 cy=%27150%27 r=%2720%27 fill=%27%23c9a227%27 opacity=%270.4%27 stroke=%27%23ffd700%27 stroke-width=%272%27/%3E%3Ctext x=%27200%27 y=%27155%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23000%27 text-anchor=%27middle%27%3E5%3C/text%3E%3Ccircle cx=%27280%27 cy=%27130%27 r=%2720%27 fill=%27%23c9a227%27 opacity=%270.4%27 stroke=%27%23ffd700%27 stroke-width=%272%27/%3E%3Ctext x=%27280%27 y=%27135%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23000%27 text-anchor=%27middle%27%3E6%3C/text%3E%3C!-- Center Boss Area --%3E%3Cellipse cx=%27200%27 cy=%27100%27 rx=%2735%27 ry=%2725%27 fill=%27%23ff4444%27 opacity=%270.3%27 stroke=%27%23ff4444%27 stroke-width=%272%27/%3E%3Ctext x=%27200%27 y=%27105%27 font-family=%27Arial%27 font-size=%278%27 fill=%27%23fff%27 text-anchor=%27middle%27%3EKALLI%3C/text%3E%3C!-- Door Indicators --%3E%3Crect x=%2755%27 y=%2740%27 width=%2715%27 height=%2725%27 fill=%27%237b2d8e%27 opacity=%270.7%27/%3E%3Crect x=%27330%27 y=%2740%27 width=%2715%27 height=%2725%27 fill=%27%237b2d8e%27 opacity=%270.7%27/%3E%3Crect x=%2755%27 y=%27135%27 width=%2715%27 height=%2725%27 fill=%27%237b2d8e%27 opacity=%270.7%27/%3E%3Crect x=%27330%27 y=%27135%27 width=%2715%27 height=%2725%27 fill=%27%237b2d8e%27 opacity=%270.7%27/%3E%3C!-- Title --%3E%3Ctext x=%27200%27 y=%27185%27 font-family=%27Arial%27 font-size=%2714%27 font-weight=%27bold%27 fill=%27%23ffd700%27 text-anchor=%27middle%27%3EKALLI · THE CORRUPTED%3C/text%3E%3Ctext x=%27200%27 y=%27195%27 font-family=%27Arial%27 font-size=%279%27 fill=%27%23999%27 text-anchor=%27middle%27%3E6 Plates · Kill Knights · DPS%3C/text%3E%3C/svg%3E'"
+            >
+            <div class="encounter-infographic-tab">
+              <button class="infographic-toggle active" data-tab="mechanics-0">Visual</button>
+              <button class="infographic-toggle" data-tab="flow-0">Flow</button>
+            </div>
+            <div class="encounter-visual-content" id="mechanics-0">
+              <div class="encounter-flow-diagram" id="flow-0">
+              <svg viewBox="0 0 400 120" class="flow-svg">
+                <defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="var(--color-primary)"/></marker></defs>
+                <!-- Plate Phase -->
+                <rect x="10" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-primary)"/>
+                <text x="45" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Plates</text>
+                <!-- Knight Phase -->
+                <path d="M80 60 L110 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead)"/>
+                <rect x="110" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-warning)"/>
+                <text x="145" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Kill Knights</text>
+                <!-- DPS Phase -->
+                <path d="M180 60 L210 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead)"/>
+                <rect x="210" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-success)"/>
+                <text x="245" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">DPS Kalli</text>
+                <!-- Doors -->
+                <path d="M280 60 L310 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead)"/>
+                <rect x="310" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-error)"/>
+                <text x="345" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Enter Doors</text>
+              </svg>
+            </div>
+          </div>
           <div class="encounter-grid">
             <!-- Mechanics -->
             <div class="encounter-card">
@@ -311,7 +434,7 @@
             <!-- Symbol Callouts -->
             <div class="encounter-card">
               <div class="encounter-card-header">
-                <div class="card-icon card-icon--purple">🔮</div>
+                <div class="card-icon card-icon--purple"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--color-purple)"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
                 <div>
                   <div class="card-title">Symbol Callouts</div>
                   <div class="card-subtitle">16 Ahamkara symbols used across all encounters</div>
@@ -320,42 +443,42 @@
               <div class="encounter-card-body">
                 <div class="callouts-grid">
                   <div class="callout-symbol tooltip-trigger" data-tip="Points in a direction — call the animal + direction">
-                    <span class="callout-glyph">🐦</span>
+                    <span class="callout-glyph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M20 8.5c0-2-2-3.5-5-3.5-2 0-3.5 1-4 2.5L10 9l-2 1c0 3 2.5 5 6 5 1 0 2-.2 3-.5-.5-1-1-2-1-3.5 0-2 1.5-3.5 4-3.5 1 0 2 .3 2.5.5l.5-2z" fill="var(--color-purple)"/><circle cx="7" cy="8" r="1.5" fill="var(--color-text)"/></svg></span>
                     <span class="callout-name">Bird</span>
                     <span class="callout-sub">+ direction</span>
                   </div>
                   <div class="callout-symbol tooltip-trigger" data-tip="Facing up, left, or right — call direction">
-                    <span class="callout-glyph">🐍</span>
+                    <span class="callout-glyph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M18 8c-1.5 0-3 1-3 3 0 1.5.5 2.5 1.5 3.5 1 1 1.5 2 1.5 3.5 0 2.5-2 4-5 4H9c-1 0-2-.5-2.5-1.5C6 19 6 18 6 17c0-3 2-5 5-5h2c1.5 0 2.5-1 3-2.5.5-1.5 1.5-2.5 3-2.5 2 0 3 1.5 3 3 0-.5 0-1-.5-1.5-.5-.5-1.5-.5-2-.5z" fill="var(--color-success)"/><circle cx="8" cy="9" r="1.2" fill="var(--color-text)"/></svg></span>
                     <span class="callout-name">Snake</span>
                     <span class="callout-sub">+ direction</span>
                   </div>
                   <div class="callout-symbol tooltip-trigger" data-tip="Points a direction — call animal + direction">
-                    <span class="callout-glyph">🐟</span>
+                    <span class="callout-glyph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M20 12c0-3-2.5-5-6-5s-6 2-6 5 2.5 5 6 5c1.5 0 3-.5 4-1.5 0 2 1.5 3.5 3 3.5s3-1.5 3-3.5c1 1 2.5 1.5 4 1.5 3.5 0 6-2 6-5z" fill="var(--color-teal)"/><path d="M8 11h4v2H8z" fill="var(--color-text)"/></svg></span>
                     <span class="callout-name">Fish</span>
                     <span class="callout-sub">+ direction</span>
                   </div>
                   <div class="callout-symbol tooltip-trigger" data-tip="Four-legged dragon. Call the direction it faces">
-                    <span class="callout-glyph">🐉</span>
+                    <span class="callout-glyph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2C7.5 2 4 5.5 4 9c0 2.5 1 4 3 5.5v3.5c0 1.5 1.5 2 3 2h6c1.5 0 3-.5 3-2v-3.5c2-1.5 3-3 3-5.5c0-3.5-3.5-7-7-7zm0 2c3 0 5.5 2.5 5.5 5.5 0 1.5-.5 2.5-1.5 3.5L14 16h-4l-2-3c-1-1-1.5-2-1.5-3.5C7 6.5 9 4 12 4z" fill="var(--color-primary)"/><circle cx="10" cy="9" r="1" fill="var(--color-text)"/><circle cx="14" cy="9" r="1" fill="var(--color-text)"/></svg></span>
                     <span class="callout-name">Dragon</span>
                     <span class="callout-sub">+ direction</span>
                   </div>
                   <div class="callout-symbol">
-                    <span class="callout-glyph">🌳</span>
+                    <span class="callout-glyph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 22c1.5 0 3-1 3-3 0-1-.5-2-1.5-2.5-.5-1-1-2-1-3.5 0-2 1-4 3-5v-3C15 3 13.5 2 12 2s-3 1-3 3v3c2 1 3 3 3 5 0 1.5-.5 2.5-1 3.5-1 .5-1.5 1.5-1.5 2.5 0 2 1.5 3 3 3z" fill="var(--color-success)"/><path d="M7 12c0-1.5 1-3 2.5-3.5-.5 1.5.5 2.5 2 2.5H7zm10 0c0-1.5-1-3-2.5-3.5.5 1.5-.5 2.5-2 2.5H17z" fill="var(--color-text)" opacity="0.5"/></svg></span>
                     <span class="callout-name">Tree</span>
                     <span class="callout-sub">landmark</span>
                   </div>
                   <div class="callout-symbol">
-                    <span class="callout-glyph">🪨</span>
+                    <span class="callout-glyph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="16" rx="8" ry="6" fill="var(--color-text-faint)"/><path d="M4 16c0-3 3-6 8-6s8 3 8 6" fill="var(--color-text-muted)"/></svg></span>
                     <span class="callout-name">Rock</span>
                     <span class="callout-sub">landmark</span>
                   </div>
                   <div class="callout-symbol">
-                    <span class="callout-glyph">🏛️</span>
+                    <span class="callout-glyph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 18l8-10 8 10H4z" fill="var(--color-purple)" opacity="0.8"/><path d="M12 4v14" stroke="var(--color-purple)" stroke-width="1.5"/><path d="M8 8l4 4 4-4" fill="none" stroke="var(--color-text)" stroke-width="1" opacity="0.5"/></svg></span>
                     <span class="callout-name">Temple</span>
                     <span class="callout-sub">landmark</span>
                   </div>
                   <div class="callout-symbol">
-                    <span class="callout-glyph">🪜</span>
+                    <span class="callout-glyph"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 20h16M4 16h16M4 12h12M6 8h8" stroke="var(--color-text-muted)" stroke-width="2" stroke-linecap="round"/></svg></span>
                     <span class="callout-name">Stairs</span>
                     <span class="callout-sub">landmark</span>
                   </div>
@@ -370,6 +493,40 @@
 
         <!-- E2: SHURO CHI -->
         <div class="encounter-panel" id="enc-1" role="tabpanel">
+          <div class="encounter-header-visual">
+            <img 
+              src="https://worldsofdestiny.com/wp-content/uploads/2021/01/Last-Wish-Encounter-2-Shuro-Chi-Puzzles.gif"
+              alt="Shuro Chi, the Corrupted encounter in Last Wish raid"
+              class="encounter-image"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 200%27%3E%3Cdefs%3E%3ClinearGradient id=%27bg2%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23181428%27/%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%230d0d15%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27200%27 fill=%27url(%23bg2)%27/%3E%3C!-- Room Layout Grid --%3E%3Crect x=%2780%27 y=%2740%27 width=%2780%27 height=%2760%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27120%27 y=%2770%27 font-family=%27Arial%27 font-size=%278%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3ESTAIRS%3C/text%3E%3Crect x=%27160%27 y=%2740%27 width=%2780%27 height=%2760%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27200%27 y=%2770%27 font-family=%27Arial%27 font-size=%278%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3ECENTER%3C/text%3E%3Crect x=%27240%27 y=%2740%27 width=%2780%27 height=%2760%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27280%27 y=%2770%27 font-family=%27Arial%27 font-size=%278%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3ETREES%3C/text%3E%3Crect x=%2780%27 y=%27100%27 width=%2780%27 height=%2760%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27120%27 y=%27130%27 font-family=%27Arial%27 font-size=%278%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3EROCKS%3C/text%3E%3Crect x=%27160%27 y=%27100%27 width=%2780%27 height=%2760%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27200%27 y=%27130%27 font-family=%27Arial%27 font-size=%278%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3ESHURO CHI%3C/text%3E%3Crect x=%27240%27 y=%27100%27 width=%2780%27 height=%2760%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27280%27 y=%27130%27 font-family=%27Arial%27 font-size=%278%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3ESUMMONING%3C/text%3E%3C!-- Puzzle Plates (4 corners) --%3E%3Ccircle cx=%27100%27 cy=%2755%27 r=%2712%27 fill=%27%23ffd700%27 opacity=%270.3%27 stroke=%27%23ffd700%27/%3E%3Ccircle cx=%27260%27 cy=%2755%27 r=%2712%27 fill=%27%23ffd700%27 opacity=%270.3%27 stroke=%27%23ffd700%27/%3E%3Ccircle cx=%27100%27 cy=%27145%27 r=%2712%27 fill=%27%23ffd700%27 opacity=%270.3%27 stroke=%27%23ffd700%27/%3E%3Ccircle cx=%27260%27 cy=%27145%27 r=%2712%27 fill=%27%23ffd700%27 opacity=%270.3%27 stroke=%27%23ffd700%27/%3E%3C!-- Connection Lines (puzzle path) --%3E%3Cpath d=%27M100 55 L140 55 L140 100 L200 100%27 stroke=%27%23c9a227%27 stroke-width=%272%27 stroke-dasharray=%274%27 fill=%27none%27 opacity=%270.5%27/%3E%3Cpath d=%27M260 55 L220 55 L220 100 L200 100%27 stroke=%27%23c9a227%27 stroke-width=%272%27 stroke-dasharray=%274%27 fill=%27none%27 opacity=%270.5%27/%3E%3Cpath d=%27M100 145 L140 145 L140 100 L200 100%27 stroke=%27%23c9a227%27 stroke-width=%272%27 stroke-dasharray=%274%27 fill=%27none%27 opacity=%270.5%27/%3E%3Cpath d=%27M260 145 L220 145 L220 100 L200 100%27 stroke=%27%23c9a227%27 stroke-width=%272%27 stroke-dasharray=%274%27 fill=%27none%27 opacity=%270.5%27/%3E%3C!-- Title --%3E%3Ctext x=%27200%27 y=%27185%27 font-family=%27Arial%27 font-size=%2714%27 font-weight=%27bold%27 fill=%27%23ffd700%27 text-anchor=%27middle%27%3ESHURO CHI · THE CORRUPTED%3C/text%3E%3Ctext x=%27200%27 y=%27195%27 font-family=%27Arial%27 font-size=%279%27 fill=%27%23999%27 text-anchor=%27middle%27%3EStairs/Trees/Rocks · Puzzle · DPS%3C/text%3E%3C/svg%3E'"
+            >
+            <div class="encounter-infographic-tab">
+              <button class="infographic-toggle active" data-tab="mechanics-1">Visual</button>
+              <button class="infographic-toggle" data-tab="flow-1">Flow</button>
+            </div>
+            <div class="encounter-visual-content" id="mechanics-1">
+              <div class="encounter-flow-diagram" id="flow-1">
+              <svg viewBox="0 0 400 120" class="flow-svg">
+                <defs><marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="var(--color-primary)"/></marker></defs>
+                <!-- Puzzle Phase -->
+                <rect x="10" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-purple)"/>
+                <text x="45" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Puzzle</text>
+                <!-- Clear Adds -->
+                <path d="M80 60 L110 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead2)"/>
+                <rect x="110" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-warning)"/>
+                <text x="145" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Clear Adds</text>
+                <!-- DPS Phase -->
+                <path d="M180 60 L210 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead2)"/>
+                <rect x="210" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-success)"/>
+                <text x="245" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">DPS Shuro</text>
+                <!-- Repeat -->
+                <path d="M280 60 L310 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead2)"/>
+                <rect x="310" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-teal)"/>
+                <text x="345" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Repeat ×4</text>
+              </svg>
+            </div>
+          </div>
           <div class="encounter-grid">
             <div class="encounter-card">
               <div class="encounter-card-header">
@@ -520,6 +677,40 @@
 
         <!-- E3: MORGETH -->
         <div class="encounter-panel" id="enc-2" role="tabpanel">
+          <div class="encounter-header-visual">
+            <img 
+              src="https://worldsofdestiny.com/wp-content/uploads/2021/01/Last-Wish-Wish-5-Teleport-to-Morgeth-1024x576.jpg"
+              alt="Morgeth, the Spirekeeper encounter in Last Wish raid"
+              class="encounter-image"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 200%27%3E%3Cdefs%3E%3ClinearGradient id=%27bg3%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset='0%25' style='stop-color:%23181428'/%3E%3Cstop offset='100%25' style='stop-color:%230d0d15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='200' fill='url(%23bg3)'/%3E%3C!-- Morgeth - Spirekeeper (Big Ogre) --%3E%3Cellipse cx='200' cy='100' rx='90' ry='75' fill='%23c9a227' opacity='0.8'/%3E%3C!-- Shoulders --%3E%3Cellipse cx='140' cy='90' rx='30' ry='25' fill='%23ffd700'/%3E%3Cellipse cx='260' cy='90' rx='30' ry='25' fill='%23ffd700'/%3E%3C!-- Face --%3E%3Cellipse cx='200' cy='100' rx='40' ry='35' fill='%23aa8800'/%3E%3C!-- Eyes --%3E%3Ccircle cx='180' cy='90' r='8' fill='%23ff6600'/%3E%3Ccircle cx='220' cy='90' r='8' fill='%23ff6600'/%3E%3C!-- Mouth --%3Cellipse cx='200' cy='120' rx='15' ry='8' fill='%23000000'/%3E%3C!-- Title --%3E%3Ctext x='200' y='185' font-family='Arial' font-size='18' font-weight='bold' fill='%23ffd700' text-anchor='middle'%3EMORGETH%3C/text%3E%3Ctext x='200' y='195' font-family='Arial' font-size='9' fill='%23999' text-anchor='middle'%3E4 Supplicants · Offer Orbs · DPS%3C/text%3E%3C/svg%3E"
+
+            <div class="encounter-infographic-tab">
+              <button class="infographic-toggle active" data-tab="mechanics-2">Visual</button>
+              <button class="infographic-toggle" data-tab="flow-2">Flow</button>
+            </div>
+            <div class="encounter-visual-content" id="mechanics-2">
+              <div class="encounter-flow-diagram" id="flow-2">
+              <svg viewBox="0 0 400 120" class="flow-svg">
+                <defs><marker id="arrowhead3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="var(--color-primary)"/></marker></defs>
+                <!-- First Supplicant -->
+                <rect x="10" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-purple)"/>
+                <text x="45" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">1st Supplicant</text>
+                <!-- Collect Orb -->
+                <path d="M80 60 L110 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead3)"/>
+                <rect x="110" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-teal)"/>
+                <text x="145" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Collect Orb</text>
+                <!-- Offer Orb -->
+                <path d="M180 60 L210 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead3)"/>
+                <rect x="210" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-warning)"/>
+                <text x="245" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Offer to Eyes</text>
+                <!-- DPS Phase -->
+                <path d="M280 60 L310 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead3)"/>
+                <rect x="310" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-success)"/>
+                <text x="345" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">DPS Morgeth</text>
+              </svg>
+            </div>
+          </div>
           <div class="encounter-grid">
             <div class="encounter-card">
               <div class="encounter-card-header">
@@ -658,6 +849,40 @@
 
         <!-- E4: THE VAULT -->
         <div class="encounter-panel" id="enc-3" role="tabpanel">
+          <div class="encounter-header-visual">
+            <img 
+              src="https://worldsofdestiny.com/wp-content/uploads/2021/01/Last-Wish-Wish-6-Teleport-to-the-Vault-1024x576.jpg"
+              alt="The Vault encounter in Last Wish raid"
+              class="encounter-image"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 200%27%3E%3Cdefs%3E%3ClinearGradient id=%27bg4%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23181428%27/%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%230d0d15%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27200%27 fill=%27url(%23bg4)%27/%3E%3C!-- Vault Rooms (Stairs/Trees/Rocks) --%3E%3Crect x=%2760%27 y=%2740%27 width=%27100%27 height=%2780%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27110%27 y=%2780%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3ESTAIRS%3C/text%3E%3Crect x=%27160%27 y=%2740%27 width=%2780%27 height=%2780%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27200%27 y=%2780%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3ECENTER%3C/text%3E%3Crect x=%27240%27 y=%2740%27 width=%27100%27 height=%2780%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27290%27 y=%2780%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3ETREES%3C/text%3E%3Crect x=%2760%27 y=%27120%27 width=%27100%27 height=%2760%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27110%27 y=%27150%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3EROCKS%3C/text%3E%3Crect x=%27240%27 y=%27120%27 width=%27100%27 height=%2760%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27290%27 y=%27150%27 font-family=%27Arial%27 font-size=%2710%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3ESUMMONING%3C/text%3E%3C!-- Chest --%3E%3Crect x=%27170%27 y=%2785%27 width=%2760%27 height=%2740%27 rx=%273%27 fill=%27%23ffd700%27 opacity=%270.5%27 stroke=%27%23c9a227%27 stroke-width=%272%27/%3E%3Ccircle cx=%27200%27 cy=%27105%27 r=%278%27 fill=%27%23c9a227%27/%3E%3Ccircle cx=%27200%27 cy=%27105%27 r=%274%27 fill=%27%23000%27/%3E%3C!-- Title --%3E%3Ctext x=%27200%27 y=%27185%27 font-family=%27Arial%27 font-size=%2718%27 font-weight=%27bold%27 fill=%27%23ffd700%27 text-anchor=%27middle%27%3ETHE VAULT · RIVEN%27S TREASURE%3C/text%3E%3Ctext x=%27200%27 y=%27195%27 font-family=%27Arial%27 font-size=%279%27 fill=%27%23999%27 text-anchor=%27middle%27%3EStairs/Trees/Rocks · Puzzle · Knights%3C/text%3E%3C/svg%3E'"
+            >
+            <div class="encounter-infographic-tab">
+              <button class="infographic-toggle active" data-tab="mechanics-3">Visual</button>
+              <button class="infographic-toggle" data-tab="flow-3">Flow</button>
+            </div>
+            <div class="encounter-visual-content" id="mechanics-3">
+              <div class="encounter-flow-diagram" id="flow-3">
+              <svg viewBox="0 0 400 120" class="flow-svg">
+                <defs><marker id="arrowhead4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="var(--color-primary)"/></marker></defs>
+                <!-- Room Selection -->
+                <rect x="10" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-purple)"/>
+                <text x="45" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Pick Room</text>
+                <!-- Symbol Callout -->
+                <path d="M80 60 L110 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead4)"/>
+                <rect x="110" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-teal)"/>
+                <text x="145" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Call Symbol</text>
+                <!-- Solve Puzzle -->
+                <path d="M180 60 L210 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead4)"/>
+                <rect x="210" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-warning)"/>
+                <text x="245" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Solve Puzzle</text>
+                <!-- Kill Knights -->
+                <path d="M280 60 L310 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead4)"/>
+                <rect x="310" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-error)"/>
+                <text x="345" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Kill Knights</text>
+              </svg>
+            </div>
+          </div>
           <div class="encounter-grid">
             <div class="encounter-card">
               <div class="encounter-card-header">
@@ -800,6 +1025,40 @@
 
         <!-- E5: RIVEN -->
         <div class="encounter-panel" id="enc-4" role="tabpanel">
+          <div class="encounter-header-visual">
+            <img 
+              src="https://worldsofdestiny.com/wp-content/uploads/2021/01/Last-Wish-Encounter-5-Riven-Eyes-1024x796.jpg"
+              alt="Riven of a Thousand Voices encounter in Last Wish raid"
+              class="encounter-image"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 200%27%3E%3Cdefs%3E%3ClinearGradient id=%27bg5%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 style=%27stop-color:%23181428%27/%3E%3Cstop offset=%27100%25%27 style=%27stop-color:%230d0d15%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27400%27 height=%27200%27 fill=%27url(%23bg5)%27/%3E%3C!-- Riven Arena - Two Room Layout --%3E%3C!-- Room A --%3E%3Crect x=%2760%27 y=%2740%27 width=%27110%27 height=%27100%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27115%27 y=%2790%27 font-family=%27Arial%27 font-size=%2712%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3EROOM A%3C/text%3E%3Ccircle cx=%27115%27 cy=%27110%27 r=%2712%27 fill=%27%23ff4444%27 opacity=%270.6%27/%3E%3C!-- Room B --%3E%3Crect x=%27230%27 y=%2740%27 width=%27110%27 height=%27100%27 fill=%27none%27 stroke=%27%23c9a227%27 stroke-width=%271%27 opacity=%270.4%27/%3E%3Ctext x=%27285%27 y=%2790%27 font-family=%27Arial%27 font-size=%2712%27 fill=%27%23c9a227%27 text-anchor=%27middle%27%3EROOM B%3C/text%3E%3Ccircle cx=%27285%27 cy=%27110%27 r=%2712%27 fill=%27%23ff4444%27 opacity=%270.6%27/%3E%3C!-- Queenswalk Path --%3E%3Cpath d=%27M200 50 L200 150%27 stroke=%27%237b2d8e%27 stroke-width=%273%27 stroke-dasharray=%275,3%27 opacity=%270.5%27/%3E%3Ccircle cx=%27200%27 cy=%27150%27 r=%2720%27 fill=%27%237b2d8e%27 opacity=%270.4%27 stroke=%27%23ffd700%27 stroke-width=%272%27/%3E%3Ctext x=%27200%27 y=%27155%27 font-family=%27Arial%27 font-size=%278%27 fill=%27%23fff%27 text-anchor=%27middle%27%3EBLIGHT%3C/text%3E%3C!-- Riven Mouth --%3E%3Cellipse cx=%27200%27 cy=%27100%27 rx=%2735%27 ry=%2720%27 fill=%27%23c9a227%27 opacity=%270.4%27 stroke=%27%23ff4444%27 stroke-width=%272%27/%3E%3Ccircle cx=%27185%27 cy=%2795%27 r=%276%27 fill=%27%23ff0000%27/%3E%3Ccircle cx=%27215%27 cy=%2795%27 r=%276%27 fill=%27%23ff0000%27/%3E%3C!-- Title --%3E%3Ctext x=%27200%27 y=%27185%27 font-family=%27Arial%27 font-size=%2718%27 font-weight=%27bold%27 fill=%27%23ffd700%27 text-anchor=%27middle%27%3ERIVEN · OF A THOUSAND VOICES%3C/text%3E%3Ctext x=%27200%27 y=%27195%27 font-family=%27Arial%27 font-size=%279%27 fill=%27%23999%27 text-anchor=%27middle%27%3ERoom A/B · Shoot Eyes · Queenswalk%3C/text%3E%3C/svg%3E'"
+            >
+            <div class="encounter-infographic-tab">
+              <button class="infographic-toggle active" data-tab="mechanics-4">Visual</button>
+              <button class="infographic-toggle" data-tab="flow-4">Flow</button>
+            </div>
+            <div class="encounter-visual-content" id="mechanics-4">
+              <div class="encounter-flow-diagram" id="flow-4">
+              <svg viewBox="0 0 400 120" class="flow-svg">
+                <defs><marker id="arrowhead5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="var(--color-primary)"/></marker></defs>
+                <!-- Split Into Rooms -->
+                <rect x="10" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-primary)"/>
+                <text x="45" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Split Rooms</text>
+                <!-- Shoot Eyes -->
+                <path d="M80 60 L110 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead5)"/>
+                <rect x="110" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-purple)"/>
+                <text x="145" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Shoot Eyes</text>
+                <!-- DPS Phase -->
+                <path d="M180 60 L210 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead5)"/>
+                <rect x="210" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-success)"/>
+                <text x="245" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">DPS Mouth</text>
+                <!-- Queenswalk -->
+                <path d="M280 60 L310 60" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowhead5)"/>
+                <rect x="310" y="40" width="70" height="40" rx="4" fill="var(--color-surface-offset)" stroke="var(--color-warning)"/>
+                <text x="345" y="65" text-anchor="middle" fill="var(--color-text)" font-size="10">Queenswalk</text>
+              </svg>
+            </div>
+          </div>
           <div class="encounter-grid">
             <div class="encounter-card">
               <div class="encounter-card-header">
@@ -960,6 +1219,50 @@
             <h2 class="section-title">Weapons &amp; Armor</h2>
           </div>
           <p class="section-desc">8 craftable legendaries + One Thousand Voices. Curated drops per encounter.</p>
+        </div>
+
+        <!-- Loot Items Gallery -->
+        <div class="loot-gallery">
+          <div class="gallery-item" data-item="tractor-cannon">
+            <div class="gallery-item-icon" style="background: linear-gradient(135deg, var(--color-warning-highlight), var(--color-surface))">🔫</div>
+            <div class="gallery-item-name">Tractor Cannon</div>
+            <div class="gallery-item-type">Shotgun · Solar</div>
+          </div>
+          <div class="gallery-item" data-item="threat-level">
+            <div class="gallery-item-icon" style="background: linear-gradient(135deg, var(--color-teal-highlight), var(--color-surface))">⚔️</div>
+            <div class="gallery-item-name">Threat Level</div>
+            <div class="gallery-item-type">Shotgun · Arc</div>
+          </div>
+          <div class="gallery-item" data-item="age-old-bond">
+            <div class="gallery-item-icon" style="background: linear-gradient(135deg, var(--color-purple-highlight), var(--color-surface))">💜</div>
+            <div class="gallery-item-name">Age-Old Bond</div>
+            <div class="gallery-item-type">Auto Rifle · Void</div>
+          </div>
+          <div class="gallery-item" data-item="spite-fang">
+            <div class="gallery-item-icon" style="background: linear-gradient(135deg, var(--color-success-highlight), var(--color-surface))">🏹</div>
+            <div class="gallery-item-name">Spite Fang</div>
+            <div class="gallery-item-type">Bow · Arc</div>
+          </div>
+          <div class="gallery-item" data-item="nations-beast">
+            <div class="gallery-item-icon" style="background: linear-gradient(135deg, var(--color-teal-highlight), var(--color-surface))">⚡</div>
+            <div class="gallery-item-name">Nation of Beasts</div>
+            <div class="gallery-item-type">Hand Cannon · Arc</div>
+          </div>
+          <div class="gallery-item" data-item="techeun-force">
+            <div class="gallery-item-icon" style="background: linear-gradient(135deg, var(--color-warning-highlight), var(--color-surface))">🌩️</div>
+            <div class="gallery-item-name">Techeun Force</div>
+            <div class="gallery-item-type">Fusion Rifle · Arc</div>
+          </div>
+          <div class="gallery-item" data-item="supremacy">
+            <div class="gallery-item-icon" style="background: linear-gradient(135deg, var(--color-surface-offset), var(--color-surface))">🎯</div>
+            <div class="gallery-item-name">The Supremacy</div>
+            <div class="gallery-item-type">Sniper · Kinetic</div>
+          </div>
+          <div class="gallery-item gallery-item--exotic">
+            <div class="gallery-item-icon" style="background: linear-gradient(135deg, var(--color-primary-highlight), var(--color-surface))">👑</div>
+            <div class="gallery-item-name">One Thousand Voices</div>
+            <div class="gallery-item-type">Exotic · Solar</div>
+          </div>
         </div>
 
         <!-- Encounter loot table -->
@@ -1421,6 +1724,46 @@
           <p class="section-desc">Optimized loadouts for each role and encounter type.</p>
         </div>
 
+        <!-- Loadout Infographic -->
+        <div class="loadout-infographic">
+          <div class="infographic-title">Role Quick Reference</div>
+          <svg viewBox="0 0 800 200" class="infographic-svg">
+            <!-- DPS Role -->
+            <rect x="20" y="30" width="140" height="70" rx="8" fill="var(--color-surface-offset)" stroke="var(--color-error)" stroke-width="2"/>
+            <text x="90" y="60" text-anchor="middle" fill="var(--color-text)" font-weight="700" font-size="14">DPS</text>
+            <text x="90" y="85" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Heavy Weapon,</text>
+            <text x="90" y="100" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Burst Super</text>
+            <!-- Support Role -->
+            <rect x="180" y="30" width="140" height="70" rx="8" fill="var(--color-surface-offset)" stroke="var(--color-teal)" stroke-width="2"/>
+            <text x="250" y="60" text-anchor="middle" fill="var(--color-text)" font-weight="700" font-size="14">Support</text>
+            <text x="250" y="85" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Well/Rift,</text>
+            <text x="250" y="100" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Orb Gen</text>
+            <!-- Runner Role -->
+            <rect x="340" y="30" width="140" height="70" rx="8" fill="var(--color-surface-offset)" stroke="var(--color-success)" stroke-width="2"/>
+            <text x="410" y="60" text-anchor="middle" fill="var(--color-text)" font-weight="700" font-size="14">Runner</text>
+            <text x="410" y="85" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Speed Build,</text>
+            <text x="410" y="100" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Class Ability CD</text>
+            <!-- Carrier Role -->
+            <rect x="500" y="30" width="140" height="70" rx="8" fill="var(--color-surface-offset)" stroke="var(--color-warning)" stroke-width="2"/>
+            <text x="570" y="60" text-anchor="middle" fill="var(--color-text)" font-weight="700" font-size="14">Carrier</text>
+            <text x="570" y="85" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Survivability,</text>
+            <text x="570" y="100" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Health Focus</text>
+            <!-- Adds Role -->
+            <rect x="660" y="30" width="140" height="70" rx="8" fill="var(--color-surface-offset)" stroke="var(--color-purple)" stroke-width="2"/>
+            <text x="730" y="60" text-anchor="middle" fill="var(--color-text)" font-weight="700" font-size="14">Adds</text>
+            <text x="730" y="85" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Add Clear,</text>
+            <text x="730" y="100" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Crowd Control</text>
+            <!-- Arrow to tab panel -->
+            <path d="M400 130 L400 160" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowdown)"/>
+            <!-- Arrow marker -->
+            <defs>
+              <marker id="arrowdown" markerWidth="10" markerHeight="10" refX="5" refY="10" orient="auto">
+                <polygon points="0 0, 10 5, 0 10" fill="var(--color-primary)"/>
+              </marker>
+            </defs>
+          </svg>
+        </div>
+
         <div class="loadout-tabs" role="tablist">
           <button class="loadout-tab active" onclick="switchLoadoutTab('dps', this)" role="tab">DPS Builds</button>
           <button class="loadout-tab" onclick="switchLoadoutTab('support', this)" role="tab">Support Builds</button>
@@ -1869,10 +2212,10 @@
             <div class="wish-name">Grant Me a Wish</div>
             <div class="wish-effect">Spawns a chest at the end of the raid with a random item. Best used to get a free attempt at a specific weapon.</div>
             <div class="wish-code">
-              <span class="wish-icon">🐉</span>
-              <span class="wish-icon">🐉</span>
-              <span class="wish-icon">🐟</span>
-              <span class="wish-icon">🐦</span>
+              <span class="wish-icon" aria-label="Dragon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C7.5 2 4 5.5 4 9c0 2.5 1 4 3 5.5v3.5c0 1.5 1.5 2 3 2h6c1.5 0 3-.5 3-2v-3.5c2-1.5 3-3 3-5.5c0-3.5-3.5-7-7-7zm0 2c3 0 5.5 2.5 5.5 5.5 0 1.5-.5 2.5-1.5 3.5L14 16h-4l-2-3c-1-1-1.5-2-1.5-3.5C7 6.5 9 4 12 4z" fill="var(--color-primary)"/><circle cx="10" cy="9" r="1" fill="var(--color-text)"/><circle cx="14" cy="9" r="1" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Dragon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C7.5 2 4 5.5 4 9c0 2.5 1 4 3 5.5v3.5c0 1.5 1.5 2 3 2h6c1.5 0 3-.5 3-2v-3.5c2-1.5 3-3 3-5.5c0-3.5-3.5-7-7-7zm0 2c3 0 5.5 2.5 5.5 5.5 0 1.5-.5 2.5-1.5 3.5L14 16h-4l-2-3c-1-1-1.5-2-1.5-3.5C7 6.5 9 4 12 4z" fill="var(--color-primary)"/><circle cx="10" cy="9" r="1" fill="var(--color-text)"/><circle cx="14" cy="9" r="1" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Fish"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 12c0-3-2.5-5-6-5s-6 2-6 5 2.5 5 6 5c1.5 0 3-.5 4-1.5 0 2 1.5 3.5 3 3.5s3-1.5 3-3.5c1 1 2.5 1.5 4 1.5 3.5 0 6-2 6-5z" fill="var(--color-teal)"/><path d="M8 11h4v2H8z" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Bird"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 8.5c0-2-2-3.5-5-3.5-2 0-3.5 1-4 2.5L10 9l-2 1c0 3 2.5 5 6 5 1 0 2-.2 3-.5-.5-1-1-2-1-3.5 0-2 1.5-3.5 4-3.5 1 0 2 .3 2.5.5l.5-2z" fill="var(--color-purple)"/><circle cx="7" cy="8" r="1.5" fill="var(--color-text)"/></svg></span>
             </div>
             <div style="font-size: var(--text-xs); color: var(--color-text-faint);">Pattern: Dragon · Dragon · Fish · Bird</div>
           </div>
@@ -1882,10 +2225,10 @@
             <div class="wish-name">Checkpoint Skip</div>
             <div class="wish-effect">Teleports your fireteam to any encounter in the raid. Combine with raid banners to skip to any boss fight.</div>
             <div class="wish-code">
-              <span class="wish-icon">🐟</span>
-              <span class="wish-icon">🐉</span>
-              <span class="wish-icon">🐍</span>
-              <span class="wish-icon">🐦</span>
+              <span class="wish-icon" aria-label="Fish"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 12c0-3-2.5-5-6-5s-6 2-6 5 2.5 5 6 5c1.5 0 3-.5 4-1.5 0 2 1.5 3.5 3 3.5s3-1.5 3-3.5c1 1 2.5 1.5 4 1.5 3.5 0 6-2 6-5z" fill="var(--color-teal)"/><path d="M8 11h4v2H8z" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Dragon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C7.5 2 4 5.5 4 9c0 2.5 1 4 3 5.5v3.5c0 1.5 1.5 2 3 2h6c1.5 0 3-.5 3-2v-3.5c2-1.5 3-3 3-5.5c0-3.5-3.5-7-7-7zm0 2c3 0 5.5 2.5 5.5 5.5 0 1.5-.5 2.5-1.5 3.5L14 16h-4l-2-3c-1-1-1.5-2-1.5-3.5C7 6.5 9 4 12 4z" fill="var(--color-primary)"/><circle cx="10" cy="9" r="1" fill="var(--color-text)"/><circle cx="14" cy="9" r="1" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Snake"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 8c-1.5 0-3 1-3 3 0 1.5.5 2.5 1.5 3.5 1 1 1.5 2 1.5 3.5 0 2.5-2 4-5 4H9c-1 0-2-.5-2.5-1.5C6 19 6 18 6 17c0-3 2-5 5-5h2c1.5 0 2.5-1 3-2.5.5-1.5 1.5-2.5 3-2.5 2 0 3 1.5 3 3 0-.5 0-1-.5-1.5-.5-.5-1.5-.5-2-.5z" fill="var(--color-success)"/><circle cx="8" cy="9" r="1.2" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Bird"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 8.5c0-2-2-3.5-5-3.5-2 0-3.5 1-4 2.5L10 9l-2 1c0 3 2.5 5 6 5 1 0 2-.2 3-.5-.5-1-1-2-1-3.5 0-2 1.5-3.5 4-3.5 1 0 2 .3 2.5.5l.5-2z" fill="var(--color-purple)"/><circle cx="7" cy="8" r="1.5" fill="var(--color-text)"/></svg></span>
             </div>
             <div style="font-size: var(--text-xs); color: var(--color-text-faint);">Teleports to selected encounter</div>
           </div>
@@ -1895,10 +2238,10 @@
             <div class="wish-name">Wanderer's Respite</div>
             <div class="wish-effect">Activates a permanent Dreaming City-style corruption aura in the raid. Mainly aesthetic but used for challenge runs.</div>
             <div class="wish-code">
-              <span class="wish-icon">🐦</span>
-              <span class="wish-icon">🐟</span>
-              <span class="wish-icon">🐉</span>
-              <span class="wish-icon">🐍</span>
+              <span class="wish-icon" aria-label="Bird"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 8.5c0-2-2-3.5-5-3.5-2 0-3.5 1-4 2.5L10 9l-2 1c0 3 2.5 5 6 5 1 0 2-.2 3-.5-.5-1-1-2-1-3.5 0-2 1.5-3.5 4-3.5 1 0 2 .3 2.5.5l.5-2z" fill="var(--color-purple)"/><circle cx="7" cy="8" r="1.5" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Fish"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 12c0-3-2.5-5-6-5s-6 2-6 5 2.5 5 6 5c1.5 0 3-.5 4-1.5 0 2 1.5 3.5 3 3.5s3-1.5 3-3.5c1 1 2.5 1.5 4 1.5 3.5 0 6-2 6-5z" fill="var(--color-teal)"/><path d="M8 11h4v2H8z" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Dragon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C7.5 2 4 5.5 4 9c0 2.5 1 4 3 5.5v3.5c0 1.5 1.5 2 3 2h6c1.5 0 3-.5 3-2v-3.5c2-1.5 3-3 3-5.5c0-3.5-3.5-7-7-7zm0 2c3 0 5.5 2.5 5.5 5.5 0 1.5-.5 2.5-1.5 3.5L14 16h-4l-2-3c-1-1-1.5-2-1.5-3.5C7 6.5 9 4 12 4z" fill="var(--color-primary)"/><circle cx="10" cy="9" r="1" fill="var(--color-text)"/><circle cx="14" cy="9" r="1" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Snake"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 8c-1.5 0-3 1-3 3 0 1.5.5 2.5 1.5 3.5 1 1 1.5 2 1.5 3.5 0 2.5-2 4-5 4H9c-1 0-2-.5-2.5-1.5C6 19 6 18 6 17c0-3 2-5 5-5h2c1.5 0 2.5-1 3-2.5.5-1.5 1.5-2.5 3-2.5 2 0 3 1.5 3 3 0-.5 0-1-.5-1.5-.5-.5-1.5-.5-2-.5z" fill="var(--color-success)"/><circle cx="8" cy="9" r="1.2" fill="var(--color-text)"/></svg></span>
             </div>
             <div style="font-size: var(--text-xs); color: var(--color-text-faint);">Aesthetic / environment wish</div>
           </div>
@@ -1908,10 +2251,10 @@
             <div class="wish-name">A Petitioner's Mark</div>
             <div class="wish-effect">Grants every player in the fireteam the Paws of the Great Hunt shader on their armor for this run. Cosmetic wish.</div>
             <div class="wish-code">
-              <span class="wish-icon">🐍</span>
-              <span class="wish-icon">🐦</span>
-              <span class="wish-icon">🐉</span>
-              <span class="wish-icon">🐟</span>
+              <span class="wish-icon" aria-label="Snake"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 8c-1.5 0-3 1-3 3 0 1.5.5 2.5 1.5 3.5 1 1 1.5 2 1.5 3.5 0 2.5-2 4-5 4H9c-1 0-2-.5-2.5-1.5C6 19 6 18 6 17c0-3 2-5 5-5h2c1.5 0 2.5-1 3-2.5.5-1.5 1.5-2.5 3-2.5 2 0 3 1.5 3 3 0-.5 0-1-.5-1.5-.5-.5-1.5-.5-2-.5z" fill="var(--color-success)"/><circle cx="8" cy="9" r="1.2" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Bird"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 8.5c0-2-2-3.5-5-3.5-2 0-3.5 1-4 2.5L10 9l-2 1c0 3 2.5 5 6 5 1 0 2-.2 3-.5-.5-1-1-2-1-3.5 0-2 1.5-3.5 4-3.5 1 0 2 .3 2.5.5l.5-2z" fill="var(--color-purple)"/><circle cx="7" cy="8" r="1.5" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Dragon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C7.5 2 4 5.5 4 9c0 2.5 1 4 3 5.5v3.5c0 1.5 1.5 2 3 2h6c1.5 0 3-.5 3-2v-3.5c2-1.5 3-3 3-5.5c0-3.5-3.5-7-7-7zm0 2c3 0 5.5 2.5 5.5 5.5 0 1.5-.5 2.5-1.5 3.5L14 16h-4l-2-3c-1-1-1.5-2-1.5-3.5C7 6.5 9 4 12 4z" fill="var(--color-primary)"/><circle cx="10" cy="9" r="1" fill="var(--color-text)"/><circle cx="14" cy="9" r="1" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Fish"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 12c0-3-2.5-5-6-5s-6 2-6 5 2.5 5 6 5c1.5 0 3-.5 4-1.5 0 2 1.5 3.5 3 3.5s3-1.5 3-3.5c1 1 2.5 1.5 4 1.5 3.5 0 6-2 6-5z" fill="var(--color-teal)"/><path d="M8 11h4v2H8z" fill="var(--color-text)"/></svg></span>
             </div>
             <div style="font-size: var(--text-xs); color: var(--color-text-faint);">Cosmetic wish</div>
           </div>
@@ -1921,10 +2264,10 @@
             <div class="wish-name">Wish Granted</div>
             <div class="wish-effect">The final wish — activates the Queenswalk escape sequence variant and unlocks the Wishing All the Best triumph for the secret ending.</div>
             <div class="wish-code">
-              <span class="wish-icon">🐉</span>
-              <span class="wish-icon">🐍</span>
-              <span class="wish-icon">🐦</span>
-              <span class="wish-icon">🐟</span>
+              <span class="wish-icon" aria-label="Dragon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C7.5 2 4 5.5 4 9c0 2.5 1 4 3 5.5v3.5c0 1.5 1.5 2 3 2h6c1.5 0 3-.5 3-2v-3.5c2-1.5 3-3 3-5.5c0-3.5-3.5-7-7-7zm0 2c3 0 5.5 2.5 5.5 5.5 0 1.5-.5 2.5-1.5 3.5L14 16h-4l-2-3c-1-1-1.5-2-1.5-3.5C7 6.5 9 4 12 4z" fill="var(--color-primary)"/><circle cx="10" cy="9" r="1" fill="var(--color-text)"/><circle cx="14" cy="9" r="1" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Snake"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 8c-1.5 0-3 1-3 3 0 1.5.5 2.5 1.5 3.5 1 1 1.5 2 1.5 3.5 0 2.5-2 4-5 4H9c-1 0-2-.5-2.5-1.5C6 19 6 18 6 17c0-3 2-5 5-5h2c1.5 0 2.5-1 3-2.5.5-1.5 1.5-2.5 3-2.5 2 0 3 1.5 3 3 0-.5 0-1-.5-1.5-.5-.5-1.5-.5-2-.5z" fill="var(--color-success)"/><circle cx="8" cy="9" r="1.2" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Bird"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 8.5c0-2-2-3.5-5-3.5-2 0-3.5 1-4 2.5L10 9l-2 1c0 3 2.5 5 6 5 1 0 2-.2 3-.5-.5-1-1-2-1-3.5 0-2 1.5-3.5 4-3.5 1 0 2 .3 2.5.5l.5-2z" fill="var(--color-purple)"/><circle cx="7" cy="8" r="1.5" fill="var(--color-text)"/></svg></span>
+              <span class="wish-icon" aria-label="Fish"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 12c0-3-2.5-5-6-5s-6 2-6 5 2.5 5 6 5c1.5 0 3-.5 4-1.5 0 2 1.5 3.5 3 3.5s3-1.5 3-3.5c1 1 2.5 1.5 4 1.5 3.5 0 6-2 6-5z" fill="var(--color-teal)"/><path d="M8 11h4v2H8z" fill="var(--color-text)"/></svg></span>
             </div>
             <div style="font-size: var(--text-xs); color: var(--color-text-faint);">Secret ending / triumph unlock</div>
           </div>

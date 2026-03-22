@@ -2,6 +2,21 @@
 
 Complete interactive guide for all 5 encounters. Track your clears, assign roles, hunt god rolls, and master the Taken mechanics of Riven's domain.
 
+## Features
+
+### Encounter Images & Infographics
+
+Each encounter now features detailed infographic-style images showing:
+
+- **Kalli**: Arena layout with 6 plates in hexagonal formation, boss position, and door indicators
+- **Shuro Chi**: Room layout grid (Stairs/Trees/Rocks/Center/Summoning), puzzle plate positions, and connection paths
+- **Morgeth**: Arena with central Spire, 4 Supplicant spawn points, and eye positions
+- **The Vault**: Room layout showing Stairs/Trees/Rocks/Summoning rooms with chest location
+- **Riven**: Two-room layout (Room A/B), Queenswalk path, and Blight position
+- **Hero Banner**: External image with fallback to custom SVG featuring Riven silhouette
+
+All images include descriptive labels and mechanic hints for quick reference during raids.
+
 ## What's included
 
 ### Encounter Guide (all 5 encounters with tabbed navigation)

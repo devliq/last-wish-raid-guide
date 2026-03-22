@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive Destiny 2 Last Wish raid guide — encounter checklists, role assignments, loot tables, god rolls, and wish wall.">
+  <title>Last Wish — Raid Guide</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230e0c16'/><path d='M16 4 L28 10 L28 22 L16 28 L4 22 L4 10 Z' fill='none' stroke='%23c9a227' stroke-width='1.5'/><circle cx='16' cy='16' r='4' fill='%23c9a227'/><path d='M16 4 L16 12 M16 20 L16 28 M4 10 L11 14 M21 18 L28 22 M4 22 L11 18 M21 14 L28 10' stroke='%23c9a227' stroke-width='1' opacity='0.5'/></svg>">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="site-logo" aria-label="Last Wish Raid Guide Home">
+          <!-- SVG Logo: Ahamkara Diamond Mark -->
+          <svg class="logo-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <path d="M18 2 L33 10 L33 26 L18 34 L3 26 L3 10 Z" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            <path d="M18 5 L30 12 L30 24 L18 31 L6 24 L6 12 Z" fill="none" stroke="var(--color-primary)" stroke-width="1.5"/>
+            <circle cx="18" cy="18" r="5" fill="var(--color-primary)" opacity="0.9"/>
+            <circle cx="18" cy="18" r="2.5" fill="var(--color-bg)"/>
+            <path d="M18 5 L18 13 M18 23 L18 31 M6 12 L12 16 M24 20 L30 24 M6 24 L12 20 M24 16 L30 12" stroke="var(--color-primary)" stroke-width="0.75" opacity="0.6"/>
+          </svg>
+          <div class="logo-text">
+            <span class="logo-title">Last Wish</span>
+            <span class="logo-sub">Raid Guide</span>
+          </div>
+        </a>
+
+        <nav class="header-nav" aria-label="Sections">
+          <a href="#encounters" class="nav-link">Encounters</a>
+          <a href="#loot" class="nav-link">Loot</a>
+          <a href="#loadouts" class="nav-link">Loadouts</a>
+          <a href="#challenges" class="nav-link">Challenges</a>
+          <a href="#wish-wall" class="nav-link">Wish Wall</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="progress-indicator" aria-live="polite">
+            <span id="header-progress-count" class="progress-count">0</span>
+            <span>/ 5 cleared</span>
+          </div>
+          <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-label="Last Wish overview">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-eyebrow">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Dreaming City · Forsaken
+          </span>
+          <h1 class="hero-title">
+            Raid of <span class="gold">Last Wish</span>
+          </h1>
+          <p class="hero-subtitle">
+            Complete interactive guide for all 5 encounters. Track your clears, assign roles, hunt god rolls, and master the Taken mechanics of Riven's domain.
+          </p>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-value">5</span>
+              <span class="hero-stat-label">Encounters</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">8</span>
+              <span class="hero-stat-label">Legendaries</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">5%</span>
+              <span class="hero-stat-label">1KV Drop Chance</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">15</span>
+              <span class="hero-stat-label">Wishes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERALL PROGRESS -->
+    <section class="section" id="progress-section">
+      <div class="container">
+        <div class="overall-progress">
+          <div class="progress-header">
+            <span class="progress-title">Run Progress</span>
+            <span class="progress-pct" id="progress-pct">0%</span>
+          </div>
+          <div class="progress-bar-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Overall raid progress">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+          <div class="progress-encounters" id="progress-encounters">
+            <button class="enc-progress-dot" data-enc="0" onclick="switchEncounterTab(0)">
+              <span class="dot"></span>
+              <span>Kalli</span>
+            </button>
+            <button class="enc-progress-dot" data-enc="1" onclick="switchEncounterTab(1)">
+              <span class="dot"></span>
+              <span>Shuro Chi</span>
+            </button>
+            <button class="enc-progress-dot" data-enc="2" onclick="switchEncounterTab(2)">
+              <span class="dot"></span>
+              <span>Morgeth</span>
+            </button>
+            <button class="enc-progress-dot" data-enc="3" onclick="switchEncounterTab(3)">
+              <span class="dot"></span>
+              <span>The Vault</span>
+            </button>
+            <button class="enc-progress-dot" data-enc="4" onclick="switchEncounterTab(4)">
+              <span class="dot"></span>
+              <span>Riven</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENCOUNTERS -->
+    <section class="section" id="encounters">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-label">Encounters</div>
+            <h2 class="section-title">All 5 Encounters</h2>
+          </div>
+          <p class="section-desc">Click each encounter for mechanics, roles, checklist, and symbol callouts.</p>
+        </div>
+
+        <!-- Encounter Tabs -->
+        <div class="encounter-tabs" role="tablist" aria-label="Encounters">
+          <button class="encounter-tab active" role="tab" aria-selected="true" data-enc="0" onclick="switchEncounterTab(0)">
+            <span class="tab-number">E1</span>
+            <span class="tab-name">Kalli</span>
+            <span class="tab-completed-badge" id="tab-badge-0">✓</span>
+          </button>
+          <button class="encounter-tab" role="tab" aria-selected="false" data-enc="1" onclick="switchEncounterTab(1)">
+            <span class="tab-number">E2</span>
+            <span class="tab-name">Shuro Chi</span>
+            <span class="tab-completed-badge" id="tab-badge-1">✓</span>
+          </button>
+          <button class="encounter-tab" role="tab" aria-selected="false" data-enc="2" onclick="switchEncounterTab(2)">
+            <span class="tab-number">E3</span>
+            <span class="tab-name">Morgeth</span>
+            <span class="tab-completed-badge" id="tab-badge-2">✓</span>
+          </button>
+          <button class="encounter-tab" role="tab" aria-selected="false" data-enc="3" onclick="switchEncounterTab(3)">
+            <span class="tab-number">E4</span>
+            <span class="tab-name">The Vault</span>
+            <span class="tab-completed-badge" id="tab-badge-3">✓</span>
+          </button>
+          <button class="encounter-tab" role="tab" aria-selected="false" data-enc="4" onclick="switchEncounterTab(4)">
+            <span class="tab-number">E5</span>
+            <span class="tab-name">Riven</span>
+            <span class="tab-completed-badge" id="tab-badge-4">✓</span>
+          </button>
+        </div>
+
+        <!-- E1: KALLI -->
+        <div class="encounter-panel active" id="enc-0" role="tabpanel">
+          <div class="encounter-grid">
+            <!-- Mechanics -->
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--gold">⚔️</div>
+                <div>
+                  <div class="card-title">Mechanics</div>
+                  <div class="card-subtitle">Kalli, the Corrupted</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="mechanic-step">
+                  <span class="step-number">1</span>
+                  <div class="step-content">
+                    <div class="step-title">Match the 6 Plates</div>
+                    <div class="step-desc">Six symbols float around the center arena. Match each plate's symbol to one of the six. Assign one player per matching plate.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">2</span>
+                  <div class="step-content">
+                    <div class="step-title">Stand on Plates + Kill Knights</div>
+                    <div class="step-desc">All players stand on their assigned plate. A Taken Knight spawns near each — kill all six to begin the DPS phase on Kalli.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">3</span>
+                  <div class="step-content">
+                    <div class="step-title">DPS Phase</div>
+                    <div class="step-desc">Move to center and burn Kalli. When she readies her Ontological Weapon, six doors open around the room — all players must enter a door or wipe.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">4</span>
+                  <div class="step-content">
+                    <div class="step-title">Repeat Until Dead</div>
+                    <div class="step-desc">Kalli is typically one-phased with good DPS. Equip 3 Surge mods + 3 Reserve mods matching your heavy weapon element.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Roles -->
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--teal">👥</div>
+                <div>
+                  <div class="card-title">Role Assignments</div>
+                  <div class="card-subtitle">6-player fireteam</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="roles-grid">
+                  <div class="role-card">
+                    <div class="role-badge badge--all">× 6</div>
+                    <div class="role-name">Plate Holder</div>
+                    <div class="role-desc">Each player takes one of the six plates. Identify your symbol before the encounter starts.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--dps">× 1</div>
+                    <div class="role-name">Well / Rift</div>
+                    <div class="role-desc">Warlock drops Well of Radiance during DPS phase. Everyone stacks inside for damage buff.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--support">× 1</div>
+                    <div class="role-name">Ward Caller</div>
+                    <div class="role-desc">Calls out when Kalli preps her weapon so team enters doors in time. Watch her animation.</div>
+                  </div>
+                </div>
+                <p style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted);">
+                  <strong style="color: var(--color-warning);">Challenge:</strong> <em>Summoning Ritual</em> — summon and kill all three Ogres before each DPS phase.
+                </p>
+              </div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--success">✅</div>
+                <div>
+                  <div class="card-title">Pre-Encounter Checklist</div>
+                  <div class="card-subtitle">Tick off before pulling aggro</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <ul class="checklist" role="list" id="checklist-0">
+                  <li class="checklist-item" onclick="toggleCheck(this, 0)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg>
+                    </span>
+                    <span class="check-label">Equip 3× Surge mods matching heavy weapon</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 0)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg>
+                    </span>
+                    <span class="check-label">Equip 3× Reserve mods matching heavy weapon</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 0)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg>
+                    </span>
+                    <span class="check-label">Learn your plate symbol before encounter start</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 0)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg>
+                    </span>
+                    <span class="check-label">Warlock has Well of Radiance ready (or Rifts for DPS)</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 0)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg>
+                    </span>
+                    <span class="check-label">Highest burst-damage Super equipped for DPS phase</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 0)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg>
+                    </span>
+                    <span class="check-label">Doors noted — identify nearest door before DPS starts</span>
+                  </li>
+                </ul>
+                <button class="checklist-reset" onclick="resetChecklist(0)">Reset checklist</button>
+                <div style="margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--color-divider);">
+                  <button class="filter-chip" onclick="markEncounterCleared(0)" id="clear-btn-0" style="font-size: var(--text-xs); border-radius: var(--radius-md);">
+                    Mark Encounter Cleared
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Symbol Callouts -->
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--purple">🔮</div>
+                <div>
+                  <div class="card-title">Symbol Callouts</div>
+                  <div class="card-subtitle">16 Ahamkara symbols used across all encounters</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="callouts-grid">
+                  <div class="callout-symbol tooltip-trigger" data-tip="Points in a direction — call the animal + direction">
+                    <span class="callout-glyph">🐦</span>
+                    <span class="callout-name">Bird</span>
+                    <span class="callout-sub">+ direction</span>
+                  </div>
+                  <div class="callout-symbol tooltip-trigger" data-tip="Facing up, left, or right — call direction">
+                    <span class="callout-glyph">🐍</span>
+                    <span class="callout-name">Snake</span>
+                    <span class="callout-sub">+ direction</span>
+                  </div>
+                  <div class="callout-symbol tooltip-trigger" data-tip="Points a direction — call animal + direction">
+                    <span class="callout-glyph">🐟</span>
+                    <span class="callout-name">Fish</span>
+                    <span class="callout-sub">+ direction</span>
+                  </div>
+                  <div class="callout-symbol tooltip-trigger" data-tip="Four-legged dragon. Call the direction it faces">
+                    <span class="callout-glyph">🐉</span>
+                    <span class="callout-name">Dragon</span>
+                    <span class="callout-sub">+ direction</span>
+                  </div>
+                  <div class="callout-symbol">
+                    <span class="callout-glyph">🌳</span>
+                    <span class="callout-name">Tree</span>
+                    <span class="callout-sub">landmark</span>
+                  </div>
+                  <div class="callout-symbol">
+                    <span class="callout-glyph">🪨</span>
+                    <span class="callout-name">Rock</span>
+                    <span class="callout-sub">landmark</span>
+                  </div>
+                  <div class="callout-symbol">
+                    <span class="callout-glyph">🏛️</span>
+                    <span class="callout-name">Temple</span>
+                    <span class="callout-sub">landmark</span>
+                  </div>
+                  <div class="callout-symbol">
+                    <span class="callout-glyph">🪜</span>
+                    <span class="callout-name">Stairs</span>
+                    <span class="callout-sub">landmark</span>
+                  </div>
+                </div>
+                <p style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted); max-width: none;">
+                  16 total symbols split into 4 animals (Bird, Snake, Fish, Dragon) × 4 directions. Exceptions for Snake/Fish facing are common — agree on callouts before starting.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- E2: SHURO CHI -->
+        <div class="encounter-panel" id="enc-1" role="tabpanel">
+          <div class="encounter-grid">
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--gold">⚔️</div>
+                <div>
+                  <div class="card-title">Mechanics</div>
+                  <div class="card-subtitle">Shuro Chi, the Corrupted</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="mechanic-step">
+                  <span class="step-number">1</span>
+                  <div class="step-content">
+                    <div class="step-title">3 Floors, 6 DPS Phases</div>
+                    <div class="step-desc">Shuro Chi's health is divided into 6 segments. Two DPS phases per floor across three floors. Break each health bar segment.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">2</span>
+                  <div class="step-content">
+                    <div class="step-title">Tic-Tac-Toe Plate Puzzle</div>
+                    <div class="step-desc">Three rooms per floor, each has a 3×3 grid of symbols. Runners stand on the three plates matching the center device's symbols. Call middle symbol first.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">3</span>
+                  <div class="step-content">
+                    <div class="step-title">Kill Eye of Riven</div>
+                    <div class="step-desc">After puzzle, the Eye of Riven spawns. Kill it and collect the Taken Essence. Use the grenade ability to trigger DPS phase. Don't let the song timer expire!</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">4</span>
+                  <div class="step-content">
+                    <div class="step-title">Penumbral vs Antumbral</div>
+                    <div class="step-desc">Eye of Riven drops either Penumbral or Antumbral Taken Essence. Note which one — it must be popped on the matching plate type.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--teal">👥</div>
+                <div>
+                  <div class="card-title">Role Assignments</div>
+                  <div class="card-subtitle">Stairs · Trees · Rocks layout</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="roles-grid">
+                  <div class="role-card">
+                    <div class="role-badge badge--runner">× 3</div>
+                    <div class="role-name">Runner</div>
+                    <div class="role-desc">One Runner per room (Stairs, Trees, Rocks). Stand on all 3 plates, call middle symbol, solve the plate puzzle each cycle.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--all">× 3</div>
+                    <div class="role-name">Gunner</div>
+                    <div class="role-desc">One Gunner per room. Clear ads for the Runner. Pair with a Runner and defend them throughout each floor.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--dps">× 2</div>
+                    <div class="role-name">DPS Lead</div>
+                    <div class="role-desc">Coordinates when to pop Taken Essence and call DPS phase. Usually Runners from last active room after escape.</div>
+                  </div>
+                </div>
+                <p style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted);">
+                  <strong style="color: var(--color-warning);">Challenge:</strong> <em>Which Witch</em> — never get hit by Shuro Chi's long-range Arc attack.
+                </p>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--success">✅</div>
+                <div>
+                  <div class="card-title">Pre-Encounter Checklist</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <ul class="checklist" role="list" id="checklist-1">
+                  <li class="checklist-item" onclick="toggleCheck(this, 1)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Know your room assignment (Stairs / Trees / Rocks)</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 1)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Know your role: Runner or Gunner</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 1)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Understand Penumbral vs Antumbral plate matching</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 1)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Note when the music song timer is nearly expired</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 1)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Hunter Tether or Titan Banner Shield for DPS phases</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 1)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Know which floor you're switching to after each DPS</span>
+                  </li>
+                </ul>
+                <button class="checklist-reset" onclick="resetChecklist(1)">Reset checklist</button>
+                <div style="margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--color-divider);">
+                  <button class="filter-chip" onclick="markEncounterCleared(1)" id="clear-btn-1">Mark Encounter Cleared</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--purple">🔮</div>
+                <div>
+                  <div class="card-title">Pro Tips</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="mechanic-step">
+                  <span class="step-number" style="font-size: var(--text-base); opacity: 1; color: var(--color-teal);">💡</span>
+                  <div class="step-content">
+                    <div class="step-title">Stick to Your Plate</div>
+                    <div class="step-desc">Remember which plate you stood on — if you're off it in the tic-tac-toe phase, hop back on fast. Coordination wipes here more than anything else.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number" style="font-size: var(--text-base); opacity: 1; color: var(--color-teal);">💡</span>
+                  <div class="step-content">
+                    <div class="step-title">Forced Room Mechanic</div>
+                    <div class="step-desc">After solving, a force-field traps the Runner in their room. Other players call out which room is now open so the Runner knows which tunnel to take.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number" style="font-size: var(--text-base); opacity: 1; color: var(--color-teal);">💡</span>
+                  <div class="step-content">
+                    <div class="step-title">Hidden Chest</div>
+                    <div class="step-desc">First hidden chest is below the bridge just before this encounter. Find it for a chance at raid mods.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- E3: MORGETH -->
+        <div class="encounter-panel" id="enc-2" role="tabpanel">
+          <div class="encounter-grid">
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--gold">⚔️</div>
+                <div>
+                  <div class="card-title">Mechanics</div>
+                  <div class="card-subtitle">Morgeth, the Spirekeeper</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="mechanic-step">
+                  <span class="step-number">1</span>
+                  <div class="step-content">
+                    <div class="step-title">Taken Strength Stacking</div>
+                    <div class="step-desc">Taken Strength orbs spawn throughout the arena. You can hold a maximum of 2 at a time — grabbing a 3rd kills you instantly. Plan carefully.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">2</span>
+                  <div class="step-content">
+                    <div class="step-title">Designated Carrier</div>
+                    <div class="step-desc">Assign one player to pick up the FIRST Taken Strength and the LAST one. Their purpose is to never touch another until the final collection.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">3</span>
+                  <div class="step-content">
+                    <div class="step-title">Left Side Collection</div>
+                    <div class="step-desc">After first Taken Strength is grabbed, carrier runs to the left side. Other players collect additional orbs, rotating when at max stacks.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">4</span>
+                  <div class="step-content">
+                    <div class="step-title">Stagger & DPS</div>
+                    <div class="step-desc">Collect enough Taken Strength to stagger Morgeth. During stagger, all players unload maximum DPS. Rinse and repeat until dead.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--teal">👥</div>
+                <div>
+                  <div class="card-title">Role Assignments</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="roles-grid">
+                  <div class="role-card">
+                    <div class="role-badge badge--runner">× 1</div>
+                    <div class="role-name">First/Last Carrier</div>
+                    <div class="role-desc">Picks up first Taken Strength and reserves the last. Must not touch any other orb between these two events. Critical role.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--all">× 3–4</div>
+                    <div class="role-name">Orb Collectors</div>
+                    <div class="role-desc">Collect Taken Strength orbs, staying at or below 2 stacks. Hand off to the next player when maxed. Call your stack count.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--dps">× 1</div>
+                    <div class="role-name">Well / Support</div>
+                    <div class="role-desc">Warlock drops Well during DPS windows. Also calls stagger timing so team knows when to stack and burst.</div>
+                  </div>
+                </div>
+                <p style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted);">
+                  <strong style="color: var(--color-warning);">Challenge:</strong> <em>Forever Flight</em> — do NOT kill any Ogres that spawn during this encounter.
+                </p>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--success">✅</div>
+                <div>
+                  <div class="card-title">Pre-Encounter Checklist</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <ul class="checklist" role="list" id="checklist-2">
+                  <li class="checklist-item" onclick="toggleCheck(this, 2)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Assign First/Last Carrier role before starting</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 2)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">All players know the 2-stack max rule (3 = instant death)</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 2)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Good ad-clear weapon equipped (Morgeth spawns many ads)</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 2)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">For challenge: agree NOT to shoot Ogres</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 2)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Hidden chest location scouted (across large gap, before this encounter)</span>
+                  </li>
+                </ul>
+                <button class="checklist-reset" onclick="resetChecklist(2)">Reset checklist</button>
+                <div style="margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--color-divider);">
+                  <button class="filter-chip" onclick="markEncounterCleared(2)" id="clear-btn-2">Mark Encounter Cleared</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--purple">🔮</div>
+                <div>
+                  <div class="card-title">Key Notes</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="mechanic-step">
+                  <span class="step-number" style="font-size: var(--text-base); opacity: 1; color: var(--color-warning);">⚠️</span>
+                  <div class="step-content">
+                    <div class="step-title">3 Stacks = Instant Wipe</div>
+                    <div class="step-desc">The most common cause of death here. Call out your current stack count constantly. If you see 2 stacks on yourself, move away from orbs immediately.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number" style="font-size: var(--text-base); opacity: 1; color: var(--color-teal);">💡</span>
+                  <div class="step-content">
+                    <div class="step-title">Power Creep Makes This Easy</div>
+                    <div class="step-desc">Morgeth can usually be one-phased in the current meta. Focus on collecting enough orbs to get one stagger and dump everything into the boss.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- E4: THE VAULT -->
+        <div class="encounter-panel" id="enc-3" role="tabpanel">
+          <div class="encounter-grid">
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--gold">⚔️</div>
+                <div>
+                  <div class="card-title">Mechanics</div>
+                  <div class="card-subtitle">Open the Vault</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="mechanic-step">
+                  <span class="step-number">1</span>
+                  <div class="step-content">
+                    <div class="step-title">Three Rooms, Three Locations</div>
+                    <div class="step-desc">The Vault has three locations: Stairs (left), Trees (middle), and Rocks (right). Same layout as Shuro Chi. Assign teams of two to each.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">2</span>
+                  <div class="step-content">
+                    <div class="step-title">Identify Open Room</div>
+                    <div class="step-desc">A Taken wall blocks 2 of the 3 rooms. One room is always open. The player whose room is open enters, kills the Eye of Riven, and takes the Essence.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">3</span>
+                  <div class="step-content">
+                    <div class="step-title">Force Field Rotation</div>
+                    <div class="step-desc">After taking the Essence, a force field traps the Runner. Others tell them which room is now open. Runner takes the side tunnel to escape to the open room.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">4</span>
+                  <div class="step-content">
+                    <div class="step-title">Pop on Matching Plate × 2</div>
+                    <div class="step-desc">Repeat the cycle twice — collect two Essences total, popping each on its matching plate to open the vault. Then DPS the boss.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--teal">👥</div>
+                <div>
+                  <div class="card-title">Role Assignments</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="roles-grid">
+                  <div class="role-card">
+                    <div class="role-badge badge--runner">× 3</div>
+                    <div class="role-name">Runner</div>
+                    <div class="role-desc">One Runner per room. Enters open room, kills Eye, takes Essence. Navigates tunnel to next open room when trapped.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--all">× 3</div>
+                    <div class="role-name">Gunner</div>
+                    <div class="role-desc">Defends their Runner. Calls which room is unblocked after force-field swap. Heavy ad-clear focus.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--support">× 1+</div>
+                    <div class="role-name">Knight Killer</div>
+                    <div class="role-desc">For the challenge: kill all Might of Riven Knights before they reach the center. Assign fastest-DPS players.</div>
+                  </div>
+                </div>
+                <p style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted);">
+                  <strong style="color: var(--color-warning);">Challenge:</strong> <em>Keep Out</em> — kill all Might of Riven Knights before they reach the chamber center.
+                </p>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--success">✅</div>
+                <div>
+                  <div class="card-title">Pre-Encounter Checklist</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <ul class="checklist" role="list" id="checklist-3">
+                  <li class="checklist-item" onclick="toggleCheck(this, 3)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Assign Stairs / Trees / Rocks room assignments</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 3)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Know which tunnel connects to which room</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 3)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Understand Penumbral vs Antumbral plate distinction</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 3)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Heavy DPS weapons ready for vault boss encounter</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 3)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Survival loadout on Runners — survivability over raw DPS</span>
+                  </li>
+                </ul>
+                <button class="checklist-reset" onclick="resetChecklist(3)">Reset checklist</button>
+                <div style="margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--color-divider);">
+                  <button class="filter-chip" onclick="markEncounterCleared(3)" id="clear-btn-3">Mark Encounter Cleared</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--purple">🔮</div>
+                <div>
+                  <div class="card-title">Vault Layout</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); margin-bottom: var(--space-4);">
+                  <div style="text-align: center; padding: var(--space-4); background: var(--color-surface-offset); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                    <div style="font-size: 20px; margin-bottom: var(--space-1);">🪜</div>
+                    <div style="font-family: var(--font-display); font-size: var(--text-xs); color: var(--color-primary); font-weight: 700;">STAIRS</div>
+                    <div style="font-size: 10px; color: var(--color-text-muted); margin-top: var(--space-1);">Left Room</div>
+                  </div>
+                  <div style="text-align: center; padding: var(--space-4); background: var(--color-surface-offset); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                    <div style="font-size: 20px; margin-bottom: var(--space-1);">🌳</div>
+                    <div style="font-family: var(--font-display); font-size: var(--text-xs); color: var(--color-primary); font-weight: 700;">TREES</div>
+                    <div style="font-size: 10px; color: var(--color-text-muted); margin-top: var(--space-1);">Middle Room</div>
+                  </div>
+                  <div style="text-align: center; padding: var(--space-4); background: var(--color-surface-offset); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                    <div style="font-size: 20px; margin-bottom: var(--space-1);">🪨</div>
+                    <div style="font-family: var(--font-display); font-size: var(--font-display); font-size: var(--text-xs); color: var(--color-primary); font-weight: 700;">ROCKS</div>
+                    <div style="font-size: 10px; color: var(--color-text-muted); margin-top: var(--space-1);">Right Room</div>
+                  </div>
+                </div>
+                <p style="font-size: var(--text-xs); color: var(--color-text-muted);">Side tunnels connect adjacent rooms. Communicate the open room immediately after force-field swap — trapped Runners have limited time to escape.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- E5: RIVEN -->
+        <div class="encounter-panel" id="enc-4" role="tabpanel">
+          <div class="encounter-grid">
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--gold">⚔️</div>
+                <div>
+                  <div class="card-title">Mechanics</div>
+                  <div class="card-subtitle">Riven of a Thousand Voices</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="mechanic-step">
+                  <span class="step-number">1</span>
+                  <div class="step-content">
+                    <div class="step-title">Split Into Two Rooms</div>
+                    <div class="step-desc">Six players split into two rooms of three. Each room has Riven appearing — look for her eyes. Three players per room. There's a hidden starting room — run right from spawn, jump down 2 floors.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">2</span>
+                  <div class="step-content">
+                    <div class="step-title">Shoot the Eyes</div>
+                    <div class="step-desc">Riven shows 2 eyes per stage, then more. Each guardian in the room memorizes which eyes they hit. For the Challenge: never shoot the same eye twice.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">3</span>
+                  <div class="step-content">
+                    <div class="step-title">DPS Phase — Mouth</div>
+                    <div class="step-desc">When Riven opens her mouth, unload all DPS into it. She has 4 stages of eye reveals. Final stage has a black ball in her mouth — that's your main damage window.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number">4</span>
+                  <div class="step-content">
+                    <div class="step-title">Queenswalk — Carry the Heart</div>
+                    <div class="step-desc">After Riven dies: the Fates Chosen carries the Heart with a countdown timer. Call the last 10 seconds. When teleported to Eternity, non-carriers pick up 1 blight ASAP to extend timer. Escort heart to the dunking point.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--teal">👥</div>
+                <div>
+                  <div class="card-title">Role Assignments</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div class="roles-grid">
+                  <div class="role-card">
+                    <div class="role-badge badge--all">× 3</div>
+                    <div class="role-name">Room A Team</div>
+                    <div class="role-desc">Three guardians in left Riven room. Each memorizes which eyes they shoot across all 4 stages. Do not re-shoot your eyes for the challenge.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--all">× 3</div>
+                    <div class="role-name">Room B Team</div>
+                    <div class="role-desc">Three guardians in right Riven room. Same rules. Communicate with Room A team via callouts — Riven's rooms are mirrored.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--runner">× 1</div>
+                    <div class="role-name">Blight Keeper</div>
+                    <div class="role-desc">During Queenswalk, responsible for collecting the final blight to extend timer. Designated first teleported player. Most important Queenswalk role.</div>
+                  </div>
+                  <div class="role-card">
+                    <div class="role-badge badge--dps">× 1</div>
+                    <div class="role-name">Heart Carrier</div>
+                    <div class="role-desc">Fates Chosen — carries Riven's Heart. Calls timer ("10 seconds!"). Move with the group toward dunk point. Everyone protects the carrier.</div>
+                  </div>
+                </div>
+                <p style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted);">
+                  <strong style="color: var(--color-warning);">Challenge:</strong> <em>Strength of Memory</em> — never shoot the same Riven eye more than once.
+                </p>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--success">✅</div>
+                <div>
+                  <div class="card-title">Pre-Encounter Checklist</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <ul class="checklist" role="list" id="checklist-4">
+                  <li class="checklist-item" onclick="toggleCheck(this, 4)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Assign Room A and Room B teams (3 per room)</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 4)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Designate Blight Keeper for Queenswalk</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 4)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Best DPS loadout equipped — swords + heavy weapons</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 4)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Everyone knows the hidden starting room path</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 4)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Plan first teleport order for Queenswalk</span>
+                  </li>
+                  <li class="checklist-item" onclick="toggleCheck(this, 4)" role="checkbox" aria-checked="false" tabindex="0">
+                    <span class="check-box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" class="check-icon" style="display:none"><polyline points="2,6 5,9 10,3"/></svg></span>
+                    <span class="check-label">Challenges active? Note eyes you shoot — no repeat shots</span>
+                  </li>
+                </ul>
+                <button class="checklist-reset" onclick="resetChecklist(4)">Reset checklist</button>
+                <div style="margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--color-divider);">
+                  <button class="filter-chip" onclick="markEncounterCleared(4)" id="clear-btn-4">Mark Encounter Cleared</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="encounter-card">
+              <div class="encounter-card-header">
+                <div class="card-icon card-icon--purple">🏆</div>
+                <div>
+                  <div class="card-title">Riven Drop Info</div>
+                </div>
+              </div>
+              <div class="encounter-card-body">
+                <div style="padding: var(--space-4); background: var(--color-primary-highlight); border: 1px solid color-mix(in oklab, var(--color-primary) 40%, transparent); border-radius: var(--radius-lg); margin-bottom: var(--space-4);">
+                  <div style="font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--color-primary); margin-bottom: var(--space-2);">One Thousand Voices</div>
+                  <div style="font-size: var(--text-xs); color: var(--color-text-muted);">Solar Exotic Fusion Rifle. 5% base drop rate from Riven. Completing raid challenges improves odds. Most coveted exotic in Last Wish.</div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number" style="font-size: var(--text-base); opacity: 1; color: var(--color-teal);">💡</span>
+                  <div class="step-content">
+                    <div class="step-title">Queenswalk Countdown</div>
+                    <div class="step-desc">The toughest Queenswalk moment is the final seconds. Pick up a blight immediately when teleported to Eternity — this saves you scrambling at the last second.</div>
+                  </div>
+                </div>
+                <div class="mechanic-step">
+                  <span class="step-number" style="font-size: var(--text-base); opacity: 1; color: var(--color-teal);">💡</span>
+                  <div class="step-content">
+                    <div class="step-title">Blight Keeper Timing</div>
+                    <div class="step-desc">Blight Keeper should pick up the last Taken Strength as late as possible into the timer — this maximizes the time extension for the outside carrier player.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOOT TABLE -->
+    <section class="section" id="loot">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-label">Loot</div>
+            <h2 class="section-title">Weapons &amp; Armor</h2>
+          </div>
+          <p class="section-desc">8 craftable legendaries + One Thousand Voices. Curated drops per encounter.</p>
+        </div>
+
+        <!-- Encounter loot table -->
+        <div style="margin-bottom: var(--space-10);">
+          <h3 style="font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-4); letter-spacing: 0.04em;">Curated Drops by Encounter</h3>
+          <div class="encounter-loot-grid">
+            <div class="loot-column">
+              <div class="loot-column-header">
+                <div class="loot-col-num">E1</div>
+                <div class="loot-col-name">Kalli</div>
+              </div>
+              <div class="loot-item loot-item--curated">Age-Old Bond</div>
+              <div class="loot-item" style="font-style: italic;">+ Random Weapon</div>
+              <div class="loot-item" style="font-style: italic;">+ Random Armor</div>
+            </div>
+            <div class="loot-column">
+              <div class="loot-column-header">
+                <div class="loot-col-num">E2</div>
+                <div class="loot-col-name">Shuro Chi</div>
+              </div>
+              <div class="loot-item loot-item--curated">Transfiguration</div>
+              <div class="loot-item" style="font-style: italic;">+ Random Weapon</div>
+              <div class="loot-item" style="font-style: italic;">+ Random Armor</div>
+            </div>
+            <div class="loot-column">
+              <div class="loot-column-header">
+                <div class="loot-col-num">E3</div>
+                <div class="loot-col-name">Morgeth</div>
+              </div>
+              <div class="loot-item loot-item--curated">Nation of Beasts</div>
+              <div class="loot-item" style="font-style: italic;">+ Random Weapon</div>
+              <div class="loot-item" style="font-style: italic;">+ Random Armor</div>
+            </div>
+            <div class="loot-column">
+              <div class="loot-column-header">
+                <div class="loot-col-num">E4</div>
+                <div class="loot-col-name">The Vault</div>
+              </div>
+              <div class="loot-item loot-item--curated">Tyranny of Heaven</div>
+              <div class="loot-item" style="font-style: italic;">+ Random Weapon</div>
+              <div class="loot-item" style="font-style: italic;">+ Random Armor</div>
+            </div>
+            <div class="loot-column">
+              <div class="loot-column-header">
+                <div class="loot-col-num">E5</div>
+                <div class="loot-col-name">Riven</div>
+              </div>
+              <div class="loot-item loot-item--exotic">One Thousand Voices</div>
+              <div class="loot-item loot-item--curated">Chattering Bone</div>
+              <div class="loot-item" style="font-style: italic;">+ Random Weapon</div>
+              <div class="loot-item" style="font-style: italic;">+ Random Armor</div>
+            </div>
+          </div>
+          <p style="font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-3);">Any encounter also drops random legendary weapons from the full pool of 8. Secret chests provide random legendaries + potential raid mods. Farmable when Last Wish is the featured weekly raid.</p>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="loot-filter-bar" role="group" aria-label="Filter weapons by element">
+          <button class="filter-chip active" onclick="filterWeapons('all', this)">All Weapons</button>
+          <button class="filter-chip" onclick="filterWeapons('solar', this)">
+            <span class="element-dot element-dot--solar"></span>Solar
+          </button>
+          <button class="filter-chip" onclick="filterWeapons('arc', this)">
+            <span class="element-dot element-dot--arc"></span>Arc
+          </button>
+          <button class="filter-chip" onclick="filterWeapons('void', this)">
+            <span class="element-dot element-dot--void"></span>Void
+          </button>
+          <button class="filter-chip" onclick="filterWeapons('kinetic', this)">
+            <span class="element-dot element-dot--kinetic"></span>Kinetic
+          </button>
+        </div>
+
+        <div class="weapons-grid" id="weapons-grid">
+
+          <!-- One Thousand Voices -->
+          <div class="weapon-card" data-element="solar">
+            <div class="weapon-header">
+              <div class="weapon-icon">🔥</div>
+              <div class="weapon-meta">
+                <div class="weapon-name">One Thousand Voices</div>
+                <div class="weapon-type">Fusion Rifle · Adaptive</div>
+              </div>
+              <div class="weapon-element-badge element--solar">Solar</div>
+            </div>
+            <div class="weapon-body">
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+                <span class="exotic-tag">⭐ Exotic</span>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">Exotic Perks</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--primary">Ahamkara's Eye</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--primary">Unforeseen Repercussions</span>
+                </div>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">Catalyst</div>
+                <div class="perk-row">
+                  <span class="perk-tag">+30 Stability</span>
+                  <span class="perk-tag">+20 Inventory Size</span>
+                </div>
+              </div>
+            </div>
+            <div class="weapon-footer">
+              <span class="drop-source">Drops from Riven only — 5% base</span>
+            </div>
+          </div>
+
+          <!-- Apex Predator -->
+          <div class="weapon-card" data-element="solar">
+            <div class="weapon-header">
+              <div class="weapon-icon">🚀</div>
+              <div class="weapon-meta">
+                <div class="weapon-name">Apex Predator</div>
+                <div class="weapon-type">Rocket Launcher · Adaptive</div>
+              </div>
+              <div class="weapon-element-badge element--solar">Solar</div>
+            </div>
+            <div class="weapon-body">
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+                <span class="craftable-tag">✦ Craftable</span>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvE God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--primary">Reconstruction</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--primary">Bait and Switch</span>
+                </div>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">Also Good</div>
+                <div class="perk-row">
+                  <span class="perk-tag">Surrounded</span>
+                  <span class="perk-tag">Explosive Light</span>
+                </div>
+              </div>
+            </div>
+            <div class="weapon-footer">
+              <span class="drop-source">Any encounter</span>
+            </div>
+          </div>
+
+          <!-- Age-Old Bond -->
+          <div class="weapon-card" data-element="void">
+            <div class="weapon-header">
+              <div class="weapon-icon">💜</div>
+              <div class="weapon-meta">
+                <div class="weapon-name">Age-Old Bond</div>
+                <div class="weapon-type">Auto Rifle · High-Impact</div>
+              </div>
+              <div class="weapon-element-badge element--void">Void</div>
+            </div>
+            <div class="weapon-body">
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+                <span class="craftable-tag">✦ Craftable</span>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvE God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--primary">Repulsor Brace</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--primary">Destabilizing Rounds</span>
+                </div>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">Alt PvE / PvP</div>
+                <div class="perk-row">
+                  <span class="perk-tag">4th Time's the Charm</span>
+                  <span class="perk-tag">Target Lock</span>
+                  <span class="perk-tag">Kill Clip</span>
+                </div>
+              </div>
+            </div>
+            <div class="weapon-footer">
+              <span class="drop-source">Curated: Kalli (E1)</span>
+            </div>
+          </div>
+
+          <!-- Chattering Bone -->
+          <div class="weapon-card" data-element="kinetic">
+            <div class="weapon-header">
+              <div class="weapon-icon">🩶</div>
+              <div class="weapon-meta">
+                <div class="weapon-name">Chattering Bone</div>
+                <div class="weapon-type">Pulse Rifle · Lightweight</div>
+              </div>
+              <div class="weapon-element-badge element--kinetic">Kinetic</div>
+            </div>
+            <div class="weapon-body">
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+                <span class="craftable-tag">✦ Craftable</span>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvE God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--primary">Kill Clip</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--primary">Kinetic Tremors</span>
+                </div>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvP God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--secondary">Kill Clip</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--secondary">Rampage</span>
+                </div>
+              </div>
+            </div>
+            <div class="weapon-footer">
+              <span class="drop-source">Curated: Riven (E5)</span>
+            </div>
+          </div>
+
+          <!-- Nation of Beasts -->
+          <div class="weapon-card" data-element="arc">
+            <div class="weapon-header">
+              <div class="weapon-icon">⚡</div>
+              <div class="weapon-meta">
+                <div class="weapon-name">Nation of Beasts</div>
+                <div class="weapon-type">Hand Cannon · Adaptive</div>
+              </div>
+              <div class="weapon-element-badge element--arc">Arc</div>
+            </div>
+            <div class="weapon-body">
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+                <span class="craftable-tag">✦ Craftable</span>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvE God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--primary">Dragonfly</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--primary">Voltshot</span>
+                </div>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvP God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--secondary">Keep Away</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--secondary">Explosive Payload</span>
+                </div>
+              </div>
+            </div>
+            <div class="weapon-footer">
+              <span class="drop-source">Curated: Morgeth (E3)</span>
+            </div>
+          </div>
+
+          <!-- Techeun Force -->
+          <div class="weapon-card" data-element="arc">
+            <div class="weapon-header">
+              <div class="weapon-icon">🌩️</div>
+              <div class="weapon-meta">
+                <div class="weapon-name">Techeun Force</div>
+                <div class="weapon-type">Fusion Rifle · Adaptive</div>
+              </div>
+              <div class="weapon-element-badge element--arc">Arc</div>
+            </div>
+            <div class="weapon-body">
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+                <span class="craftable-tag">✦ Craftable</span>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvE God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--primary">Rewind Rounds</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--primary">Controlled Burst</span>
+                </div>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">Alt PvE</div>
+                <div class="perk-row">
+                  <span class="perk-tag">Reconstruction</span>
+                  <span class="perk-tag">High-Impact Reserves</span>
+                </div>
+              </div>
+            </div>
+            <div class="weapon-footer">
+              <span class="drop-source">Any encounter</span>
+            </div>
+          </div>
+
+          <!-- The Supremacy -->
+          <div class="weapon-card" data-element="kinetic">
+            <div class="weapon-header">
+              <div class="weapon-icon">🎯</div>
+              <div class="weapon-meta">
+                <div class="weapon-name">The Supremacy</div>
+                <div class="weapon-type">Sniper Rifle · Rapid-Fire</div>
+              </div>
+              <div class="weapon-element-badge element--kinetic">Kinetic</div>
+            </div>
+            <div class="weapon-body">
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+                <span class="craftable-tag">✦ Craftable</span>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvE God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--primary">Rewind Rounds</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--primary">Fourth Time's the Charm</span>
+                </div>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvP God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--secondary">Snapshot Sights</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--secondary">Opening Shot</span>
+                </div>
+              </div>
+            </div>
+            <div class="weapon-footer">
+              <span class="drop-source">Any encounter</span>
+            </div>
+          </div>
+
+          <!-- Transfiguration -->
+          <div class="weapon-card" data-element="kinetic">
+            <div class="weapon-header">
+              <div class="weapon-icon">🔭</div>
+              <div class="weapon-meta">
+                <div class="weapon-name">Transfiguration</div>
+                <div class="weapon-type">Scout Rifle · High-Impact</div>
+              </div>
+              <div class="weapon-element-badge element--kinetic">Kinetic</div>
+            </div>
+            <div class="weapon-body">
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+                <span class="craftable-tag">✦ Craftable</span>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvE God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--primary">Rapid Hit</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--primary">Kinetic Tremors</span>
+                </div>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvP God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--secondary">Rampage</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--secondary">Kill Clip</span>
+                </div>
+              </div>
+            </div>
+            <div class="weapon-footer">
+              <span class="drop-source">Curated: Shuro Chi (E2)</span>
+            </div>
+          </div>
+
+          <!-- Tyranny of Heaven -->
+          <div class="weapon-card" data-element="solar">
+            <div class="weapon-header">
+              <div class="weapon-icon">🏹</div>
+              <div class="weapon-meta">
+                <div class="weapon-name">Tyranny of Heaven</div>
+                <div class="weapon-type">Combat Bow · Lightweight</div>
+              </div>
+              <div class="weapon-element-badge element--solar">Solar</div>
+            </div>
+            <div class="weapon-body">
+              <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+                <span class="craftable-tag">✦ Craftable</span>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvE God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--primary">Archer's Tempo</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--primary">Incandescent</span>
+                </div>
+              </div>
+              <div class="godroll-section">
+                <div class="godroll-label">PvP God Roll</div>
+                <div class="perk-row">
+                  <span class="perk-tag perk-tag--secondary">Explosive Head</span>
+                  <span class="perk-separator">+</span>
+                  <span class="perk-tag perk-tag--secondary">Golden Tricorn</span>
+                </div>
+              </div>
+            </div>
+            <div class="weapon-footer">
+              <span class="drop-source">Curated: Vault (E4)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Armor Set -->
+        <div style="margin-top: var(--space-10);">
+          <h3 style="font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-4); letter-spacing: 0.04em;">Great Hunt Armor Sets</h3>
+          <div style="overflow-x: auto;">
+            <table style="min-width: 600px; border-collapse: collapse;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--color-border);">
+                  <th style="text-align: left; padding: var(--space-3) var(--space-4); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-faint);">Slot</th>
+                  <th style="text-align: left; padding: var(--space-3) var(--space-4); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #f0902a;">Hunter</th>
+                  <th style="text-align: left; padding: var(--space-3) var(--space-4); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #7eb5f5;">Titan</th>
+                  <th style="text-align: left; padding: var(--space-3) var(--space-4); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #9c6fd4;">Warlock</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--color-divider);">
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;">Helmet</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Mask of the Great Hunt</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Helm of the Great Hunt</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Hood of the Great Hunt</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-divider); background: var(--color-surface-offset);">
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;">Gauntlets</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Grips of the Great Hunt</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Gauntlets of the Great Hunt</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Gloves of the Great Hunt</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-divider);">
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;">Chest</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Vest of the Great Hunt</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Plate of the Great Hunt</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Robes of the Great Hunt</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--color-divider); background: var(--color-surface-offset);">
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;">Legs</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Strides of the Great Hunt</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Greaves of the Great Hunt</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Boots of the Great Hunt</td>
+                </tr>
+                <tr>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;">Bond / Mark / Cloak</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Cloak of the Great Hunt</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Mark of the Great Hunt</td>
+                  <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Bond of the Great Hunt</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-3);">Master difficulty grants higher-stat armor with rotating weekly stat focus. Drops from any encounter or secret chests.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOADOUTS -->
+    <section class="section" id="loadouts">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-label">Loadouts</div>
+            <h2 class="section-title">Recommended Builds</h2>
+          </div>
+          <p class="section-desc">Optimized loadouts for each role and encounter type.</p>
+        </div>
+
+        <div class="loadout-tabs" role="tablist">
+          <button class="loadout-tab active" onclick="switchLoadoutTab('dps', this)" role="tab">DPS Builds</button>
+          <button class="loadout-tab" onclick="switchLoadoutTab('support', this)" role="tab">Support Builds</button>
+          <button class="loadout-tab" onclick="switchLoadoutTab('runner', this)" role="tab">Runner Builds</button>
+        </div>
+
+        <!-- DPS Builds -->
+        <div class="loadout-panel active" id="loadout-dps">
+          <div class="loadout-grid">
+
+            <div class="loadout-card">
+              <div class="loadout-header">
+                <div class="loadout-title">Solar DPS — All-Class</div>
+                <div class="loadout-class">
+                  <span class="class-badge class--all">All Classes</span>
+                </div>
+              </div>
+              <div class="loadout-body">
+                <div class="loadout-slots">
+                  <div class="loadout-slot">
+                    <div class="slot-icon">🔫</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Kinetic</div>
+                      <div class="slot-weapon">Transfiguration / The Supremacy</div>
+                      <div class="slot-reason">Sustained damage + orb generation</div>
+                    </div>
+                  </div>
+                  <div class="loadout-slot">
+                    <div class="slot-icon">🔥</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Energy · Solar</div>
+                      <div class="slot-weapon">Apex Predator / Tyranny of Heaven</div>
+                      <div class="slot-reason">Bait and Switch for max DPS</div>
+                    </div>
+                  </div>
+                  <div class="loadout-slot">
+                    <div class="slot-icon">⚔️</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Heavy</div>
+                      <div class="slot-weapon">Goldie / Sword / Linear Fusion</div>
+                      <div class="slot-reason">Boss DPS — coordinate with fireteam</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="loadout-mods">
+                  <div class="mods-label">Key Mods</div>
+                  <div class="mod-tags">
+                    <span class="mod-tag">×3 Solar Surge</span>
+                    <span class="mod-tag">×3 Solar Reserves</span>
+                    <span class="mod-tag">Taken Armaments</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="loadout-card">
+              <div class="loadout-header">
+                <div class="loadout-title">Void DPS — Hunter</div>
+                <div class="loadout-class">
+                  <span class="class-badge class--hunter">Hunter</span>
+                </div>
+              </div>
+              <div class="loadout-body">
+                <div class="loadout-slots">
+                  <div class="loadout-slot">
+                    <div class="slot-icon">💜</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Energy · Void</div>
+                      <div class="slot-weapon">Age-Old Bond</div>
+                      <div class="slot-reason">Repulsor Brace + Destabilizing Rounds = Void loop</div>
+                    </div>
+                  </div>
+                  <div class="loadout-slot">
+                    <div class="slot-icon">🎯</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Kinetic</div>
+                      <div class="slot-weapon">Chattering Bone</div>
+                      <div class="slot-reason">Add clear + Kinetic Tremors for extra damage</div>
+                    </div>
+                  </div>
+                  <div class="loadout-slot">
+                    <div class="slot-icon">⚔️</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Heavy</div>
+                      <div class="slot-weapon">Apex Predator (Void Surge)</div>
+                      <div class="slot-reason">Switch surge mods to match heavy element</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="loadout-mods">
+                  <div class="mods-label">Super Choice</div>
+                  <div class="mod-tags">
+                    <span class="mod-tag">Deadfall Tether — DPS debuff</span>
+                    <span class="mod-tag">Taken Invigoration</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="loadout-card">
+              <div class="loadout-header">
+                <div class="loadout-title">Arc DPS — Titan</div>
+                <div class="loadout-class">
+                  <span class="class-badge class--titan">Titan</span>
+                </div>
+              </div>
+              <div class="loadout-body">
+                <div class="loadout-slots">
+                  <div class="loadout-slot">
+                    <div class="slot-icon">⚡</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Energy · Arc</div>
+                      <div class="slot-weapon">Nation of Beasts</div>
+                      <div class="slot-reason">Dragonfly + Voltshot for explosive add clear</div>
+                    </div>
+                  </div>
+                  <div class="loadout-slot">
+                    <div class="slot-icon">🌩️</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Energy · Arc</div>
+                      <div class="slot-weapon">Techeun Force</div>
+                      <div class="slot-reason">Rewind Rounds + Controlled Burst for sustained DPS</div>
+                    </div>
+                  </div>
+                  <div class="loadout-slot">
+                    <div class="slot-icon">💣</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Heavy</div>
+                      <div class="slot-weapon">Arc Linear Fusion / Rocket</div>
+                      <div class="slot-reason">Coordinate with team — 3× Arc Surge mods</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="loadout-mods">
+                  <div class="mods-label">Super Choice</div>
+                  <div class="mod-tags">
+                    <span class="mod-tag">Banner of War — high uptime</span>
+                    <span class="mod-tag">Taken Barrer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Support Builds -->
+        <div class="loadout-panel" id="loadout-support">
+          <div class="loadout-grid">
+
+            <div class="loadout-card">
+              <div class="loadout-header">
+                <div class="loadout-title">Well of Radiance</div>
+                <div class="loadout-class">
+                  <span class="class-badge class--warlock">Warlock</span>
+                </div>
+              </div>
+              <div class="loadout-body">
+                <div class="loadout-slots">
+                  <div class="loadout-slot">
+                    <div class="slot-icon">☀️</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Super</div>
+                      <div class="slot-weapon">Well of Radiance</div>
+                      <div class="slot-reason">Mandatory for boss DPS phases. Stay in the well.</div>
+                    </div>
+                  </div>
+                  <div class="loadout-slot">
+                    <div class="slot-icon">🔥</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Energy · Solar</div>
+                      <div class="slot-weapon">Apex Predator / Tyranny of Heaven</div>
+                      <div class="slot-reason">Solar Surge mods stack with well buff</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="loadout-mods">
+                  <div class="mods-label">Exotics / Mods</div>
+                  <div class="mod-tags">
+                    <span class="mod-tag">Lunafaction Boots</span>
+                    <span class="mod-tag">Super Regen</span>
+                    <span class="mod-tag">Taken Repurposing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="loadout-card">
+              <div class="loadout-header">
+                <div class="loadout-title">Taken Barrier — Titan</div>
+                <div class="loadout-class">
+                  <span class="class-badge class--titan">Titan</span>
+                </div>
+              </div>
+              <div class="loadout-body">
+                <div class="loadout-slots">
+                  <div class="loadout-slot">
+                    <div class="slot-icon">🛡️</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Super</div>
+                      <div class="slot-weapon">Ward of Dawn</div>
+                      <div class="slot-reason">Overshield + Weapons of Light if running Saint-14</div>
+                    </div>
+                  </div>
+                  <div class="loadout-slot">
+                    <div class="slot-icon">💜</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Void</div>
+                      <div class="slot-weapon">Age-Old Bond</div>
+                      <div class="slot-reason">Orb generation for the fireteam</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="loadout-mods">
+                  <div class="mods-label">Exotic / Mods</div>
+                  <div class="mod-tags">
+                    <span class="mod-tag">Saint-14 Helmet</span>
+                    <span class="mod-tag">Taken Barrer</span>
+                    <span class="mod-tag">Void Surge ×3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Runner Builds -->
+        <div class="loadout-panel" id="loadout-runner">
+          <div class="loadout-grid">
+
+            <div class="loadout-card">
+              <div class="loadout-header">
+                <div class="loadout-title">Shuro Chi / Vault Runner</div>
+                <div class="loadout-class">
+                  <span class="class-badge class--all">Any Class</span>
+                </div>
+              </div>
+              <div class="loadout-body">
+                <div class="loadout-slots">
+                  <div class="loadout-slot">
+                    <div class="slot-icon">🔫</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Kinetic</div>
+                      <div class="slot-weapon">Chattering Bone / Scout Rifle</div>
+                      <div class="slot-reason">Fast kills on Eye of Riven</div>
+                    </div>
+                  </div>
+                  <div class="loadout-slot">
+                    <div class="slot-icon">🌀</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Class Ability</div>
+                      <div class="slot-weapon">Short cooldown — Dodge / Blink</div>
+                      <div class="slot-reason">Speed is essential for puzzle solving under pressure</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="loadout-mods">
+                  <div class="mods-label">Priority</div>
+                  <div class="mod-tags">
+                    <span class="mod-tag">Mobility stat 100</span>
+                    <span class="mod-tag">Taken Invigoration</span>
+                    <span class="mod-tag">Powerful Friends</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="loadout-card">
+              <div class="loadout-header">
+                <div class="loadout-title">Morgeth Carrier</div>
+                <div class="loadout-class">
+                  <span class="class-badge class--hunter">Hunter</span>
+                  <span class="class-badge class--warlock">Warlock</span>
+                </div>
+              </div>
+              <div class="loadout-body">
+                <div class="loadout-slots">
+                  <div class="loadout-slot">
+                    <div class="slot-icon">🛡️</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Survivability</div>
+                      <div class="slot-weapon">High Resilience Build</div>
+                      <div class="slot-reason">Carriers need to stay alive while orb-saturated</div>
+                    </div>
+                  </div>
+                  <div class="loadout-slot">
+                    <div class="slot-icon">⚡</div>
+                    <div class="slot-info">
+                      <div class="slot-type">Ad Clear</div>
+                      <div class="slot-weapon">Nation of Beasts / Age-Old Bond</div>
+                      <div class="slot-reason">Crowd control while navigating orbs</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="loadout-mods">
+                  <div class="mods-label">Priority Stats</div>
+                  <div class="mod-tags">
+                    <span class="mod-tag">Resilience ≥7</span>
+                    <span class="mod-tag">Recovery high</span>
+                    <span class="mod-tag">Taken Barrer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section class="section" id="challenges">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-label">Challenges</div>
+            <h2 class="section-title">Weekly Challenges</h2>
+          </div>
+          <p class="section-desc">Complete for bonus drops and improved One Thousand Voices odds. Click to track completion.</p>
+        </div>
+
+        <div class="challenges-list" id="challenges-list">
+
+          <div class="challenge-card" onclick="toggleChallenge(this)" tabindex="0" role="checkbox" aria-checked="false">
+            <div class="challenge-icon">⚔️</div>
+            <div class="challenge-content">
+              <div class="challenge-title">Summoning Ritual</div>
+              <div class="challenge-encounter">Encounter 1 · Kalli, the Corrupted</div>
+              <div class="challenge-desc">Summon and kill all three Ogres that appear before each DPS phase. Do not skip them — they must be defeated before engaging Kalli in damage.</div>
+              <div class="challenge-reward">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Extra drops + increased 1KV odds
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-card" onclick="toggleChallenge(this)" tabindex="0" role="checkbox" aria-checked="false">
+            <div class="challenge-icon">🏃</div>
+            <div class="challenge-content">
+              <div class="challenge-title">Which Witch</div>
+              <div class="challenge-encounter">Encounter 2 · Shuro Chi, the Corrupted</div>
+              <div class="challenge-desc">Stay on the move for the entire fight. Avoid Shuro Chi's long-range Arc tracking attack — it will kill you if you're stationary. Never stop moving when she targets you.</div>
+              <div class="challenge-reward">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Extra drops + increased 1KV odds
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-card" onclick="toggleChallenge(this)" tabindex="0" role="checkbox" aria-checked="false">
+            <div class="challenge-icon">🦷</div>
+            <div class="challenge-content">
+              <div class="challenge-title">Forever Flight</div>
+              <div class="challenge-encounter">Encounter 3 · Morgeth, the Spirekeeper</div>
+              <div class="challenge-desc">Do not kill any Ogres that spawn during the Morgeth encounter. These are different from Kalli's Ogres — they are environmental. Ignore them entirely and focus only on Morgeth and the Taken Strength orbs.</div>
+              <div class="challenge-reward">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Extra drops + increased 1KV odds
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-card" onclick="toggleChallenge(this)" tabindex="0" role="checkbox" aria-checked="false">
+            <div class="challenge-icon">🔒</div>
+            <div class="challenge-content">
+              <div class="challenge-title">Keep Out</div>
+              <div class="challenge-encounter">Encounter 4 · Open the Vault</div>
+              <div class="challenge-desc">Kill all Might of Riven Knights before they reach the center of the vault chamber. Designate fast-DPS players to intercept knights immediately — any reaching the center fails the challenge.</div>
+              <div class="challenge-reward">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Extra drops + increased 1KV odds
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-card" onclick="toggleChallenge(this)" tabindex="0" role="checkbox" aria-checked="false">
+            <div class="challenge-icon">👁️</div>
+            <div class="challenge-content">
+              <div class="challenge-title">Strength of Memory</div>
+              <div class="challenge-encounter">Encounter 5 · Riven of a Thousand Voices</div>
+              <div class="challenge-desc">Never shoot the same Riven eye more than once across all four stages. Each player must memorize and track every eye they personally shoot. Use callouts to coordinate with your room team.</div>
+              <div class="challenge-reward">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Extra drops + improved 1KV odds
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Raid Mods -->
+        <div style="margin-top: var(--space-10);">
+          <h3 style="font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-4); letter-spacing: 0.04em;">Raid Mods</h3>
+          <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-5); max-width: none;">Found by looting the two secret chests. First: below the bridge before Shuro Chi. Second: across the large gap before Morgeth.</p>
+          <div class="raid-mods-grid">
+            <div class="mod-card">
+              <div class="mod-card-name">Taken Armaments</div>
+              <div class="mod-card-desc">Defeating a Taken combatant with a grenade grants Heavy ammo. Cannot stack across multiple copies.</div>
+              <div class="mod-card-source">Source: Secret chests</div>
+            </div>
+            <div class="mod-card">
+              <div class="mod-card-name">Taken Barrer</div>
+              <div class="mod-card-desc">Receiving Taken damage gives a 20% damage reduction for 10 seconds. Excellent for all encounters.</div>
+              <div class="mod-card-source">Source: Secret chests</div>
+            </div>
+            <div class="mod-card">
+              <div class="mod-card-name">Taken Invigoration</div>
+              <div class="mod-card-desc">Defeating a challenging Taken combatant refreshes your class ability. Cannot stack.</div>
+              <div class="mod-card-source">Source: Secret chests</div>
+            </div>
+            <div class="mod-card">
+              <div class="mod-card-name">Taken Repurposing</div>
+              <div class="mod-card-desc">Destroying a Taken shield refreshes your grenade ability. Great for Shuro Chi and Vault encounter.</div>
+              <div class="mod-card-source">Source: Secret chests</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WISH WALL -->
+    <section class="section" id="wish-wall">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-label">Wish Wall</div>
+            <h2 class="section-title">Ahamkara Wishes</h2>
+          </div>
+          <p class="section-desc">15 wishes activate at the wall before any encounter. Input sequences using the 4 animal symbols.</p>
+        </div>
+
+        <div style="padding: var(--space-4) var(--space-5); background: var(--color-purple-highlight); border: 1px solid color-mix(in oklab, var(--color-purple) 30%, transparent); border-radius: var(--radius-lg); margin-bottom: var(--space-6);">
+          <p style="font-size: var(--text-sm); color: var(--color-text-muted); max-width: none;">
+            <strong style="color: var(--color-purple);">How to use:</strong> The wish wall is accessed from the starting area before any encounter. Use 4 directional inputs with the 4 Ahamkara animal symbols to enter each wish. Each wish persists until the raid instance resets.
+          </p>
+        </div>
+
+        <div class="wish-wall">
+
+          <div class="wish-card">
+            <div class="wish-number">Wish 1</div>
+            <div class="wish-name">Grant Me a Wish</div>
+            <div class="wish-effect">Spawns a chest at the end of the raid with a random item. Best used to get a free attempt at a specific weapon.</div>
+            <div class="wish-code">
+              <span class="wish-icon">🐉</span>
+              <span class="wish-icon">🐉</span>
+              <span class="wish-icon">🐟</span>
+              <span class="wish-icon">🐦</span>
+            </div>
+            <div style="font-size: var(--text-xs); color: var(--color-text-faint);">Pattern: Dragon · Dragon · Fish · Bird</div>
+          </div>
+
+          <div class="wish-card">
+            <div class="wish-number">Wish 4</div>
+            <div class="wish-name">Checkpoint Skip</div>
+            <div class="wish-effect">Teleports your fireteam to any encounter in the raid. Combine with raid banners to skip to any boss fight.</div>
+            <div class="wish-code">
+              <span class="wish-icon">🐟</span>
+              <span class="wish-icon">🐉</span>
+              <span class="wish-icon">🐍</span>
+              <span class="wish-icon">🐦</span>
+            </div>
+            <div style="font-size: var(--text-xs); color: var(--color-text-faint);">Teleports to selected encounter</div>
+          </div>
+
+          <div class="wish-card">
+            <div class="wish-number">Wish 7</div>
+            <div class="wish-name">Wanderer's Respite</div>
+            <div class="wish-effect">Activates a permanent Dreaming City-style corruption aura in the raid. Mainly aesthetic but used for challenge runs.</div>
+            <div class="wish-code">
+              <span class="wish-icon">🐦</span>
+              <span class="wish-icon">🐟</span>
+              <span class="wish-icon">🐉</span>
+              <span class="wish-icon">🐍</span>
+            </div>
+            <div style="font-size: var(--text-xs); color: var(--color-text-faint);">Aesthetic / environment wish</div>
+          </div>
+
+          <div class="wish-card">
+            <div class="wish-number">Wish 11</div>
+            <div class="wish-name">A Petitioner's Mark</div>
+            <div class="wish-effect">Grants every player in the fireteam the Paws of the Great Hunt shader on their armor for this run. Cosmetic wish.</div>
+            <div class="wish-code">
+              <span class="wish-icon">🐍</span>
+              <span class="wish-icon">🐦</span>
+              <span class="wish-icon">🐉</span>
+              <span class="wish-icon">🐟</span>
+            </div>
+            <div style="font-size: var(--text-xs); color: var(--color-text-faint);">Cosmetic wish</div>
+          </div>
+
+          <div class="wish-card">
+            <div class="wish-number">Wish 15</div>
+            <div class="wish-name">Wish Granted</div>
+            <div class="wish-effect">The final wish — activates the Queenswalk escape sequence variant and unlocks the Wishing All the Best triumph for the secret ending.</div>
+            <div class="wish-code">
+              <span class="wish-icon">🐉</span>
+              <span class="wish-icon">🐍</span>
+              <span class="wish-icon">🐦</span>
+              <span class="wish-icon">🐟</span>
+            </div>
+            <div style="font-size: var(--text-xs); color: var(--color-text-faint);">Secret ending / triumph unlock</div>
+          </div>
+
+          <div class="wish-card" style="border-color: var(--color-primary); background: color-mix(in oklab, var(--color-primary-highlight) 60%, var(--color-surface));">
+            <div class="wish-number">All 15 Wishes</div>
+            <div class="wish-name">Full Wall Reference</div>
+            <div class="wish-effect">The complete wish wall has 15 wishes total. Check D2Checklist or Raid.Report for the full sequence guide — most are cosmetic or skips.</div>
+            <div style="margin-top: var(--space-3);">
+              <a href="https://www.d2checklist.com/" target="_blank" rel="noopener noreferrer" style="font-size: var(--text-xs); color: var(--color-primary); text-decoration: underline;">D2Checklist Full Guide →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">Last Wish Raid Guide — Destiny 2 Forsaken. All encounter data sourced from Dexerto, Blueberries.gg, and community guides.</p>
+        <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer" class="footer-link">
+          Created with Perplexity Computer
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>

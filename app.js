@@ -177,6 +177,44 @@ function updateProgressBar() {
   if (count === 5) {
     headerCount?.parentElement?.setAttribute('title', 'Raid completed!');
   }
+
+  const progressPct = document.getElementById('progress-pct');
+  const progressBarFill = document.getElementById('progress-bar-fill');
+  const progressBarTrack = document.querySelector('.progress-bar-track');
+  
+  if (progressPct) {
+    progressPct.textContent = pct + '%';
+    if (count === 5) {
+      progressPct.style.color = 'var(--color-success)';
+      progressPct.textContent = '100% — Raid Clear!';
+    } else {
+      progressPct.style.color = '';
+    }
+  }
+  
+  if (progressBarFill) {
+    progressBarFill.style.width = pct + '%';
+  }
+  
+  if (progressBarTrack) {
+    progressBarTrack.setAttribute('aria-valuenow', pct);
+  }
+
+  // Update Run Progress panel
+  const runPct = document.getElementById('run-pct');
+  const runBar = document.getElementById('run-bar');
+  const runCleared = document.getElementById('run-cleared');
+  if (runPct && runBar && runCleared) {
+    runPct.textContent = pct + '%';
+    runBar.style.width = pct + '%';
+    runCleared.textContent = count + '/5';
+  }
+}
+
+  // All done?
+  if (count === 5) {
+    headerCount?.parentElement?.setAttribute('title', 'Raid completed!');
+  }
 }
 
   const barTrack = document.querySelector('.progress-bar-track');
@@ -297,7 +335,6 @@ function switchLoadoutTab(tab, btn) {
    if (progressTrigger && progressModal) {
      progressTrigger.addEventListener('click', () => {
        progressModal.classList.add('active');
-       // Update modal progress
        updateModalProgress();
      });
    }
@@ -308,7 +345,7 @@ function switchLoadoutTab(tab, btn) {
      });
    }
    
-   // Close modal on overlay click
+   // Close modal on overlay click or ESC key
    if (progressModal) {
      progressModal.addEventListener('click', (e) => {
        if (e.target === progressModal) {
@@ -316,6 +353,14 @@ function switchLoadoutTab(tab, btn) {
        }
      });
    }
+   
+   // ESC key to close modal
+   document.addEventListener('keydown', (e) => {
+     if (e.key === 'Escape' && progressModal && progressModal.classList.contains('active')) {
+       progressModal.classList.remove('active');
+       closeMobileMenu();
+     }
+   });
    
    function updateModalProgress() {
      const modalPct = document.getElementById('modal-progress-pct');
@@ -340,16 +385,81 @@ function switchLoadoutTab(tab, btn) {
      });
    }
    
-   // Handle Encounter dropdown nav links
+   // Handle Encounter dropdown nav links (with scroll to encounters section)
    document.querySelectorAll('[data-scroll]').forEach(link => {
      link.addEventListener('click', (e) => {
        e.preventDefault();
        const encIndex = parseInt(link.dataset.scroll.replace('enc-', ''));
        if (!isNaN(encIndex)) {
          switchEncounterTab(encIndex);
+         // Close mobile menu if open
+         closeMobileMenu();
        }
      });
    });
+   
+   // Mobile menu handling
+   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+   const mobileMenu = document.getElementById('mobile-menu');
+   const mobileMenuClose = document.getElementById('mobile-menu-close');
+   const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+   
+   function openMobileMenu() {
+     if (mobileMenu && mobileMenuToggle) {
+       mobileMenu.classList.add('active');
+       mobileMenuToggle.setAttribute('aria-expanded', 'true');
+       document.body.style.overflow = 'hidden';
+     }
+   }
+   
+   function closeMobileMenu() {
+     if (mobileMenu && mobileMenuToggle) {
+       mobileMenu.classList.remove('active');
+       mobileMenuToggle.setAttribute('aria-expanded', 'false');
+       document.body.style.overflow = '';
+     }
+   }
+   
+   if (mobileMenuToggle) {
+     mobileMenuToggle.addEventListener('click', () => {
+       if (mobileMenu.classList.contains('active')) {
+         closeMobileMenu();
+       } else {
+         openMobileMenu();
+       }
+     });
+   }
+   
+   if (mobileMenuClose) {
+     mobileMenuClose.addEventListener('click', closeMobileMenu);
+   }
+   
+   // Close mobile menu on link click
+   mobileMenuLinks.forEach(link => {
+     link.addEventListener('click', closeMobileMenu);
+   });
+   
+   // Make switchEncounterTab available globally and add scroll behavior
+   window.switchEncounterTab = function(index) {
+     // Hide all panels
+     document.querySelectorAll('.encounter-panel').forEach(p => {
+       p.classList.remove('active');
+       p.setAttribute('aria-hidden', 'true');
+     });
+     // Deactivate all tabs
+     document.querySelectorAll('.encounter-tab').forEach(t => {
+       t.classList.remove('active');
+       t.setAttribute('aria-selected', 'false');
+     });
+     
+     const tab = document.querySelector(`.encounter-tab[data-enc="${index}"]`);
+     const panel = document.getElementById(`enc-${index}`);
+     
+     if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
+     if (panel) { panel.classList.add('active'); panel.setAttribute('aria-hidden', 'false'); }
+     
+     state.currentEncounter = index;
+   };
 })();
 
 // ─── Active Nav Link ─────────────────────────

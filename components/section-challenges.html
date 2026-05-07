@@ -1,0 +1,109 @@
+<!-- CHALLENGES SECTION -->
+<section class="section" id="challenges">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Challenges</div>
+        <h2 class="section-title">Weekly Challenges</h2>
+      </div>
+      <p class="section-desc">Complete for bonus drops and improved One Thousand Voices odds. Click to track completion.</p>
+    </div>
+
+    <div class="challenges-list" id="challenges-list">
+
+      <div class="challenge-card" onclick="toggleChallenge(this)" tabindex="0" role="checkbox" aria-checked="false">
+        <div class="challenge-icon">⚔️</div>
+        <div class="challenge-content">
+          <div class="challenge-title">Summoning Ritual</div>
+          <div class="challenge-encounter">Encounter 1 · Kalli, the Corrupted</div>
+          <div class="challenge-desc">Summon and kill all three Ogres that appear before each DPS phase. Do not skip them — they must be defeated before engaging Kalli in damage.</div>
+          <div class="challenge-reward">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Extra drops + increased 1KV odds
+          </div>
+        </div>
+      </div>
+
+      <div class="challenge-card" onclick="toggleChallenge(this)" tabindex="0" role="checkbox" aria-checked="false">
+        <div class="challenge-icon">🏃</div>
+        <div class="challenge-content">
+          <div class="challenge-title">Which Witch</div>
+          <div class="challenge-encounter">Encounter 2 · Shuro Chi, the Corrupted</div>
+          <div class="challenge-desc">Stay on the move for the entire fight. Avoid Shuro Chi's long-range Arc tracking attack — it will kill you if you're stationary. Never stop moving when she targets you.</div>
+          <div class="challenge-reward">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Extra drops + increased 1KV odds
+          </div>
+        </div>
+      </div>
+
+      <div class="challenge-card" onclick="toggleChallenge(this)" tabindex="0" role="checkbox" aria-checked="false">
+        <div class="challenge-icon">🦷</div>
+        <div class="challenge-content">
+          <div class="challenge-title">Forever Flight</div>
+          <div class="challenge-encounter">Encounter 3 · Morgeth, the Spirekeeper</div>
+          <div class="challenge-desc">Do not kill any Ogres that spawn during the Morgeth encounter. These are different from Kalli's Ogres — they are environmental. Ignore them entirely and focus only on Morgeth and the Taken Strength orbs.</div>
+          <div class="challenge-reward">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Extra drops + increased 1KV odds
+          </div>
+        </div>
+      </div>
+
+      <div class="challenge-card" onclick="toggleChallenge(this)" tabindex="0" role="checkbox" aria-checked="false">
+        <div class="challenge-icon">🔒</div>
+        <div class="challenge-content">
+          <div class="challenge-title">Keep Out</div>
+          <div class="challenge-encounter">Encounter 4 · Open the Vault</div>
+          <div class="challenge-desc">Kill all Might of Riven Knights before they reach the center of the vault chamber. Designate fast-DPS players to intercept knights immediately — any reaching the center fails the challenge.</div>
+          <div class="challenge-reward">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2.z"/></svg>
+            Extra drops + increased 1KV odds
+          </div>
+        </div>
+      </div>
+
+      <div class="challenge-card" onclick="toggleChallenge(this)" tabindex="0" role="checkbox" aria-checked="false">
+        <div class="challenge-icon">👁️</div>
+        <div class="challenge-content">
+          <div class="challenge-title">Strength of Memory</div>
+          <div class="challenge-encounter">Encounter 5 · Riven of a Thousand Voices</div>
+          <div class="challenge-desc">Never shoot the same Riven eye more than once across all four stages. Each player must memorize and track every eye they personally shoot. Use callouts to coordinate with your room team.</div>
+          <div class="challenge-reward">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2.z"/></svg>
+            Extra drops + improved 1KV odds
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Raid Mods -->
+    <div style="margin-top: var(--space-10);">
+      <h3 style="font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-4); letter-spacing: 0.04em;">Raid Mods</h3>
+      <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-5); max-width: none;">Found by looting the two secret chests. First: below the bridge before Shuro Chi. Second: across the large gap before Morgeth.</p>
+      <div class="raid-mods-grid">
+        <div class="mod-card">
+          <div class="mod-card-name">Taken Armaments</div>
+          <div class="mod-card-desc">Defeating a Taken combatant with a grenade grants Heavy ammo. Cannot stack across multiple copies.</div>
+          <div class="mod-card-source">Source: Secret chests</div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-card-name">Taken Barrier</div>
+          <div class="mod-card-desc">Receiving Taken damage gives a 20% damage reduction for 10 seconds. Excellent for all encounters.</div>
+          <div class="mod-card-source">Source: Secret chests</div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-card-name">Taken Invigoration</div>
+          <div class="mod-card-desc">Defeating a challenging Taken combatant refreshes your class ability. Cannot stack.</div>
+          <div class="mod-card-source">Source: Secret chests</div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-card-name">Taken Repurposing</div>
+          <div class="mod-card-desc">Destroying a Taken shield refreshes your grenade ability. Great for Shuro Chi and Vault encounter.</div>
+          <div class="mod-card-source">Source: Secret chests</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

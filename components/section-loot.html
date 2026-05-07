@@ -1,0 +1,304 @@
+<!-- LOOT SECTION -->
+<section class="section" id="loot">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Loot</div>
+        <h2 class="section-title">Weapons & Rewards</h2>
+      </div>
+      <p class="section-desc">Every encounter drops specific weapons. Curated rolls guarantee great perks. All weapons are craftable at the Enclave.</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="loot-filter-bar">
+      <button class="filter-chip active" onclick="filterWeapons('all', this)">
+        <span class="element-dot element-dot--kinetic"></span>
+        All Elements
+      </button>
+      <button class="filter-chip" onclick="filterWeapons('solar', this)">
+        <span class="element-dot element-dot--solar"></span>
+        Solar
+      </button>
+      <button class="filter-chip" onclick="filterWeapons('arc', this)">
+        <span class="element-dot element-dot--arc"></span>
+        Arc
+      </button>
+      <button class="filter-chip" onclick="filterWeapons('void', this)">
+        <span class="element-dot element-dot--void"></span>
+        Void
+      </button>
+      <button class="filter-chip" onclick="filterWeapons('kinetic', this)">
+        <span class="element-dot element-dot--kinetic"></span>
+        Kinetic
+      </button>
+    </div>
+
+    <!-- Weapons Grid -->
+    <div class="weapons-grid">
+      <!-- Chattering Bone -->
+      <div class="weapon-card" data-element="kinetic">
+        <div class="weapon-header">
+          <div class="weapon-icon">🩶</div>
+          <div class="weapon-meta">
+            <div class="weapon-name">Chattering Bone</div>
+            <div class="weapon-type">Pulse Rifle · Lightweight</div>
+          </div>
+          <div class="weapon-element-badge element--kinetic">Kinetic</div>
+        </div>
+        <div class="weapon-body">
+          <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+            <span class="craftable-tag">✦ Craftable</span>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvE God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--primary">Kill Clip</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--primary">Kinetic Tremors</span>
+            </div>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvP God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--secondary">Kill Clip</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--secondary">Rampage</span>
+            </div>
+          </div>
+        </div>
+        <div class="weapon-footer">
+          <span class="drop-source">Curated: Riven (E5)</span>
+        </div>
+      </div>
+
+      <!-- Nation of Beasts -->
+      <div class="weapon-card" data-element="arc">
+        <div class="weapon-header">
+          <div class="weapon-icon">⚡</div>
+          <div class="weapon-meta">
+            <div class="weapon-name">Nation of Beasts</div>
+            <div class="weapon-type">Hand Cannon · Adaptive</div>
+          </div>
+          <div class="weapon-element-badge element--arc">Arc</div>
+        </div>
+        <div class="weapon-body">
+          <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+            <span class="craftable-tag">✦ Craftable</span>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvE God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--primary">Dragonfly</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--primary">Voltshot</span>
+            </div>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvP God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--secondary">Keep Away</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--secondary">Explosive Payload</span>
+            </div>
+          </div>
+        </div>
+        <div class="weapon-footer">
+          <span class="drop-source">Curated: Morgeth (E3)</span>
+        </div>
+      </div>
+
+      <!-- Techeun Force -->
+      <div class="weapon-card" data-element="arc">
+        <div class="weapon-header">
+          <div class="weapon-icon">🌩️</div>
+          <div class="weapon-meta">
+            <div class="weapon-name">Techeun Force</div>
+            <div class="weapon-type">Fusion Rifle · Adaptive</div>
+          </div>
+          <div class="weapon-element-badge element--arc">Arc</div>
+        </div>
+        <div class="weapon-body">
+          <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+            <span class="craftable-tag">✦ Craftable</span>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvE God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--primary">Rewind Rounds</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--primary">Controlled Burst</span>
+            </div>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">Alt PvE</div>
+            <div class="perk-row">
+              <span class="perk-tag">Reconstruction</span>
+              <span class="perk-tag">High-Impact Reserves</span>
+            </div>
+          </div>
+        </div>
+        <div class="weapon-footer">
+          <span class="drop-source">Any encounter</span>
+        </div>
+      </div>
+
+      <!-- The Supremacy -->
+      <div class="weapon-card" data-element="kinetic">
+        <div class="weapon-header">
+          <div class="weapon-icon">🎯</div>
+          <div class="weapon-meta">
+            <div class="weapon-name">The Supremacy</div>
+            <div class="weapon-type">Sniper Rifle · Rapid-Fire</div>
+          </div>
+          <div class="weapon-element-badge element--kinetic">Kinetic</div>
+        </div>
+        <div class="weapon-body">
+          <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+            <span class="craftable-tag">✦ Craftable</span>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvE God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--primary">Rewind Rounds</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--primary">Fourth Time's the Charm</span>
+            </div>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvP God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--secondary">Snapshot Sights</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--secondary">Opening Shot</span>
+            </div>
+          </div>
+        </div>
+        <div class="weapon-footer">
+          <span class="drop-source">Any encounter</span>
+        </div>
+      </div>
+
+      <!-- Transfiguration -->
+      <div class="weapon-card" data-element="kinetic">
+        <div class="weapon-header">
+          <div class="weapon-icon">🔭</div>
+          <div class="weapon-meta">
+            <div class="weapon-name">Transfiguration</div>
+            <div class="weapon-type">Scout Rifle · High-Impact</div>
+          </div>
+          <div class="weapon-element-badge element--kinetic">Kinetic</div>
+        </div>
+        <div class="weapon-body">
+          <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+            <span class="craftable-tag">✦ Craftable</span>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvE God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--primary">Rapid Hit</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--primary">Kinetic Tremors</span>
+            </div>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvP God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--secondary">Rampage</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--secondary">Kill Clip</span>
+            </div>
+          </div>
+        </div>
+        <div class="weapon-footer">
+          <span class="drop-source">Curated: Shuro Chi (E2)</span>
+        </div>
+      </div>
+
+      <!-- Tyranny of Heaven -->
+      <div class="weapon-card" data-element="solar">
+        <div class="weapon-header">
+          <div class="weapon-icon">🏹</div>
+          <div class="weapon-meta">
+            <div class="weapon-name">Tyranny of Heaven</div>
+            <div class="weapon-type">Combat Bow · Lightweight</div>
+          </div>
+          <div class="weapon-element-badge element--solar">Solar</div>
+        </div>
+        <div class="weapon-body">
+          <div style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3);">
+            <span class="craftable-tag">✦ Craftable</span>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvE God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--primary">Archer's Tempo</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--primary">Incandescent</span>
+            </div>
+          </div>
+          <div class="godroll-section">
+            <div class="godroll-label">PvP God Roll</div>
+            <div class="perk-row">
+              <span class="perk-tag perk-tag--secondary">Explosive Head</span>
+              <span class="perk-separator">+</span>
+              <span class="perk-tag perk-tag--secondary">Golden Tricorn</span>
+            </div>
+          </div>
+        </div>
+        <div class="weapon-footer">
+          <span class="drop-source">Curated: Vault (E4)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Armor Set -->
+    <div style="margin-top: var(--space-10);">
+      <h3 style="font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-4); letter-spacing: 0.04em;">Great Hunt Armor Sets</h3>
+      <div style="overflow-x: auto;">
+        <table style="min-width: 600px; border-collapse: collapse;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--color-border);">
+              <th style="text-align: left; padding: var(--space-3) var(--space-4); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-faint);">Slot</th>
+              <th style="text-align: left; padding: var(--space-3) var(--space-4); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #f0902a;">Hunter</th>
+              <th style="text-align: left; padding: var(--space-3) var(--space-4); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #7eb5f5;">Titan</th>
+              <th style="text-align: left; padding: var(--space-3) var(--space-4); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #9c6fd4;">Warlock</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--color-divider);">
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;">Helmet</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Mask of the Great Hunt</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Helm of the Great Hunt</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Hood of the Great Hunt</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-divider); background: var(--color-surface-offset);">
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;">Gauntlets</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Grips of the Great Hunt</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--color-text);">Gauntlets of the Great Hunt</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Gloves of the Great Hunt</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-divider);">
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;">Chest</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Vest of the Great Hunt</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Plate of the Great Hunt</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Robes of the Great Hunt</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-divider); background: var(--color-surface-offset);">
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;">Legs</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Stride of the Great Hunt</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Greaves of the Great Hunt</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Boots of the Great Hunt</td>
+            </tr>
+            <tr>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.06em;">Bond / Mark / Cloak</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Cloak of the Great Hunt</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Mark of the Great Hunt</td>
+              <td style="padding: var(--space-3) var(--space-4); font-size: var(--text-sm); color: var(--color-text);">Bond of the Great Hunt</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-3);">Master difficulty grants higher-stat armor with rotating weekly stat focus. Drops from any encounter or secret chests.</p>
+    </div>
+  </div>
+</section>

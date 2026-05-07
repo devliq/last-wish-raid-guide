@@ -1,0 +1,364 @@
+<!-- LOADOUTS SECTION -->
+<section class="section" id="loadouts">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Loadouts</div>
+        <h2 class="section-title">Recommended Builds</h2>
+      </div>
+      <p class="section-desc">Optimized loadouts for each role and encounter type.</p>
+    </div>
+
+    <!-- Loadout Infographic -->
+    <div class="loadout-infographic">
+      <div class="infographic-title">Role Quick Reference</div>
+      <svg viewBox="0 0 800 200" class="infographic-svg">
+        <!-- DPS Role -->
+        <rect x="20" y="30" width="140" height="70" rx="8" fill="var(--color-surface-offset)" stroke="var(--color-error)" stroke-width="2"/>
+        <text x="90" y="60" text-anchor="middle" fill="var(--color-text)" font-weight="700" font-size="14">DPS</text>
+        <text x="90" y="85" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Heavy Weapon,</text>
+        <text x="90" y="100" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Burst Super</text>
+        <!-- Support Role -->
+        <rect x="180" y="30" width="140" height="70" rx="8" fill="var(--color-surface-offset)" stroke="var(--color-teal)" stroke-width="2"/>
+        <text x="250" y="60" text-anchor="middle" fill="var(--color-text)" font-weight="700" font-size="14">Support</text>
+        <text x="250" y="85" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Well/Rift,</text>
+        <text x="250" y="100" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Orb Gen</text>
+        <!-- Runner Role -->
+        <rect x="340" y="30" width="140" height="70" rx="8" fill="var(--color-surface-offset)" stroke="var(--color-success)" stroke-width="2"/>
+        <text x="410" y="60" text-anchor="middle" fill="var(--color-text)" font-weight="700" font-size="14">Runner</text>
+        <text x="410" y="85" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Speed Build,</text>
+        <text x="410" y="100" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Class Ability CD</text>
+        <!-- Carrier Role -->
+        <rect x="500" y="30" width="140" height="70" rx="8" fill="var(--color-surface-offset)" stroke="var(--color-warning)" stroke-width="2"/>
+        <text x="570" y="60" text-anchor="middle" fill="var(--color-text)" font-weight="700" font-size="14">Carrier</text>
+        <text x="570" y="85" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Survivability,</text>
+        <text x="570" y="100" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Health Focus</text>
+        <!-- Adds Role -->
+        <rect x="660" y="30" width="140" height="70" rx="8" fill="var(--color-surface-offset)" stroke="var(--color-purple)" stroke-width="2"/>
+        <text x="730" y="60" text-anchor="middle" fill="var(--color-text)" font-weight="700" font-size="14">Adds</text>
+        <text x="730" y="85" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Add Clear,</text>
+        <text x="730" y="100" text-anchor="middle" fill="var(--color-text-muted)" font-size="11">Crowd Control</text>
+        <!-- Arrow to tab panel -->
+        <path d="M400 130 L400 160" stroke="var(--color-primary)" stroke-width="2" marker-end="url(#arrowdown)"/>
+        <!-- Arrow marker -->
+        <defs>
+          <marker id="arrowdown" markerWidth="10" markerHeight="10" refX="5" refY="10" orient="auto">
+            <polygon points="0 0, 10 5, 0 10" fill="var(--color-primary)"/>
+          </marker>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="loadout-tabs" role="tablist">
+      <button class="loadout-tab active" onclick="switchLoadoutTab('dps', this)" role="tab">DPS Builds</button>
+      <button class="loadout-tab" onclick="switchLoadoutTab('support', this)" role="tab">Support Builds</button>
+      <button class="loadout-tab" onclick="switchLoadoutTab('runner', this)" role="tab">Runner Builds</button>
+    </div>
+
+    <!-- DPS Builds -->
+    <div class="loadout-panel active" id="loadout-dps">
+      <div class="loadout-grid">
+
+        <div class="loadout-card">
+          <div class="loadout-header">
+            <div class="loadout-title">Solar DPS — All-Class</div>
+            <div class="loadout-class">
+              <span class="class-badge class--all">All Classes</span>
+            </div>
+          </div>
+          <div class="loadout-body">
+            <div class="loadout-slots">
+              <div class="loadout-slot">
+                <div class="slot-icon">🔫</div>
+                <div class="slot-info">
+                  <div class="slot-type">Kinetic</div>
+                  <div class="slot-weapon">Transfiguration / The Supremacy</div>
+                  <div class="slot-reason">Sustained damage + orb generation</div>
+                </div>
+              </div>
+              <div class="loadout-slot">
+                <div class="slot-icon">🔥</div>
+                <div class="slot-info">
+                  <div class="slot-type">Energy · Solar</div>
+                  <div class="slot-weapon">Apex Predator / Tyranny of Heaven</div>
+                  <div class="slot-reason">Bait and Switch for max DPS</div>
+                </div>
+              </div>
+              <div class="loadout-slot">
+                <div class="slot-icon">⚔️</div>
+                <div class="slot-info">
+                  <div class="slot-type">Heavy</div>
+                  <div class="slot-weapon">Goldie / Sword / Linear Fusion</div>
+                  <div class="slot-reason">Boss DPS — coordinate with fireteam</div>
+                </div>
+              </div>
+            </div>
+            <div class="loadout-mods">
+              <div class="mods-label">Key Mods</div>
+              <div class="mod-tags">
+                <span class="mod-tag">×3 Solar Surge</span>
+                <span class="mod-tag">×3 Solar Reserves</span>
+                <span class="mod-tag">Taken Armaments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="loadout-card">
+          <div class="loadout-header">
+            <div class="loadout-title">Void DPS — Hunter</div>
+            <div class="loadout-class">
+              <span class="class-badge class--hunter">Hunter</span>
+            </div>
+          </div>
+          <div class="loadout-body">
+            <div class="loadout-slots">
+              <div class="loadout-slot">
+                <div class="slot-icon">💜</div>
+                <div class="slot-info">
+                  <div class="slot-type">Energy · Void</div>
+                  <div class="slot-weapon">Age-Old Bond</div>
+                  <div class="slot-reason">Repulsor Brace + Destabilizing Rounds = Void loop</div>
+                </div>
+              </div>
+              <div class="loadout-slot">
+                <div class="slot-icon">🎯</div>
+                <div class="slot-info">
+                  <div class="slot-type">Kinetic</div>
+                  <div class="slot-weapon">Chattering Bone</div>
+                  <div class="slot-reason">Add clear + Kinetic Tremors for extra damage</div>
+                </div>
+              </div>
+              <div class="loadout-slot">
+                <div class="slot-icon">⚔️</div>
+                <div class="slot-info">
+                  <div class="slot-type">Heavy</div>
+                  <div class="slot-weapon">Apex Predator (Void Surge)</div>
+                  <div class="slot-reason">Switch surge mods to match heavy element</div>
+                </div>
+              </div>
+            </div>
+            <div class="loadout-mods">
+              <div class="mods-label">Super Choice</div>
+              <div class="mod-tags">
+                <span class="mod-tag">Deadfall Tether — DPS debuff</span>
+                <span class="mod-tag">Taken Invigoration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="loadout-card">
+          <div class="loadout-header">
+            <div class="loadout-title">Arc DPS — Titan</div>
+            <div class="loadout-class">
+              <span class="class-badge class--titan">Titan</span>
+            </div>
+          </div>
+          <div class="loadout-body">
+            <div class="loadout-slots">
+              <div class="loadout-slot">
+                <div class="slot-icon">⚡</div>
+                <div class="slot-info">
+                  <div class="slot-type">Energy · Arc</div>
+                  <div class="slot-weapon">Nation of Beasts</div>
+                  <div class="slot-reason">Dragonfly + Voltshot for explosive add clear</div>
+                </div>
+              </div>
+              <div class="loadout-slot">
+                <div class="slot-icon">🌩️</div>
+                <div class="slot-info">
+                  <div class="slot-type">Energy · Arc</div>
+                  <div class="slot-weapon">Techeun Force</div>
+                  <div class="slot-reason">Rewind Rounds + Contrlled Burst for sustained DPS</div>
+                </div>
+              </div>
+              <div class="loadout-slot">
+                <div class="slot-icon">💣</div>
+                <div class="slot-info">
+                  <div class="slot-type">Heavy</div>
+                  <div class="slot-weapon">Arc Linear Fusion / Rocket</div>
+                  <div class="slot-reason">Coordinate with team — 3× Arc Surge mods</div>
+                </div>
+              </div>
+            </div>
+            <div class="loadout-mods">
+              <div class="mods-label">Super Choice</div>
+              <div class="mod-tags">
+                <span class="mod-tag">Banner of War — high uptime</span>
+                <span class="mod-tag">Taken Barrier</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Support Builds -->
+    <div class="loadout-panel" id="loadout-support">
+      <div class="loadout-grid">
+
+        <div class="loadout-card">
+          <div class="loadout-header">
+            <div class="loadout-title">Well of Radiance</div>
+            <div class="loadout-class">
+              <span class="class-badge class--warlock">Warlock</span>
+            </div>
+          </div>
+          <div class="loadout-body">
+            <div class="loadout-slots">
+              <div class="loadout-slot">
+                <div class="slot-icon">☀️</div>
+                <div class="slot-info">
+                  <div class="slot-type">Super</div>
+                  <div class="slot-weapon">Well of Radiance</div>
+                  <div class="slot-reason">Mandatory for boss DPS phases. Stay in the well.</div>
+                </div>
+              </div>
+              <div class="loadout-slot">
+                <div class="slot-icon">🔥</div>
+                <div class="slot-info">
+                  <div class="slot-type">Energy · Solar</div>
+                  <div class="slot-weapon">Apex Predator / Tyranny of Heaven</div>
+                  <div class="slot-reason">Solar Surge mods stack with well buff</div>
+                </div>
+              </div>
+            </div>
+            <div class="loadout-mods">
+              <div class="mods-label">Exotics / Mods / Stats</div>
+              <div class="mod-tags">
+                <span class="mod-tag">Lunafaction Boots</span>
+                <span class="mod-tag">Super ≥8</span>
+                <span class="mod-tag">Super Regen</span>
+                <span class="mod-tag">Taken Repurposing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="loadout-card">
+          <div class="loadout-header">
+            <div class="loadout-title">Taken Barrier — Titan</div>
+            <div class="loadout-class">
+              <span class="class-badge class--titan">Titan</span>
+            </div>
+          </div>
+          <div class="loadout-body">
+            <div class="loadout-slots">
+              <div class="loadout-slot">
+                <div class="slot-icon">🛡️</div>
+                <div class="slot-info">
+                  <div class="slot-type">Super</div>
+                  <div class="slot-weapon">Ward of Dawn</div>
+                  <div class="slot-reason">Overshield + Weapons of Light if running Saint-14</div>
+                </div>
+              </div>
+              <div class="loadout-slot">
+                <div class="slot-icon">💜</div>
+                <div class="slot-info">
+                  <div class="slot-type">Void</div>
+                  <div class="slot-weapon">Age-Old Bond</div>
+                  <div class="slot-reason">Orb generation for the fireteam</div>
+                </div>
+              </div>
+            </div>
+            <div class="loadout-mods">
+              <div class="mods-label">Exotics / Mods</div>
+              <div class="mod-tags">
+                <span class="mod-tag">Saint-14 Helmet</span>
+                <span class="mod-tag">Taken Barrier</span>
+                <span class="mod-tag">Void Surge ×3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Runner Builds -->
+    <div class="loadout-panel" id="loadout-runner">
+      <div class="loadout-grid">
+
+        <div class="loadout-card">
+          <div class="loadout-header">
+            <div class="loadout-title">Shuro Chi / Vault Runner</div>
+            <div class="loadout-class">
+              <span class="class-badge class--all">Any Class</span>
+            </div>
+          </div>
+          <div class="loadout-body">
+            <div class="loadout-slots">
+              <div class="loadout-slot">
+                <div class="slot-icon">🔫</div>
+                <div class="slot-info">
+                  <div class="slot-type">Kinetic</div>
+                  <div class="slot-weapon">Chattering Bone / Scout Rifle</div>
+                  <div class="slot-reason">Fast kills on Eye of Riven</div>
+                </div>
+              </div>
+              <div class="loadout-slot">
+                <div class="slot-icon">🌀</div>
+                <div class="slot-info">
+                  <div class="slot-type">Class Ability</div>
+                  <div class="slot-weapon">Short cooldown — Dodge / Blink</div>
+                  <div class="slot-reason">Speed is essential for puzzle solving under pressure</div>
+                </div>
+              </div>
+            </div>
+            <div class="loadout-mods">
+              <div class="mods-label">Priority</div>
+              <div class="mod-tags">
+                <span class="mod-tag">Weapons stat 100</span>
+                <span class="mod-tag">Grenade high</span>
+                <span class="mod-tag">Taken Invigoration</span>
+                <span class="mod-tag">Powerful Friends</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="loadout-card">
+          <div class="loadout-header">
+            <div class="loadout-title">Morgeth Carrier</div>
+            <div class="loadout-class">
+              <span class="class-badge class--hunter">Hunter</span>
+              <span class="class-badge class--warlock">Warlock</span>
+            </div>
+          </div>
+          <div class="loadout-body">
+            <div class="loadout-slots">
+              <div class="loadout-slot">
+                <div class="slot-icon">🛡️</div>
+                <div class="slot-info">
+                  <div class="slot-type">Survivability</div>
+                  <div class="slot-weapon">High Health Build</div>
+                  <div class="slot-reason">Carriers need to stay alive while orb-saturated</div>
+                </div>
+              </div>
+              <div class="loadout-slot">
+                <div class="slot-icon">⚡</div>
+                <div class="slot-info">
+                  <div class="slot-type">Ad Clear</div>
+                  <div class="slot-weapon">Nation of Beasts / Age-Old Bond</div>
+                  <div class="slot-reason">Crowd control while navigating orbs</div>
+                </div>
+              </div>
+            </div>
+            <div class="loadout-mods">
+              <div class="mods-label">Priority Stats</div>
+              <div class="mod-tags">
+                <span class="mod-tag">Health ≥7</span>
+                <span class="mod-tag">Class high</span>
+                <span class="mod-tag">Melee high</span>
+                <span class="mod-tag">Taken Barrier</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

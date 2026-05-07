@@ -1,0 +1,196 @@
+<!-- ADVANCED GUIDE SECTION -->
+<section class="section" id="advanced">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">Advanced Guide</div>
+        <h2 class="section-title">Strategy & Optimization</h2>
+      </div>
+      <p class="section-desc">Advanced mechanics, positioning guides, callout systems, and common mistake avoidance.</p>
+    </div>
+
+    <!-- Callout System Reference -->
+    <div class="encounter-card" style="margin-bottom: var(--space-6);">
+      <div class="encounter-card-header">
+        <div class="card-icon card-icon--purple">📢</div>
+        <div>
+          <div class="card-title">Callout Systems</div>
+          <div class="card-subtitle">Standardized communication across all encounters</div>
+        </div>
+      </div>
+      <div class="encounter-card-body">
+        <h4 style="font-size: var(--text-sm); font-weight: 700; margin-bottom: var(--space-3);">Ahamkara Symbol Callouts</h4>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-bottom: var(--space-4);">
+          All symbols are called as "animal + direction". Example: "Dragon Left" or "Snake Up". The 4 animals are Bird, Snake, Fish, Dragon. Directions are Up, Left, Down, Right relative to the symbol facing.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-bottom: var(--space-4);">
+          <div>
+            <strong style="font-size: var(--text-xs); color: var(--color-warning);">Kalli / Vault Plates</strong>
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1);">Caller: "Bird Up" to indicate the plate with Bird facing Up. Each player confirms "Copy" when they reach their plate.</p>
+          </div>
+          <div>
+            <strong style="font-size: var(--text-xs); color: var(--color-warning);">Shuro Chi Puzzles</strong>
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1);">Runner calls middle symbol first: "Dragon Left center, Dragon Right left, Snake Down right". Other plates called in any order.</p>
+          </div>
+          <div>
+            <strong style="font-size: var(--text-xs); color: var(--color-warning);">Morgeth Team Comms</strong>
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1);">"Orbs Left/Right" for orb locations. "Carrier stacked" when 2x Taken Strength confirmed. "Ready for orb" for handoffs.</p>
+          </div>
+          <div>
+            <strong style="font-size: var(--text-xs); color: var(--color-warning);">Vault Room Calls</strong>
+            <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1);">"Stairs is open" or "Go Trees". Runner announces "I'm trapped" during force field rotation. "DPS room" after second solve.</p>
+          </div>
+        </div>
+
+        <h4 style="font-size: var(--text-sm); font-weight: 700; margin-bottom: var(--space-3);">Riven Room Coordination</h4>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-bottom: var(--space-2);">
+          <strong style="color: var(--color-success);">Room A:</strong> Left room when splitting. Call eyes as "A1 Top Left" or "A2 Bottom Right".
+        </p>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-bottom: var(--space-2);">
+          <strong style="color: var(--color-teal);">Room B:</strong> Right room. Mirror positions to Room A. "B1 Top Right" corresponds to "A1 Top Left".
+        </p>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted);">
+          <strong style="color: var(--color-warning);">Queenswalk:</strong> "10 seconds" callout. "Blight up" when blights spawn in Eternity. "Teleport X" for teleport order.
+        </p>
+      </div>
+    </div>
+
+    <!-- Common Mistakes & Troubleshooting -->
+    <div class="encounter-card" style="margin-bottom: var(--space-6);">
+      <div class="encounter-card-header">
+        <div class="card-icon card-icon--error">⚠️</div>
+        <div>
+          <div class="card-title">Common Mistakes & Fixes</div>
+          <div class="card-subtitle">Wipe prevention guide</div>
+        </div>
+      </div>
+      <div class="encounter-card-body">
+        <div class="mechanic-step">
+          <span class="step-number" style="background: var(--color-error);">❌</span>
+          <div class="step-content">
+            <div class="step-title">Kalli: Wrong Door Entry</div>
+            <div class="step-desc"><strong>Problem:</strong> Players enter wrong door or miss door entry. <strong>Fix:</strong> Identify your nearest door BEFORE DPS starts. Pre-designate Door 1-6. All players call "doors!" when Kalli readies weapon.</div>
+          </div>
+        </div>
+        <div class="mechanic-step">
+          <span class="step-number" style="background: var(--color-error);">❌</span>
+          <div class="step-content">
+            <div class="step-title">Shuro Chi: Song Timer Expiry</div>
+            <div class="step-desc"><strong>Problem:</strong> Running out of time during tic-tac-toe puzzle. <strong>Fix:</strong> The song timer is ~60 seconds. When music stops, wipe soon after. Kill Eye immediately after puzzle solve — don't wait.</div>
+          </div>
+        </div>
+        <div class="mechanic-step">
+          <span class="step-number" style="background: var(--color-error);">❌</span>
+          <div class="step-content">
+            <div class="step-title">Morgeth: 3 Stacks Death</div>
+            <div class="step-desc"><strong>Problem:</strong> Dying from picking up a 3rd Taken Strength orb. <strong>Fix:</strong> Call your stack count constantly. "At 1, going for 2" or "Dropping to 0, need 1 more." Carrier must stay at 0 stacks until final collection.</div>
+          </div>
+        </div>
+        <div class="mechanic-step">
+          <span class="step-number" style="background: var(--color-error);">❌</span>
+          <div class="step-content">
+            <div class="step-title">Vault: Wrong Essence Type</div>
+            <div class="step-desc"><strong>Problem:</strong> Popping Antumbral on Penumbral plate (or vice versa). <strong>Fix:</strong> Eye always drops the same type you need. Penumbral = white sphere, Antumbral = dark sphere. Note which type before popping.</div>
+          </div>
+        </div>
+        <div class="mechanic-step">
+          <span class="step-number" style="background: var(--color-error);">❌</span>
+          <div class="step-content">
+            <div class="step-title">Riven: Repeated Eye Shots</div>
+            <div class="step-desc"><strong>Problem:</strong> Shooting the same eye twice on Strength of Memory challenge. <strong>Fix:</strong> Each player tracks their own eyes. Use a numbered callout system: "Stage 1: A1, A3, B2, B4" for eye positions.</div>
+          </div>
+        </div>
+        <div class="mechanic-step">
+          <span class="step-number" style="background: var(--color-error);">❌</span>
+          <div class="step-content">
+            <div class="step-title">Queenswalk: Blight Timing</div>
+            <div class="step-desc"><strong>Problem:</strong> Timer expires before reaching dunk point. <strong>Fix:</strong> Blight Keeper picks up LAST blight in Eternity. Non-carriers grab blights immediately on teleport. Stay close to carrier for protection.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Positioning Guides -->
+    <div class="encounter-card" style="margin-bottom: var(--space-6);">
+      <div class="encounter-card-header">
+        <div class="card-icon card-icon--teal">📍</div>
+        <div>
+          <div class="card-title">Positioning Guides</div>
+          <div class="card-subtitle">Optimal positioning for each encounter</div>
+        </div>
+      </div>
+      <div class="encounter-card-body">
+        <h4 style="font-size: var(--text-sm); font-weight: 700; margin-bottom: var(--space-2);">Kalli - Door Positions</h4>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-bottom: var(--space-3);">
+          <strong>Safe Door Strategy:</strong> Stand near the center after DPS. When doors open, run to the door closest to your plate position. Players 1-3 take left doors (1-3), Players 4-6 take right doors (4-6).
+        </p>
+
+        <h4 style="font-size: var(--text-sm); font-weight: 700; margin-bottom: var(--space-2);">Shuro Chi - Floor Positioning</h4>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-bottom: var(--space-3);">
+          <strong>Stairs Room:</strong> Runner at back left plate, Gunner at door entrance covering Runner.<br>
+          <strong>Trees Room:</strong> Runner center, Gunner covering flanks.<br>
+          <strong>Rocks Room:</strong> Runner right side, Gunner at entrance.
+        </p>
+
+        <h4 style="font-size: var(--text-sm); font-weight: 700; margin-bottom: var(--space-2);">Morgeth - Orb Collection Arc</h4>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted); margin-bottom: var(--space-3);">
+          <strong>Collection Flow:</strong> Start at center spawn, move to left side for first orb. Carrier stays on left ledge until final collection. Rotate clockwise through orbs to avoid collisions.
+        </p>
+
+        <h4 style="font-size: var(--text-sm); font-weight: 700; margin-bottom: var(--space-2);">Vault - Room Escape Routes</h4>
+        <p style="font-size: var(--text-xs); color: var(--color-text-muted);">
+          <strong>Tunnel Navigation:</strong> Stairs connects to Trees (left tunnel). Trees connects to both Stairs (left) and Rocks (right). Rocks connects to Trees (left). Learn these before attempting.
+        </p>
+      </div>
+    </div>
+
+    <!-- Recommended Resources -->
+    <div class="encounter-card">
+      <div class="encounter-card-header">
+        <div class="card-icon card-icon--gold">📚</div>
+        <div>
+          <div class="card-title">Recommended Resources</div>
+          <div class="card-subtitle">Where to learn more and find video guides</div>
+        </div>
+      </div>
+      <div class="encounter-card-body">
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4);">
+          <div>
+            <strong style="font-size: var(--text-xs); color: var(--color-primary);">YouTube Channels</strong>
+            <ul style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2); padding-left: var(--space-4);">
+              <li style="margin-bottom: var(--space-1);"><a href="https://www.youtube.com/@Datto" target="_blank" style="color: var(--color-primary);">Datto</a> - Clear, concise raid guides</li>
+              <li style="margin-bottom: var(--space-1);"><a href="https://www.youtube.com/@FalloutPlays" target="_blank" style="color: var(--color-primary);">FalloutPlays</a> - Detailed mechanics breakdowns</li>
+              <li style="margin-bottom: var(--space-1);"><a href="https://www.youtube.com/@Esoterickk" target="_blank" style="color: var(--color-primary);">Esoterickk</a> - High-skill strategies</li>
+              <li style="margin-bottom: var(--space-1);"><a href="https://www.youtube.com/@Morgeth" target="_blank" style="color: var(--color-primary);">Morgeth</a> - Last Wish specific content</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="font-size: var(--text-xs); color: var(--color-primary);">Websites & Wikis</strong>
+            <ul style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2); padding-left: var(--space-4);">
+              <li style="margin-bottom: var(--space-1);"><a href="https://www.d2checklist.com/" target="_blank" style="color: var(--color-primary);">D2Checklist</a> - Checklists, wish wall, loadouts</li>
+              <li style="margin-bottom: var(--space-1);"><a href="https://raid.report/" target="_blank" style="color: var(--color-primary);">Raid.Report</a> - Performance tracking</li>
+              <li style="margin-bottom: var(--space-1);"><a href="https://www.blueberries.gg/" target="_blank" style="color: var(--color-primary);">Blueberries.gg</a> - Weekly rotation info</li>
+              <li style="margin-bottom: var(--space-1);"><a href="https://www.light.gg/" target="_blank" style="color: var(--color-primary);">Light.gg</a> - Weapon stats and god rolls</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="font-size: var(--text-xs); color: var(--color-primary);">Communities</strong>
+            <ul style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2); padding-left: var(--space-4);">
+              <li style="margin-bottom: var(--space-1);"><a href="https://www.reddit.com/r/DestinyTheGame/" target="_blank" style="color: var(--color-primary);">r/DestinyTheGame</a> - General discussion, LFG</li>
+              <li style="margin-bottom: var(--space-1);"><a href="https://www.reddit.com/r/Fireteams/" target="_blank" style="color: var(--color-primary);">r/Fireteams</a> - Find raid teams</li>
+              <li style="margin-bottom: var(--space-1);"><a href="https://discord.gg/destinygame" target="_blank" style="color: var(--color-primary);">D2 LFG Discord</a> - Active raider community</li>
+            </ul>
+          </div>
+          <div>
+            <strong style="font-size: var(--text-xs); color: var(--color-primary);">Tools</strong>
+            <ul style="font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2); padding-left: var(--space-4);">
+              <li style="margin-bottom: var(--space-1);"><a href="https://destinyitemmanager.com/" target="_blank" style="color: var(--color-primary);">DIM</a> - Loadout optimization</li>
+              <li style="margin-bottom: var(--space-1);"><a href="https://bray.tech/" target="_blank" style="color: var(--color-primary);">Bray.tech</a> - Artifact calculator</li>
+              <li style="margin-bottom: var(--space-1);"><a href="https://www.destinyoptimizer.com/" target="_blank" style="color: var(--color-primary);">Destiny Optimizer</a> - Gear planning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

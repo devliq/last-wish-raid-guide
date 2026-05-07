@@ -60,11 +60,7 @@ function switchEncounterTab(index) {
   if (tab) { tab.classList.add('active'); tab.setAttribute('aria-selected', 'true'); }
 
   state.currentEncounter = index;
-
-  // Smooth scroll to encounters on mobile
-  if (window.innerWidth < 640) {
-    document.getElementById('encounters')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+  // Removed auto-scroll behavior - user can manually scroll if needed
 }
 
 // ─── Checklists ──────────────────────────────
@@ -319,22 +315,17 @@ function switchLoadoutTab(tab, btn) {
     });
   });
   
-  // Handle Encounter dropdown nav links
-  document.querySelectorAll('[data-scroll]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const encIndex = parseInt(link.dataset.scroll.replace('enc-', ''));
-      if (!isNaN(encIndex)) {
-        switchEncounterTab(encIndex);
-        const encounters = document.getElementById('encounters');
-        if (encounters) {
-          const yOffset = -80;
-          const y = encounters.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-      }
-    });
-  });
+// Handle Encounter dropdown nav links
+   document.querySelectorAll('[data-scroll]').forEach(link => {
+     link.addEventListener('click', (e) => {
+       e.preventDefault();
+       const encIndex = parseInt(link.dataset.scroll.replace('enc-', ''));
+       if (!isNaN(encIndex)) {
+         switchEncounterTab(encIndex);
+         // Removed auto-scroll - user can manually scroll if needed
+       }
+     });
+   });
   
   // Handle close buttons
   document.querySelectorAll('[data-close-progress]').forEach(btn => {
@@ -373,13 +364,17 @@ function switchLoadoutTab(tab, btn) {
   updateActiveLink();
 })();
 
-// ─── Smooth Scroll for Nav ───────────────────
+// ─── Smooth Scroll for Nav (excluding encounter dropdowns) ───────────────────
 document.querySelectorAll('a[href^="#"]').forEach(link => {
+  // Skip if this is an encounter dropdown link with data-scroll
+  if (link.hasAttribute('data-scroll')) return;
   link.addEventListener('click', (e) => {
     const target = document.querySelector(link.getAttribute('href'));
     if (target) {
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const yOffset = -80;
+      const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   });
 });

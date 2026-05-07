@@ -52,16 +52,7 @@
                  <a href="#encounters" class="nav-dropdown-link" data-scroll="enc-4"><span class="nav-enc-num">5.</span> <span class="nav-enc-name">Riven</span> <span class="nav-separator">·</span> <span class="nav-enc-type">Eye Puzzle + Boss</span></a>
                </div>
              </div>
-           <div class="nav-dropdown">
-              <button class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-                Progress <span class="dropdown-arrow">▾</span>
-              </button>
-              <div class="nav-dropdown-menu">
-                <a href="#last-wish-progress" class="nav-dropdown-link" data-progress="last-wish">Last Wish Progress</a>
-                <a href="#run-progress" class="nav-dropdown-link" data-progress="run">Run Progress</a>
-              </div>
-            </div>
-           <a href="#advanced" class="nav-link">Advanced</a>
+            <a href="#advanced" class="nav-link">Advanced</a>
            <a href="#loot" class="nav-link">Loot</a>
            <a href="#loadouts" class="nav-link">Loadouts</a>
            <a href="#challenges" class="nav-link">Challenges</a>
@@ -69,10 +60,10 @@
           </nav>
 
         <div class="header-actions">
-          <div class="progress-indicator" aria-live="polite">
+          <button class="progress-indicator" aria-live="polite" id="progress-modal-trigger" title="View Progress Summary">
             <span id="header-progress-count" class="progress-count">0</span>
             <span>/ 5 cleared</span>
-          </div>
+          </button>
           <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
           </button>
@@ -81,78 +72,35 @@
     </div>
   </header>
 
+<!-- PROGRESS MODAL -->
+<div class="progress-modal" id="progress-modal">
+  <div class="progress-modal-content">
+    <div class="progress-modal-header">
+      <h3>Last Wish Progress</h3>
+      <button class="progress-modal-close" id="progress-modal-close">×</button>
+    </div>
+    <div class="progress-modal-body">
+      <div class="overall-progress">
+        <div class="progress-header">
+          <span class="progress-title">Total Completion</span>
+          <span class="progress-pct" id="modal-progress-pct">0%</span>
+        </div>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="modal-progress-bar" style="width: 0%"></div>
+        </div>
+      </div>
+      <div class="progress-encounters" id="modal-encounters">
+        <div class="enc-progress-dot" data-enc="0"><span class="dot"></span> Kalli</div>
+        <div class="enc-progress-dot" data-enc="1"><span class="dot"></span> Shuro Chi</div>
+        <div class="enc-progress-dot" data-enc="2"><span class="dot"></span> Morgeth</div>
+        <div class="enc-progress-dot" data-enc="3"><span class="dot"></span> Vault</div>
+        <div class="enc-progress-dot" data-enc="4"><span class="dot"></span> Riven</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <main>
-    <!-- LAST WISH PROGRESS -->
-    <section class="section progress-section" id="last-wish-progress">
-      <div class="container">
-        <div class="progress-panel" id="last-wish-progress-panel">
-          <div class="progress-panel-header">
-            <h2 class="progress-panel-title">Last Wish Progress</h2>
-            <button class="progress-panel-close" data-close-progress>×</button>
-          </div>
-          <div class="progress-content">
-            <div class="overall-progress">
-              <div class="progress-header">
-                <span class="progress-title">Total Completion</span>
-                <span class="progress-pct" id="last-wish-pct">0%</span>
-              </div>
-              <div class="progress-bar-track">
-                <div class="progress-bar-fill" id="last-wish-bar" style="width: 0%"></div>
-              </div>
-            </div>
-            <div class="progress-encounters" id="last-wish-encounters">
-              <div class="enc-progress-dot" data-enc="0"><span class="dot"></span> Kalli</div>
-              <div class="enc-progress-dot" data-enc="1"><span class="dot"></span> Shuro Chi</div>
-              <div class="enc-progress-dot" data-enc="2"><span class="dot"></span> Morgeth</div>
-              <div class="enc-progress-dot" data-enc="3"><span class="dot"></span> Vault</div>
-              <div class="enc-progress-dot" data-enc="4"><span class="dot"></span> Riven</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RUN PROGRESS -->
-    <section class="section progress-section" id="run-progress">
-      <div class="container">
-        <div class="progress-panel" id="run-progress-panel">
-          <div class="progress-panel-header">
-            <h2 class="progress-panel-title">Run Progress</h2>
-            <button class="progress-panel-close" data-close-progress>×</button>
-          </div>
-          <div class="progress-content">
-            <div class="overall-progress">
-              <div class="progress-header">
-                <span class="progress-title">Current Run</span>
-                <span class="progress-pct" id="run-pct">0%</span>
-              </div>
-              <div class="progress-bar-track">
-                <div class="progress-bar-fill" id="run-bar" style="width: 0%"></div>
-              </div>
-            </div>
-            <div class="run-tracker">
-              <div class="run-item">
-                <span class="run-label">Encounters Cleared</span>
-                <span class="run-value" id="run-cleared">0/5</span>
-              </div>
-              <div class="run-item">
-                <span class="run-label">Challenges Done</span>
-                <span class="run-value" id="run-challenges">0/5</span>
-              </div>
-              <div class="run-item">
-                <span class="run-label">Wish Wall</span>
-                <span class="run-value" id="run-wishes">0/15</span>
-              </div>
-              <div class="run-item">
-                <span class="run-label">Time Elapsed</span>
-                <span class="run-value" id="run-time">00:00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ENCOUNTERS -->
     <section class="section" id="encounters">
       <div class="container">

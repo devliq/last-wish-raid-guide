@@ -147,6 +147,7 @@ function markEncounterCleared(encIndex) {
 
   updateTabBadge(encIndex);
   updateProgressBar();
+  updateModalProgress();
 }
 
 function updateTabBadge(encIndex) {
@@ -166,16 +167,17 @@ function updateProgressBar() {
   const count = state.clearedEncounters.size;
   const pct = Math.round((count / 5) * 100);
 
-  document.getElementById('progress-pct').textContent = pct + '%';
-  document.getElementById('progress-bar-fill').style.width = pct + '%';
-  
-  // Update Last Wish Progress panel
-  const lastWishPct = document.getElementById('last-wish-pct');
-  const lastWishBar = document.getElementById('last-wish-bar');
-  if (lastWishPct && lastWishBar) {
-    lastWishPct.textContent = pct + '%';
-    lastWishBar.style.width = pct + '%';
+  // Header count
+  const headerCount = document.getElementById('header-progress-count');
+  if (headerCount) {
+    headerCount.textContent = count;
   }
+
+  // All done?
+  if (count === 5) {
+    headerCount?.parentElement?.setAttribute('title', 'Raid completed!');
+  }
+}
 
   const barTrack = document.querySelector('.progress-bar-track');
   if (barTrack) {
@@ -285,61 +287,69 @@ function switchLoadoutTab(tab, btn) {
   if (panel) panel.classList.add('active');
 }
 
-// ─── Progress Panel Integration with Nav ─────
+// ─── Progress Modal Integration ───────────────────────────
 (function() {
-  // Handle Progress nav links
-  document.querySelectorAll('[data-progress]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = link.dataset.progress;
-      
-      // Show the corresponding progress section
-      document.querySelectorAll('.progress-section').forEach(section => {
-        section.classList.remove('active');
-      });
-      
-      const section = document.getElementById(target + '-progress');
-      if (section) {
-        section.classList.add('active');
-        // Scroll with offset for header
-        const yOffset = -80;
-        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-      
-      // Update nav active state
-      document.querySelectorAll('.nav-link').forEach(navLink => {
-        navLink.classList.remove('active');
-      });
-      link.classList.add('active');
-    });
-  });
-  
-// Handle Encounter dropdown nav links
+   // Handle progress modal trigger
+   const progressTrigger = document.getElementById('progress-modal-trigger');
+   const progressModal = document.getElementById('progress-modal');
+   const progressModalClose = document.getElementById('progress-modal-close');
+   
+   if (progressTrigger && progressModal) {
+     progressTrigger.addEventListener('click', () => {
+       progressModal.classList.add('active');
+       // Update modal progress
+       updateModalProgress();
+     });
+   }
+   
+   if (progressModalClose && progressModal) {
+     progressModalClose.addEventListener('click', () => {
+       progressModal.classList.remove('active');
+     });
+   }
+   
+   // Close modal on overlay click
+   if (progressModal) {
+     progressModal.addEventListener('click', (e) => {
+       if (e.target === progressModal) {
+         progressModal.classList.remove('active');
+       }
+     });
+   }
+   
+   function updateModalProgress() {
+     const modalPct = document.getElementById('modal-progress-pct');
+     const modalBar = document.getElementById('modal-progress-bar');
+     const modalDots = document.querySelectorAll('#modal-encounters .enc-progress-dot');
+     
+     if (modalPct && modalBar) {
+       const count = state.clearedEncounters.size;
+       const pct = Math.round((count / 5) * 100);
+       modalPct.textContent = pct + '%';
+       modalBar.style.width = pct + '%';
+     }
+     
+     // Update encounter dots
+     modalDots.forEach(dot => {
+       const encIdx = parseInt(dot.dataset.enc);
+       if (state.clearedEncounters.has(encIdx)) {
+         dot.classList.add('completed');
+       } else {
+         dot.classList.remove('completed');
+       }
+     });
+   }
+   
+   // Handle Encounter dropdown nav links
    document.querySelectorAll('[data-scroll]').forEach(link => {
      link.addEventListener('click', (e) => {
        e.preventDefault();
        const encIndex = parseInt(link.dataset.scroll.replace('enc-', ''));
        if (!isNaN(encIndex)) {
          switchEncounterTab(encIndex);
-         // Removed auto-scroll - user can manually scroll if needed
        }
      });
    });
-  
-  // Handle close buttons
-  document.querySelectorAll('[data-close-progress]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const section = btn.closest('.progress-section');
-      if (section) {
-        section.classList.remove('active');
-        // Remove active from nav links pointing to progress
-        document.querySelectorAll('[data-progress]').forEach(link => {
-          link.classList.remove('active');
-        });
-      }
-    });
-  });
 })();
 
 // ─── Active Nav Link ─────────────────────────

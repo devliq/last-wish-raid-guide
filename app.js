@@ -305,7 +305,10 @@ function switchLoadoutTab(tab, btn) {
       const section = document.getElementById(target + '-progress');
       if (section) {
         section.classList.add('active');
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Scroll with offset for header
+        const yOffset = -80;
+        const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
       }
       
       // Update nav active state
@@ -313,6 +316,23 @@ function switchLoadoutTab(tab, btn) {
         navLink.classList.remove('active');
       });
       link.classList.add('active');
+    });
+  });
+  
+  // Handle Encounter dropdown nav links
+  document.querySelectorAll('[data-scroll]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const encIndex = parseInt(link.dataset.scroll.replace('enc-', ''));
+      if (!isNaN(encIndex)) {
+        switchEncounterTab(encIndex);
+        const encounters = document.getElementById('encounters');
+        if (encounters) {
+          const yOffset = -80;
+          const y = encounters.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }
     });
   });
   

@@ -2169,7 +2169,7 @@
 
 .progress-section {
   display: none;
-  padding: 0;
+  padding: var(--space-8) 0 0;
   animation: fadeInUp 200ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 

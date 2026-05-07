@@ -327,17 +327,18 @@
 }
 
 /* =============================================
-   HERO
-   ============================================= */
+    HEADER & NAV
+    ============================================= */
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  padding: clamp(var(--space-12), 8vw, var(--space-20)) 0 clamp(var(--space-8), 5vw, var(--space-16));
-  background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.25 0.12 280 / 0.4) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 80% 50%, oklch(0.3 0.08 200 / 0.2) 0%, transparent 60%),
-    var(--color-bg);
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in oklab, var(--color-bg) 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-3) 0;
 }
 
 [data-theme="light"] .hero {
@@ -2072,20 +2073,11 @@
 }
 
 /* =============================================
-   MOBILE
-   ============================================= */
+    MOBILE
+    ============================================= */
 
 @media (max-width: 600px) {
   .header-nav { display: none; }
-
-  .hero-stats {
-    gap: var(--space-3);
-  }
-
-  .hero-stat {
-    padding: var(--space-3) var(--space-4);
-    min-width: 80px;
-  }
 
   .weapons-grid {
     grid-template-columns: 1fr;

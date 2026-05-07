@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Test</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .test-box {
+      background: var(--color-surface);
+      border: 2px solid var(--color-primary);
+      padding: var(--space-4);
+      border-radius: var(--radius-md);
+      color: var(--color-text);
+    }
+
+    .test-button {
+      background: var(--color-primary);
+      color: var(--color-bg);
+      border: none;
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .test-button:hover {
+      background: var(--color-primary-hover);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Test Page</h1>
+    <p>This is a test to see if CSS variables are working correctly.</p>
+    <div class="test-box">
+      <p>If you can see colored text and backgrounds, the CSS is working.</p>
+      <button class="test-button">Test Button</button>
+    </div>
+  </div>
+</body>
+</html>

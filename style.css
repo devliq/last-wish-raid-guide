@@ -284,6 +284,61 @@
   background: var(--color-primary-highlight);
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.dropdown-arrow {
+  font-size: 0.7em;
+  opacity: 0.7;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  margin-top: var(--space-2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all var(--transition-interactive);
+  z-index: 100;
+  box-shadow: var(--shadow-lg);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-link {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.nav-dropdown-link:hover {
+  color: var(--color-text);
+  background: var(--color-surface-offset);
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -324,21 +379,6 @@
   color: var(--color-primary);
   font-weight: 700;
   font-family: var(--font-display);
-}
-
-/* =============================================
-    HEADER & NAV
-    ============================================= */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: color-mix(in oklab, var(--color-bg) 85%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border);
-  padding: var(--space-3) 0;
 }
 
 [data-theme="light"] .hero {
@@ -2073,8 +2113,8 @@
 }
 
 /* =============================================
-    MOBILE
-    ============================================= */
+     MOBILE
+     ============================================= */
 
 @media (max-width: 600px) {
   .header-nav { display: none; }
@@ -2099,8 +2139,8 @@
 }
 
 /* =============================================
-   ANIMATIONS
-   ============================================= */
+    ANIMATIONS
+    ============================================= */
 
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(12px); }
@@ -2113,6 +2153,101 @@
 
 .weapon-card, .challenge-card, .loadout-card {
   animation: fadeInUp 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* =============================================
+    PROGRESS PANELS
+    ============================================= */
+
+.progress-section {
+  display: none;
+  padding: 0;
+  animation: fadeInUp 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.progress-section.active {
+  display: block;
+}
+
+.progress-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  margin-top: var(--space-6);
+  overflow: hidden;
+}
+
+.progress-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface-offset);
+}
+
+.progress-panel-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.04em;
+}
+
+.progress-panel-close {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-dynamic);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all var(--transition-interactive);
+}
+
+.progress-panel-close:hover {
+  color: var(--color-text);
+  background: var(--color-error-highlight);
+  border-color: var(--color-error);
+}
+
+.progress-content {
+  padding: var(--space-6);
+}
+
+.run-tracker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.run-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  background: var(--color-surface-offset);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.run-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.run-value {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 /* Tooltip */

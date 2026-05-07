@@ -172,6 +172,14 @@ function updateProgressBar() {
 
   document.getElementById('progress-pct').textContent = pct + '%';
   document.getElementById('progress-bar-fill').style.width = pct + '%';
+  
+  // Update Last Wish Progress panel
+  const lastWishPct = document.getElementById('last-wish-pct');
+  const lastWishBar = document.getElementById('last-wish-bar');
+  if (lastWishPct && lastWishBar) {
+    lastWishPct.textContent = pct + '%';
+    lastWishBar.style.width = pct + '%';
+  }
 
   const barTrack = document.querySelector('.progress-bar-track');
   if (barTrack) {
@@ -180,6 +188,16 @@ function updateProgressBar() {
 
   // Header count
   document.getElementById('header-progress-count').textContent = count;
+
+  // Update Run Progress panel
+  const runPct = document.getElementById('run-pct');
+  const runBar = document.getElementById('run-bar');
+  const runCleared = document.getElementById('run-cleared');
+  if (runPct && runBar && runCleared) {
+    runPct.textContent = pct + '%';
+    runBar.style.width = pct + '%';
+    runCleared.textContent = count + '/5';
+  }
 
   // All done?
   if (count === 5) {
@@ -270,6 +288,48 @@ function switchLoadoutTab(tab, btn) {
   const panel = document.getElementById('loadout-' + tab);
   if (panel) panel.classList.add('active');
 }
+
+// ─── Progress Panel Integration with Nav ─────
+(function() {
+  // Handle Progress nav links
+  document.querySelectorAll('[data-progress]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = link.dataset.progress;
+      
+      // Show the corresponding progress section
+      document.querySelectorAll('.progress-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      const section = document.getElementById(target + '-progress');
+      if (section) {
+        section.classList.add('active');
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      
+      // Update nav active state
+      document.querySelectorAll('.nav-link').forEach(navLink => {
+        navLink.classList.remove('active');
+      });
+      link.classList.add('active');
+    });
+  });
+  
+  // Handle close buttons
+  document.querySelectorAll('[data-close-progress]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const section = btn.closest('.progress-section');
+      if (section) {
+        section.classList.remove('active');
+        // Remove active from nav links pointing to progress
+        document.querySelectorAll('[data-progress]').forEach(link => {
+          link.classList.remove('active');
+        });
+      }
+    });
+  });
+})();
 
 // ─── Active Nav Link ─────────────────────────
 (function () {

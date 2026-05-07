@@ -61,88 +61,47 @@
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" aria-label="Last Wish overview">
+<main>
+    <!-- OVERALL PROGRESS -->
+    <section class="section" id="progress-section">
       <div class="container">
-        <div class="hero-visual" aria-hidden="true">
-          <!-- Decorative Ahamkara Shield SVG -->
-          <svg class="hero-image" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Background glow -->
-            <ellipse cx="200" cy="150" rx="160" ry="120" fill="url(#heroGlow)" opacity="0.6"/>
-            <!-- Outer shield -->
-            <path d="M200 30 L350 70 L350 200 L200 270 L50 200 L50 70 Z" 
-                  fill="url(#shieldGradient)" stroke="var(--color-primary)" stroke-width="2" opacity="0.9"/>
-            <!-- Inner shield -->
-            <path d="M200 55 L320 85 L320 190 L200 245 L80 190 L80 85 Z" 
-                  fill="none" stroke="var(--color-primary)" stroke-width="1" opacity="0.5"/>
-            <!-- Center eye -->
-            <circle cx="200" cy="150" r="35" fill="var(--color-surface)" stroke="var(--color-primary)" stroke-width="2"/>
-            <circle cx="200" cy="150" r="20" fill="var(--color-primary)" opacity="0.8"/>
-            <circle cx="200" cy="150" r="10" fill="var(--color-text)"/>
-            <!-- Ahamkara spine decorations -->
-            <path d="M200 55 L200 30" stroke="var(--color-primary)" stroke-width="2"/>
-            <path d="M200 245 L200 270" stroke="var(--color-primary)" stroke-width="2"/>
-            <path d="M80 85 L50 70" stroke="var(--color-primary)" stroke-width="1.5"/>
-            <path d="M320 85 L350 70" stroke="var(--color-primary)" stroke-width="1.5"/>
-            <path d="M80 190 L50 200" stroke="var(--color-primary)" stroke-width="1.5"/>
-            <path d="M320 190 L350 200" stroke="var(--color-primary)" stroke-width="1.5"/>
-            <!-- Decorative lines -->
-            <path d="M120 100 L280 100" stroke="var(--color-primary)" stroke-width="0.5" opacity="0.4"/>
-            <path d="M120 200 L280 200" stroke="var(--color-primary)" stroke-width="0.5" opacity="0.4"/>
-            <path d="M100 150 L300 150" stroke="var(--color-primary)" stroke-width="0.5" opacity="0.4"/>
-            <!-- Gradients -->
-            <defs>
-              <radialGradient id="heroGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="var(--color-primary)" stop-opacity="0.4"/>
-                <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
-              </radialGradient>
-              <linearGradient id="shieldGradient" x1="200" y1="30" x2="200" y2="270" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="var(--color-surface)" stop-opacity="0.8"/>
-                <stop offset="50%" stop-color="var(--color-surface-2)" stop-opacity="0.6"/>
-                <stop offset="100%" stop-color="var(--color-surface)" stop-opacity="0.8"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <!-- Hero Banner Image -->
-        <div class="hero-banner-container">
-          <img 
-            src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=1200&h=400&fit=crop&q=80"
-            alt="Last Wish Raid-banner featuring Riven of a Thousand Voices in the Dreaming City"
-            class="hero-banner"
-            loading="eager"
-            onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 400%22%3E%3Cdefs%3E%3ClinearGradient id=%22bg%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%231a1a2e%22/%3E%3Cstop offset=%2250%25%22 style=%22stop-color:%2316213e%22/%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%230f0f23%22/%3E%3C/linearGradient%3E%3ClinearGradient id=%22gold%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%220%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%23ffd700%22/%3E%3Cstop offset=%2250%25%22 style=%22stop-color:%23ffb700%22/%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%23ffd700%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%221200%22 height=%22400%22 fill=%22url(%23bg)%22/%3E%3Ccircle cx=%22100%22 cy=%2280%22 r=%2240%22 fill=%22%237b2d8e%22 opacity=%220.3%22/%3E%3Ccircle cx=%221100%22 cy=%22320%22 r=%2260%22 fill=%22%237b2d8e%22 opacity=%220.3%22/%3E%3Cpath d=%22M600 60 Q650 100 700 80 Q750 120 800 100 Q850 140 900 120 Q920 150 900 180 Q850 220 800 200 Q750 250 700 220 Q650 280 600 240 Q550 200 500 240 Q450 280 400 220 Q350 250 300 200 Q250 220 200 180 Q180 150 200 120 Q250 140 300 100 Q350 120 400 80 Q450 100 500 60 Q550 80 600 60 Z%22 fill=%22%23c9a227%22 opacity=%220.6%22/%3E%3Ccircle cx=%22450%22 cy=%22140%22 r=%228%22 fill=%22%23ff4444%22/%3E%3Ccircle cx=%22550%22 cy=%22130%22 r=%226%22 fill=%22%23ff4444%22/%3E%3Ccircle cx=%22650%22 cy=%22130%22 r=%226%22 fill=%22%23ff4444%22/%3E%3Ccircle cx=%22750%22 cy=%22140%22 r=%228%22 fill=%22%23ff4444%22/%3E%3Ctext x=%22600%22 y=%22320%22 font-family=%22Georgia serif%22 font-size=%2272%22 font-weight=%22bold%22 fill=%22url(%23gold)%22 text-anchor=%22middle%22%3ELAST WISH%3C/text%3E%3Ctext x=%22600%22 y=%22360%22 font-family=%22Arial sans-serif%22 font-size=%2224%22 fill=%22%23999999%22 text-anchor=%22middle%22 letter-spacing=%228%22%3ERAID%3C/text%3E%3Cline x1=%22400%22 y1=%22290%22 x2=%22800%22 y2=%22290%22 stroke=%22%23ffd700%22 stroke-width=%222%22 opacity=%220.5%22/%3E%3C/svg%3E'"
-          >
-        </div>
-        <div class="hero-content">
-          <span class="hero-eyebrow">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            Dreaming City · Forsaken
-          </span>
-          <h1 class="hero-title">
-            Raid of <span class="gold">Last Wish</span>
-          </h1>
-          <p class="hero-subtitle">
-            Complete interactive guide for all 5 encounters. Track your clears, assign roles, hunt god rolls, and master the Taken mechanics of Riven's domain.
-          </p>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <span class="hero-stat-value">5</span>
-              <span class="hero-stat-label">Encounters</span>
+        <div class="overall-progress">
+          <div class="progress-header">
+            <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap;">
+              <span class="progress-title">Last Wish Progress</span>
+              <div style="display: flex; gap: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted);">
+                <span><strong style="color: var(--color-primary);">5</strong> Encounters</span>
+                <span><strong style="color: var(--color-primary);">8</strong> Legendaries</span>
+                <span><strong style="color: var(--color-primary);">5%</strong> 1KV Drop</span>
+                <span><strong style="color: var(--color-primary);">15</strong> Wishes</span>
+              </div>
             </div>
-            <div class="hero-stat">
-              <span class="hero-stat-value">8</span>
-              <span class="hero-stat-label">Legendaries</span>
-            </div>
-            <div class="hero-stat">
-              <span class="hero-stat-value">5%</span>
-              <span class="hero-stat-label">1KV Drop Chance</span>
-            </div>
-            <div class="hero-stat">
-              <span class="hero-stat-value">15</span>
-              <span class="hero-stat-label">Wishes</span>
-            </div>
+            <span class="progress-pct" id="progress-pct">0%</span>
+          </div>
+          <div class="progress-bar-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Overall raid progress">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+          </div>
+          <div class="progress-encounters" id="progress-encounters">
+            <button class="enc-progress-dot" data-enc="0" onclick="switchEncounterTab(0)">
+              <span class="dot"></span>
+              <span>Kalli</span>
+            </button>
+            <button class="enc-progress-dot" data-enc="1" onclick="switchEncounterTab(1)">
+              <span class="dot"></span>
+              <span>Shuro Chi</span>
+            </button>
+            <button class="enc-progress-dot" data-enc="2" onclick="switchEncounterTab(2)">
+              <span class="dot"></span>
+              <span>Morgeth</span>
+            </button>
+            <button class="enc-progress-dot" data-enc="3" onclick="switchEncounterTab(3)">
+              <span class="dot"></span>
+              <span>The Vault</span>
+            </button>
+            <button class="enc-progress-dot" data-enc="4" onclick="switchEncounterTab(4)">
+              <span class="dot"></span>
+              <span>Riven</span>
+            </button>
           </div>
         </div>
       </div>

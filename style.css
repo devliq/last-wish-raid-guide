@@ -4,43 +4,43 @@
    ============================================= */
 
 /* CSS Variables & Theme */
-@import url('./css/variables.css');
+@import url('css/variables.css');
 
 /* Base Styles */
-@import url('./css/base.css');
+@import url('css/base.css');
 
 /* Layout - Header, Footer, Container */
-@import url('./css/layout.css');
+@import url('css/layout.css');
 
 /* Navigation - Header nav, dropdowns, mobile menu */
-@import url('./css/navigation.css');
+@import url('css/navigation.css');
 
 /* Sections & Hero */
-@import url('./css/sections.css');
+@import url('css/sections.css');
 
 /* Encounters - Tabs, panels, cards, checklists */
-@import url('./css/encounters.css');
+@import url('css/encounters.css');
 
 /* Weapons & Loot - Weapon cards, filters, loot tables */
-@import url('./css/weapons.css');
+@import url('css/weapons.css');
 
 /* Loadouts - Tabs, panels, cards */
-@import url('./css/loadouts.css');
+@import url('css/loadouts.css');
 
 /* Challenges */
-@import url('./css/challenges.css');
+@import url('css/challenges.css');
 
 /* Wish Wall */
-@import url('./css/wish-wall.css');
+@import url('css/wish-wall.css');
 
 /* Progress - Progress bars, modal */
-@import url('./css/progress.css');
+@import url('css/progress.css');
 
 /* Callouts & Symbols */
-@import url('./css/callouts.css');
+@import url('css/callouts.css');
 
 /* Raid Mods */
-@import url('./css/raid-mods.css');
+@import url('css/raid-mods.css');
 
 /* Animations */
-@import url('./css/animations.css');
+@import url('css/animations.css');

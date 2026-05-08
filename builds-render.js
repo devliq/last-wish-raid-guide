@@ -28,46 +28,52 @@ function renderBuildCard(build) {
     return span.outerHTML;
   }).join("");
   
-  return "<div class=\"loadout-card\" data-class=\"" + build.class.toLowerCase() + "\" data-element=\"" + build.element.toLowerCase() + "\" data-role=\"" + build.role.toLowerCase() + "\">" +
-    "<div class=\"loadout-header\">" +
-      "<div class=\"loadout-title\">" + build.name + "</div>" +
-      "<div class=\"loadout-class\">" +
-        "<span class=\"class-badge " + classBadgeClass + "\">" + build.class + "</span>" +
-        "<span class=\"element-badge " + elementBadgeClass + "\">" + build.element + "</span>" +
-        "<span class=\"role-badge\">" + build.role + "</span>" +
-      "</div>" +
-    "</div>" +
-    "<div class=\"loadout-body\">" +
-      "<div class=\"loadout-slots\">" +
-        "<div class=\"loadout-slot\">" +
-          "<div class=\"slot-icon\">🔫</div>" +
-          "<div class=\"slot-label\">Kinetic</div>" +
-          "<div class=\"slot-weapon\">" + build.weapons.kinetic.name + "</div>" +
-          "<div class=\"slot-reason\">" + build.weapons.kinetic.reason + "</div>" +
-        "</div>" +
-        "<div class=\"loadout-slot\">" +
-          "<div class=\"slot-icon\">⚡</div>" +
-          "<div class=\"slot-label\">Energy</div>" +
-          "<div class=\"slot-weapon\">" + build.weapons.energy.name + "</div>" +
-          "<div class=\"slot-reason\">" + build.weapons.energy.reason + "</div>" +
-        "</div>" +
-        "<div class=\"loadout-slot\">" +
-          "<div class=\"slot-icon\">💣</div>" +
-          "<div class=\"slot-label\">Heavy</div>" +
-          "<div class=\"slot-weapon\">" + build.weapons.heavy.name + "</div>" +
-          "<div class=\"slot-reason\">" + build.weapons.heavy.reason + "</div>" +
-        "</div>" +
-      "</div>" +
-      "<div class=\"loadout-mods\">" +
-        "<div class=\"mods-label\">Recommended Mods</div>" +
-        "<div class=\"mods-list\">" + modTags + "</div>" +
-      "</div>" +
-      "<div class=\"loadout-notes\">" +
-        "<div class=\"notes-label\">Notes</div>" +
-        "<div class=\"notes-text\">" + build.notes + "</div>" +
-      "</div>" +
-    "</div>" +
-  "</div>";
+   return "<div class=\"loadout-card\" data-class=\"" + build.class.toLowerCase() + "\" data-element=\"" + build.element.toLowerCase() + "\" data-role=\"" + build.role.toLowerCase() + "\">" +
+     "<div class=\"loadout-header\">" +
+       "<div class=\"loadout-title\">" + build.name + "</div>" +
+       "<div class=\"loadout-class\">" +
+         "<span class=\"class-badge " + classBadgeClass + "\">" + build.class + "</span>" +
+         "<span class=\"element-badge " + elementBadgeClass + "\">" + build.element + "</span>" +
+         "<span class=\"role-badge\">" + build.role + "</span>" +
+       "</div>" +
+     "</div>" +
+     "<div class=\"loadout-body\">" +
+       "<div class=\"loadout-slots\">" +
+         "<div class=\"loadout-slot\">" +
+           "<div class=\"slot-icon\">🔫</div>" +
+           "<div class=\"slot-info\">" +
+             "<div class=\"slot-type\">Kinetic</div>" +
+             "<div class=\"slot-weapon\">" + build.weapons.kinetic.name + "</div>" +
+             "<div class=\"slot-reason\">" + build.weapons.kinetic.reason + "</div>" +
+           "</div>" +
+         "</div>" +
+         "<div class=\"loadout-slot\">" +
+           "<div class=\"slot-icon\">⚡</div>" +
+           "<div class=\"slot-info\">" +
+             "<div class=\"slot-type\">Energy</div>" +
+             "<div class=\"slot-weapon\">" + build.weapons.energy.name + "</div>" +
+             "<div class=\"slot-reason\">" + build.weapons.energy.reason + "</div>" +
+           "</div>" +
+         "</div>" +
+         "<div class=\"loadout-slot\">" +
+           "<div class=\"slot-icon\">💣</div>" +
+           "<div class=\"slot-info\">" +
+             "<div class=\"slot-type\">Heavy</div>" +
+             "<div class=\"slot-weapon\">" + build.weapons.heavy.name + "</div>" +
+             "<div class=\"slot-reason\">" + build.weapons.heavy.reason + "</div>" +
+           "</div>" +
+         "</div>" +
+       "</div>" +
+       "<div class=\"loadout-mods\">" +
+         "<div class=\"mods-label\">Recommended Mods</div>" +
+         "<div class=\"mod-tags\">" + modTags + "</div>" +
+       "</div>" +
+       "<div class=\"loadout-notes\">" +
+         "<div class=\"notes-label\">Notes</div>" +
+         "<div class=\"notes-text\">" + build.notes + "</div>" +
+       "</div>" +
+     "</div>" +
+   "</div>";
 }
 
 function renderBuilds() {
@@ -113,31 +119,18 @@ function initBuilds() {
 
 document.addEventListener("DOMContentLoaded", initBuilds);
 document.addEventListener("componentsLoaded", initBuilds);
-  }
-  
-  if (supportGrid) {
-    supportBuilds.forEach(function(build) {
-      supportGrid.insertAdjacentHTML("beforeend", renderBuildCard(build));
-    });
-  }
-  
-  if (runnerGrid) {
-    runnerBuilds.forEach(function(build) {
-      runnerGrid.insertAdjacentHTML("beforeend", renderBuildCard(build));
-    });
-  }
-}
 
+// Filter builds by class and element
 function filterBuilds(classFilter, elementFilter) {
   var allCards = document.querySelectorAll(".loadout-card[data-class]");
-  
+
   allCards.forEach(function(card) {
     var cardClass = card.dataset.class;
     var cardElement = card.dataset.element;
-    
+
     var matchesClass = classFilter === "all" || cardClass === classFilter.toLowerCase();
     var matchesElement = elementFilter === "all" || cardElement === elementFilter.toLowerCase();
-    
+
     if (matchesClass && matchesElement) {
       card.style.display = "";
     } else {
@@ -145,13 +138,6 @@ function filterBuilds(classFilter, elementFilter) {
     }
   });
 }
-
-// Initialize builds on DOM ready
-document.addEventListener("DOMContentLoaded", function() {
-  if (typeof builds !== 'undefined' && builds.length > 0) {
-    renderBuilds();
-  }
-});
 
 // Make filterBuilds available globally
 window.filterBuilds = filterBuilds;

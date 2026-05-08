@@ -144,7 +144,7 @@
 
 .enc-progress-dot.cleared,
 .enc-progress-dot.completed {
-  border-color: color-mix(in oklab, var(--color-success) 30%, transparent);
+  border-color: rgba(6, 214, 160, 0.3);
 }
 
 /* Progress Panels */

@@ -41,6 +41,7 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   min-height: 100vh;
+  min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -74,8 +75,8 @@ button {
 
 /* Selection color */
 ::selection {
-  background: var(--color-primary);
-  color: var(--color-bg);
+  background: rgba(201, 162, 39, 0.25);
+  color: var(--color-text);
 }
 
 /* Skeleton loading styles */

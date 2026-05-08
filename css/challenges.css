@@ -22,12 +22,12 @@
 
 .challenge-card:hover {
   border-color: var(--color-primary);
-  background: color-mix(in oklab, var(--color-primary-highlight) 50%, var(--color-surface));
+  background: rgba(201, 162, 39, 0.08);
 }
 
 .challenge-card.completed {
-  border-color: color-mix(in oklab, var(--color-success) 40%, transparent);
-  background: var(--color-success-highlight);
+  border-color: rgba(6, 214, 160, 0.4);
+  background: rgba(6, 214, 160, 0.15);
 }
 
 .challenge-icon {

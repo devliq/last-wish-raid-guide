@@ -229,14 +229,50 @@
 }
 
 .perk-tag--primary {
-  background: var(--color-primary-highlight);
-  border-color: color-mix(in oklab, var(--color-primary) 40%, transparent);
+  background: rgba(201, 162, 39, 0.15);
+  border-color: rgba(201, 162, 39, 0.4);
   color: var(--color-primary);
 }
 
 .perk-tag--secondary {
-  background: var(--color-teal-highlight);
-  border-color: color-mix(in oklab, var(--color-teal) 30%, transparent);
+  background: rgba(78, 205, 196, 0.15);
+  border-color: rgba(78, 205, 196, 0.3);
+  color: var(--color-teal);
+}
+
+.craftable-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(6, 214, 160, 0.15);
+  color: var(--color-success);
+  border: 1px solid rgba(6, 214, 160, 0.3);
+}
+
+.exotic-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(201, 162, 39, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(201, 162, 39, 0.5);
+}
+
+.perk-tag--secondary {
+  background: rgba(78, 205, 196, 0.15);
+  border-color: rgba(78, 205, 196, 0.3);
   color: var(--color-teal);
 }
 
@@ -255,9 +291,9 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background: var(--color-success-highlight);
+  background: rgba(6, 214, 160, 0.15);
   color: var(--color-success);
-  border: 1px solid color-mix(in oklab, var(--color-success) 30%, transparent);
+  border: 1px solid rgba(6, 214, 160, 0.3);
 }
 
 .exotic-tag {
@@ -270,9 +306,9 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background: var(--color-primary-highlight);
+  background: rgba(201, 162, 39, 0.15);
   color: var(--color-primary);
-  border: 1px solid color-mix(in oklab, var(--color-primary) 50%, transparent);
+  border: 1px solid rgba(201, 162, 39, 0.5);
 }
 
 .weapon-footer {
@@ -345,14 +381,14 @@
 }
 
 .loot-item--curated {
-  border-color: color-mix(in oklab, var(--color-primary) 40%, transparent);
+  border-color: rgba(201, 162, 39, 0.4);
   color: var(--color-text);
   font-weight: 600;
 }
 
 .loot-item--exotic {
-  border-color: color-mix(in oklab, var(--color-primary) 60%, transparent);
-  background: var(--color-primary-highlight);
+  border-color: rgba(201, 162, 39, 0.6);
+  background: rgba(201, 162, 39, 0.15);
   color: var(--color-primary);
   font-weight: 700;
 }

@@ -71,24 +71,48 @@ function renderBuildCard(build) {
 }
 
 function renderBuilds() {
-  var dpsContainer = document.getElementById("loadout-dps");
-  var supportContainer = document.getElementById("loadout-support");
-  var runnerContainer = document.getElementById("loadout-runner");
-  
-  if (!dpsContainer || !supportContainer || !runnerContainer) return;
-  
-  var dpsBuilds = builds.filter(function(b) { return b.role === "DPS"; });
-  var supportBuilds = builds.filter(function(b) { return b.role === "Support"; });
-  var runnerBuilds = builds.filter(function(b) { return b.role === "Runner"; });
-  
-  var dpsGrid = dpsContainer.querySelector(".loadout-grid");
-  var supportGrid = supportContainer.querySelector(".loadout-grid");
-  var runnerGrid = runnerContainer.querySelector(".loadout-grid");
-  
-  if (dpsGrid) {
-    dpsBuilds.forEach(function(build) {
-      dpsGrid.insertAdjacentHTML("beforeend", renderBuildCard(build));
-    });
+   var dpsContainer = document.getElementById("loadout-dps");
+   var supportContainer = document.getElementById("loadout-support");
+   var runnerContainer = document.getElementById("loadout-runner");
+   
+   if (!dpsContainer && !supportContainer && !runnerContainer) return;
+   
+   var dpsBuilds = builds.filter(function(b) { return b.role === "DPS"; });
+   var supportBuilds = builds.filter(function(b) { return b.role === "Support"; });
+   var runnerBuilds = builds.filter(function(b) { return b.role === "Runner"; });
+   
+   var dpsGrid = dpsContainer ? dpsContainer.querySelector(".loadout-grid") : null;
+   var supportGrid = supportContainer ? supportContainer.querySelector(".loadout-grid") : null;
+   var runnerGrid = runnerContainer ? runnerContainer.querySelector(".loadout-grid") : null;
+   
+   if (dpsGrid) {
+     dpsBuilds.forEach(function(build) {
+       dpsGrid.insertAdjacentHTML("beforeend", renderBuildCard(build));
+     });
+   }
+   
+   if (supportGrid) {
+     supportBuilds.forEach(function(build) {
+       supportGrid.insertAdjacentHTML("beforeend", renderBuildCard(build));
+     });
+   }
+   
+   if (runnerGrid) {
+     runnerBuilds.forEach(function(build) {
+       runnerGrid.insertAdjacentHTML("beforeend", renderBuildCard(build));
+     });
+   }
+ }
+
+// Initialize builds on DOM ready and after components are loaded
+function initBuilds() {
+  if (typeof builds !== 'undefined' && builds.length > 0) {
+    renderBuilds();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", initBuilds);
+document.addEventListener("componentsLoaded", initBuilds);
   }
   
   if (supportGrid) {

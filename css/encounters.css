@@ -38,7 +38,7 @@
 .encounter-tab.active {
   border-color: var(--color-primary);
   background: var(--color-primary-highlight);
-  box-shadow: 0 0 12px color-mix(in oklab, var(--color-primary) 30%, transparent);
+  box-shadow: 0 0 12px rgba(201, 162, 39, 0.3);
 }
 
 .tab-number {
@@ -264,8 +264,8 @@
 }
 
 .checklist-item.checked {
-  background: var(--color-success-highlight);
-  border-color: color-mix(in oklab, var(--color-success) 40%, transparent);
+  background: rgba(6, 214, 160, 0.15);
+  border-color: rgba(6, 214, 160, 0.4);
   opacity: 0.75;
 }
 
